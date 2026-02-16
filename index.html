@@ -52,24 +52,9 @@
       font-size: 0.95rem;
     }
 
-    .template-section {
+    .template-grid {
       max-width: 1400px;
-      margin: 0 auto 40px;
-    }
-    .template-section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-bottom: 8px;
-      color: var(--gold-light);
-    }
-    .template-section .section-desc {
-      color: #888;
-      font-size: 0.85rem;
-      margin-bottom: 30px;
-    }
-
-    .template-row {
+      margin: 0 auto;
       display: flex;
       gap: 30px;
       flex-wrap: wrap;
@@ -3114,144 +3099,6 @@
       background: linear-gradient(180deg, transparent, #B91C1C, var(--gold), #B91C1C, transparent);
     }
 
-    /* ================================
-       AIRDROP FORMAT
-       ================================ */
-    .t-airdrop {
-      background: #000;
-      background-image:
-        radial-gradient(ellipse at 50% 40%, rgba(30,30,40,1) 0%, transparent 70%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 28px;
-      position: relative;
-      overflow: hidden;
-    }
-    .t-airdrop .ad-blur-circles {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-    }
-    .t-airdrop .ad-blur-circles .circle {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(60px);
-      opacity: 0.3;
-    }
-    .t-airdrop .ad-blur-circles .c1 {
-      width: 200px;
-      height: 200px;
-      background: var(--burgundy);
-      top: -40px;
-      left: -40px;
-    }
-    .t-airdrop .ad-blur-circles .c2 {
-      width: 180px;
-      height: 180px;
-      background: var(--gold);
-      bottom: -30px;
-      right: -30px;
-      opacity: 0.15;
-    }
-    .t-airdrop .ad-card {
-      background: rgba(44,44,46,0.85);
-      border-radius: 20px;
-      padding: 28px 24px 20px;
-      width: 82%;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-      border: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-    }
-    .t-airdrop .ad-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 12px;
-      border: 2px solid var(--gold);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    .t-airdrop .ad-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-    }
-    .t-airdrop .ad-sender {
-      font-family: 'Manrope', sans-serif;
-      font-size: 12px;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 2px;
-    }
-    .t-airdrop .ad-wants {
-      font-family: 'Manrope', sans-serif;
-      font-size: 12px;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 16px;
-    }
-    .t-airdrop .ad-note {
-      background: rgba(0,0,0,0.3);
-      border-radius: 12px;
-      padding: 14px 16px;
-      margin-bottom: 18px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-    .t-airdrop .ad-note-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--cream);
-      line-height: 1.35;
-    }
-    .t-airdrop .ad-note-text em {
-      color: var(--gold);
-      font-style: italic;
-    }
-    .t-airdrop .ad-buttons {
-      display: flex;
-      gap: 10px;
-      width: 100%;
-    }
-    .t-airdrop .ad-btn {
-      flex: 1;
-      padding: 10px;
-      border-radius: 12px;
-      font-family: 'Manrope', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      text-align: center;
-    }
-    .t-airdrop .ad-btn.decline {
-      background: rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.6);
-    }
-    .t-airdrop .ad-btn.accept {
-      background: var(--gold);
-      color: var(--burgundy);
-    }
-    .t-airdrop .ad-footer {
-      margin-top: 18px;
-      font-family: 'Caveat', cursive;
-      font-size: 14px;
-      color: var(--gold);
-      position: relative;
-      z-index: 1;
-    }
-    .t-airdrop .ad-logo {
-      position: absolute;
-      bottom: 12px;
-      font-family: 'Playfair Display', serif;
-      font-size: 8px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(245,240,232,0.15);
-      z-index: 1;
-    }
 
     /* Click hint */
     .ig-post:hover {
@@ -3263,10 +3110,7 @@
 </head>
 <body>
 
-
-<!-- SECTION 1: Single Posts -->
-<div class="template-section">
-  <div class="template-row">
+<div class="template-grid">
 
     <!-- 1. Bold Statement -->
     <div class="ig-post t-bold-statement">
@@ -3303,12 +3147,7 @@
       <div class="stat-cta">Take the free checkup →</div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 2: More Singles -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- 4. Client Quote -->
     <div class="ig-post t-quote">
@@ -3355,12 +3194,7 @@
       </div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 3: Photo-led posts -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- 7. Split layout -->
     <div class="ig-post t-photo-split">
@@ -3405,12 +3239,7 @@
       <div class="announce-cta">Link in bio →</div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 4: Carousel Covers -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- 10. Carousel: Tips -->
     <div class="ig-post t-carousel-cover">
@@ -3486,12 +3315,7 @@
       </div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 5: More content ideas -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- Bold statement variant 2 -->
     <div class="ig-post t-bold-statement" style="background: var(--olive);">
@@ -3528,12 +3352,7 @@
       <div class="stat-cta">Learn more →</div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 6: Premium Designs -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- Gradient editorial -->
     <div class="ig-post t-gradient-editorial">
@@ -3596,12 +3415,7 @@
       </div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 7: Engagement Drivers -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- Save This Checklist -->
     <div class="ig-post t-checklist">
@@ -3653,12 +3467,7 @@
       </div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 8: Concept Posts -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- iMessage Conversation -->
     <div class="ig-post t-imessage">
@@ -3707,12 +3516,7 @@
       </div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 9: Viral / Pattern Interrupt Templates -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- Sensitive Content Parody -->
     <div class="ig-post t-sensitive">
@@ -3744,38 +3548,8 @@
       </div>
     </div>
 
-    <!-- AirDrop Format -->
-    <div class="ig-post t-airdrop">
-      <div class="ad-blur-circles">
-        <div class="circle c1"></div>
-        <div class="circle c2"></div>
-      </div>
-      <div class="ad-card">
-        <div class="ad-avatar">
-          <img src="images/romany-hero.jpg" alt="Romany">
-        </div>
-        <div class="ad-sender">The Finance Woman</div>
-        <div class="ad-wants">would like to share a note</div>
-        <div class="ad-note">
-          <div class="ad-note-text">Your pension isn't going to <em>sort itself out</em>. This is your sign to book that free call.</div>
-        </div>
-        <div class="ad-buttons">
-          <div class="ad-btn decline">Decline</div>
-          <div class="ad-btn accept">Accept</div>
-        </div>
-      </div>
-      <div class="ad-footer">Will you accept? 👀</div>
-      <div class="ad-logo">The Finance Woman</div>
-    </div>
 
-  </div>
-</div>
 
-<!-- SECTION 9: Pink / Nude / Blush Templates (NEW) -->
-<div class="template-section">
-  <h2>Pink, Nude &amp; Blush Palette</h2>
-  <p class="section-desc">Softer tones using the full Canva brand palette — rose, nude, blush &amp; white</p>
-  <div class="template-row">
 
     <!-- Blush Bold Statement -->
     <div class="ig-post t-blush-statement">
@@ -3810,12 +3584,7 @@
       </div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 10: More Pink / Nude -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- Nude Quote -->
     <div class="ig-post t-nude-quote">
@@ -3869,12 +3638,7 @@
       <div class="q-logo">The Finance Woman</div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 11: Pink Photo + Engagement -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- White Split Photo -->
     <div class="ig-post t-white-split">
@@ -3927,12 +3691,7 @@
       <div class="im-footer">No judgement. Just clarity.</div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 12: Rose Editorial + Carousel -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- Rose Editorial -->
     <div class="ig-post t-rose-editorial">
@@ -3972,14 +3731,7 @@
       </div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 13: Creative / Viral Formats -->
-<div class="template-section">
-  <h2>Creative &amp; Viral Formats</h2>
-  <p class="section-desc">Trending formats that stop the scroll — Notes app, glassmorphism, receipts &amp; more</p>
-  <div class="template-row">
 
     <!-- Notes App Hot Take -->
     <div class="ig-post t-notes-app">
@@ -4031,12 +3783,7 @@
       <div class="pov-circle"></div>
     </div>
 
-  </div>
-</div>
 
-<!-- SECTION 14: More Creative Formats -->
-<div class="template-section">
-  <div class="template-row">
 
     <!-- Faux Receipt -->
     <div class="ig-post t-receipt">
@@ -4081,8 +3828,6 @@
       <div class="receipt-footer">Time to change this? Free call below 👇</div>
       <div class="receipt-barcode">|||| ||| |||| || ||||| ||| ||||</div>
     </div>
-
-  </div>
 </div>
 
 <!-- Lightbox for full-size preview -->
