@@ -3100,6 +3100,97 @@
     }
 
 
+    /* SVG logo/leaf for all templates */
+    .tfw-logo-img {
+      height: 16px;
+      width: auto;
+      display: inline-block;
+      vertical-align: middle;
+      opacity: 0.7;
+    }
+
+    /* Smaller leaf placements (8-9px text originals) */
+    .cl-logo .tfw-logo-img,
+    .q-logo .tfw-logo-img,
+    .ht-logo .tfw-logo-img,
+    .sb-logo .tfw-logo-img,
+    .tx-logo .tfw-logo-img,
+    .cd-logo .tfw-logo-img,
+    .im-logo .tfw-logo-img,
+    .glass-logo .tfw-logo-img,
+    .pov-logo .tfw-logo-img {
+      height: 12px;
+    }
+
+    /* Full logo featured placements */
+    .logo-text .tfw-logo-img {
+      height: 14px;
+    }
+    .ge-logo .tfw-logo-img,
+    .top-logo .tfw-logo-img,
+    .myth-footer .tfw-logo-img {
+      height: 12px;
+    }
+    .sens-logo .tfw-logo-img,
+    .brk-ticker-logo .tfw-logo-img {
+      height: 10px;
+    }
+
+    /* White logo on dark backgrounds */
+    .t-bold-statement .tfw-logo-img,
+    .t-photo-overlay .tfw-logo-img,
+    .t-photo-split .tfw-logo-img,
+    .t-fullbleed .tfw-logo-img,
+    .t-announce .tfw-logo-img,
+    .t-carousel-cover .tfw-logo-img,
+    .t-tips .tfw-logo-img,
+    .t-vs .tfw-logo-img,
+    .t-gradient-editorial .tfw-logo-img,
+    .t-magazine .tfw-logo-img,
+    .t-textured .tfw-logo-img,
+    .t-countdown .tfw-logo-img,
+    .t-checklist .tfw-logo-img,
+    .t-question .tfw-logo-img,
+    .t-hottake .tfw-logo-img,
+    .t-notification .tfw-logo-img,
+    .t-sensitive .tfw-logo-img,
+    .t-breaking .tfw-logo-img,
+    .t-glass-stat .tfw-logo-img,
+    .t-pov .tfw-logo-img,
+    .t-this-that .tfw-logo-img {
+      filter: brightness(0) invert(1);
+    }
+
+    /* Dark logo on light backgrounds */
+    .t-stat-post .tfw-logo-img,
+    .t-myth .tfw-logo-img,
+    .t-notes-app .tfw-logo-img,
+    .t-receipt .tfw-logo-img,
+    .t-blush-statement .tfw-logo-img,
+    .t-white-stat .tfw-logo-img,
+    .t-rose-overlay .tfw-logo-img,
+    .t-nude-quote .tfw-logo-img,
+    .t-white-checklist .tfw-logo-img,
+    .t-blush-question .tfw-logo-img,
+    .t-white-split .tfw-logo-img,
+    .t-rose-tips .tfw-logo-img,
+    .t-nude-imessage .tfw-logo-img,
+    .t-rose-editorial .tfw-logo-img {
+      filter: brightness(0);
+    }
+
+    /* Carousel logo filters */
+    .bg-burg .c-logo,
+    .bg-olive .c-logo {
+      filter: brightness(0) invert(1);
+    }
+    .bg-nude .c-logo,
+    .bg-blush .c-logo,
+    .bg-cream .c-logo {
+      filter: brightness(0);
+      opacity: 0.2;
+    }
+
     /* Click hint */
     .ig-post:hover {
       transform: scale(1.02);
@@ -3196,11 +3287,19 @@
 
     /* Giant serif number (ONE, TWO, THREE style) */
     .c-num {
+      position: absolute;
+      top: 24px;
+      left: 28px;
       font-family: 'Playfair Display', serif;
       font-size: 90px;
       font-weight: 400;
       line-height: 0.85;
       opacity: 0.15;
+    }
+    /* Numbered slides: fixed start position for consistent alignment */
+    .c-slide:has(.c-num) {
+      justify-content: flex-start;
+      padding-top: 100px;
     }
 
     /* Bold condensed sub-headline */
@@ -3271,16 +3370,13 @@
       background: currentColor;
     }
 
-    /* Logo bottom-right */
+    /* Leaf logo bottom-right */
     .c-logo {
       position: absolute;
-      bottom: 18px;
-      right: 24px;
-      font-family: 'Playfair Display', serif;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      opacity: 0.25;
+      bottom: 16px;
+      right: 20px;
+      height: 14px;
+      opacity: 0.3;
     }
 
     /* Colour stripe on right edge */
@@ -3348,6 +3444,302 @@
       opacity: 0.3;
     }
 
+    /* ================================
+       BOLD TEMPLATE 1: Type Hero
+       Massive oversized typography, editorial punch
+       ================================ */
+    .t-type-hero {
+      background: var(--brand-blush);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px 26px;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-type-hero .th-big {
+      font-family: 'Playfair Display', serif;
+      font-size: 90px;
+      font-weight: 700;
+      line-height: 0.88;
+      color: var(--brand-burgundy);
+      letter-spacing: -2px;
+      margin-bottom: 12px;
+    }
+    .t-type-hero .th-big em {
+      font-style: italic;
+      color: var(--brand-rose);
+    }
+    .t-type-hero .th-sub {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(76,19,21,0.55);
+      line-height: 1.5;
+      max-width: 200px;
+    }
+    .t-type-hero .th-leaf {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+    }
+    .t-type-hero .th-accent-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--brand-rose);
+    }
+
+    /* ================================
+       BOLD TEMPLATE 2: Diagonal Split
+       Asymmetric diagonal colour blocking
+       ================================ */
+    .t-diagonal-split {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .t-diagonal-split .ds-bg-top {
+      position: absolute;
+      inset: 0;
+      background: var(--brand-burgundy);
+      clip-path: polygon(0 0, 100% 0, 100% 45%, 0 65%);
+    }
+    .t-diagonal-split .ds-bg-bottom {
+      position: absolute;
+      inset: 0;
+      background: var(--brand-blush);
+    }
+    .t-diagonal-split .ds-content {
+      position: relative;
+      z-index: 2;
+      padding: 30px 28px;
+      text-align: center;
+    }
+    .t-diagonal-split .ds-kicker {
+      font-family: 'Caveat', cursive;
+      font-size: 18px;
+      color: var(--gold-light);
+      margin-bottom: 14px;
+    }
+    .t-diagonal-split .ds-statement {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: white;
+      line-height: 1.2;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    }
+    .t-diagonal-split .ds-statement em {
+      font-style: italic;
+      color: var(--brand-rose);
+      text-shadow: none;
+    }
+    .t-diagonal-split .ds-bottom {
+      position: absolute;
+      bottom: 24px;
+      left: 28px;
+      right: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+    .t-diagonal-split .ds-cta {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--brand-burgundy);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ================================
+       BOLD TEMPLATE 3: Overlap Card
+       Photo bg with off-centre overlapping panel
+       ================================ */
+    .t-overlap-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .t-overlap-card .oc-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.85) saturate(0.9);
+    }
+    .t-overlap-card .oc-panel {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 72%;
+      background: var(--brand-burgundy);
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .t-overlap-card .oc-tag {
+      font-family: 'Manrope', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--brand-rose);
+    }
+    .t-overlap-card .oc-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: white;
+      line-height: 1.25;
+    }
+    .t-overlap-card .oc-headline em {
+      font-style: italic;
+      color: var(--brand-rose);
+    }
+    .t-overlap-card .oc-cta {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 1px;
+    }
+    .t-overlap-card .oc-leaf {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    /* ================================
+       BOLD TEMPLATE 4: Colour Stack
+       Horizontal colour bars, Rothko-meets-editorial
+       ================================ */
+    .t-colour-stack {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .t-colour-stack .cs-bar {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 28px;
+    }
+    .t-colour-stack .cs-bar-1 {
+      background: var(--brand-burgundy);
+    }
+    .t-colour-stack .cs-bar-2 {
+      background: var(--brand-rose);
+    }
+    .t-colour-stack .cs-bar-3 {
+      background: var(--brand-blush);
+    }
+    .t-colour-stack .cs-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+    .t-colour-stack .cs-bar-1 .cs-text {
+      font-size: 36px;
+      color: white;
+    }
+    .t-colour-stack .cs-bar-2 .cs-text {
+      font-size: 28px;
+      color: white;
+    }
+    .t-colour-stack .cs-bar-3 .cs-text {
+      font-size: 15px;
+      color: var(--brand-burgundy);
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+    }
+    .t-colour-stack .cs-leaf {
+      position: absolute;
+      bottom: 14px;
+      right: 20px;
+    }
+
+    /* ================================
+       BOLD TEMPLATE 5: Minimal Punch
+       Extreme negative space, single statement
+       ================================ */
+    .t-minimal-punch {
+      background: #faf8f5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 36px;
+      text-align: center;
+      position: relative;
+    }
+    .t-minimal-punch .mp-statement {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--brand-burgundy);
+      line-height: 1.35;
+      letter-spacing: -0.3px;
+    }
+    .t-minimal-punch .mp-statement em {
+      font-style: italic;
+      color: var(--brand-rose);
+    }
+    .t-minimal-punch .mp-line {
+      width: 30px;
+      height: 2px;
+      background: var(--brand-rose);
+      margin: 20px auto 16px;
+    }
+    .t-minimal-punch .mp-sub {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      color: rgba(76,19,21,0.4);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .t-minimal-punch .mp-leaf {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+    .t-minimal-punch .mp-corner {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(76,19,21,0.08);
+    }
+    .t-minimal-punch .mp-corner-tl {
+      top: 20px;
+      left: 20px;
+      border-right: none;
+      border-bottom: none;
+    }
+    .t-minimal-punch .mp-corner-br {
+      bottom: 20px;
+      right: 20px;
+      border-left: none;
+      border-top: none;
+    }
+
+    /* Logo filters for new bold templates */
+    .t-type-hero .tfw-logo-img,
+    .t-colour-stack .tfw-logo-img,
+    .t-minimal-punch .tfw-logo-img {
+      filter: brightness(0);
+      opacity: 0.25;
+    }
+    .t-diagonal-split .tfw-logo-img,
+    .t-overlap-card .oc-leaf .tfw-logo-img {
+      filter: brightness(0) invert(1);
+      opacity: 0.5;
+    }
+
   </style>
 </head>
 <body>
@@ -3360,7 +3752,7 @@
       <h3>You don't need to be <em>rich</em> to get financial advice.</h3>
       <div class="divider"></div>
       <div class="subtitle">You just need to be ready.</div>
-      <div class="logo-mark">The Finance Woman</div>
+      <div  class="logo-mark"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- 2. Photo + Text Overlay -->
@@ -3373,7 +3765,7 @@
           <h3>Is it too late to start a pension at 40?</h3>
         </div>
         <div class="bottom-bar">
-          <div class="logo-text">The Finance Woman</div>
+          <div  class="logo-text"><img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman"></div>
           <div class="arrow">→</div>
         </div>
       </div>
@@ -3381,7 +3773,7 @@
 
     <!-- 3. Stat Post -->
     <div class="ig-post t-stat-post">
-      <div class="corner-accent">The Finance Woman</div>
+      <div  class="corner-accent"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
       <div class="stat-kicker">Did you know?</div>
       <div class="big-number">72%</div>
       <div class="stat-unit">of self-employed people</div>
@@ -3402,7 +3794,7 @@
           <div class="quote-role">Google Review · ★★★★★</div>
         </div>
       </div>
-      <div class="logo-bottom">The Finance Woman</div>
+      <div  class="logo-bottom"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- 5. Myth Buster -->
@@ -3411,7 +3803,7 @@
       <div class="myth-statement">"I'm too young to think about a pension."</div>
       <div class="truth-label">Actually...</div>
       <div class="truth-text">Starting at 25 vs 35 could mean £100,000+ more in your pot at retirement.</div>
-      <div class="myth-footer">The Finance Woman</div>
+      <div  class="myth-footer"><img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- 6. This or That -->
@@ -3447,14 +3839,14 @@
         <div class="split-tag">Real talk</div>
         <h3>Your pension won't sort itself out.</h3>
         <div class="split-body">I've lost count of how many clients tell me they've been meaning to "look into it" for years. Let's actually do it.</div>
-        <div class="split-cta">Book a free call <span class="arrow">→</span></div>
+        <div class="split-cta">Free call — link in bio <span class="arrow">→</span></div>
       </div>
     </div>
 
     <!-- 8. Full bleed with text bar -->
     <div class="ig-post t-fullbleed">
       <img src="images/romany-on-the-phone.jpg" alt="Romany on the phone">
-      <div class="top-logo"><span>The Finance Woman</span></div>
+      <div class="top-logo"><img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman"></div>
       <div class="text-bar">
         <h3>What actually happens in our free 30-minute call</h3>
         <div class="sub">
@@ -3525,7 +3917,7 @@
         </div>
       </div>
       <div class="tips-footer">
-        <span>The Finance Woman</span>
+        <img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman">
       </div>
     </div>
 
@@ -3565,7 +3957,7 @@
       <h3>She didn't come to me for <em>herself.</em> She came for her <em>daughters.</em></h3>
       <div class="divider"></div>
       <div class="subtitle">That's what this work is really about.</div>
-      <div class="logo-mark">The Finance Woman</div>
+      <div  class="logo-mark"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- Photo overlay variant -->
@@ -3578,7 +3970,7 @@
           <h3>What I wish I'd known before starting my own business</h3>
         </div>
         <div class="bottom-bar" style="background: rgba(61,74,42,0.9);">
-          <div class="logo-text">The Finance Woman</div>
+          <div  class="logo-text"><img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman"></div>
           <div class="arrow">→</div>
         </div>
       </div>
@@ -3586,7 +3978,7 @@
 
     <!-- Stat variant -->
     <div class="ig-post t-stat-post">
-      <div class="corner-accent">The Finance Woman</div>
+      <div  class="corner-accent"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
       <div class="stat-kicker">The reality check</div>
       <div class="big-number" style="font-size: 64px;">£0</div>
       <div class="stat-unit">Statutory Sick Pay for the self-employed</div>
@@ -3600,7 +3992,7 @@
     <div class="ig-post t-gradient-editorial">
       <div class="ge-bg"></div>
       <div class="ge-content">
-        <div class="ge-logo">The Finance Woman</div>
+        <div  class="ge-logo"><img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman"></div>
         <div class="ge-kicker">The question I get asked most...</div>
         <h3>"How much should I put into my pension?"</h3>
         <div class="ge-answer">The real answer depends on <em>your</em> life, not a calculator. Here's how I work it out with my clients.</div>
@@ -3629,12 +4021,12 @@
 
     <!-- Textured Quote (AI-generated background) -->
     <div class="ig-post t-textured">
-      <div class="tx-logo">The Finance Woman</div>
+      <div  class="tx-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
       <div class="tx-kicker">Something to think about...</div>
       <div class="tx-quote">Your pension isn't a <em>nice-to-have</em>. It's your future <em>salary</em>.</div>
       <div class="tx-line"></div>
       <div class="tx-sub">Every month you delay is a month your future self has to work longer. Let's fix that together.</div>
-      <div class="tx-cta">Book a free call →</div>
+      <div class="tx-cta">Free call — link in bio →</div>
     </div>
 
     <!-- Countdown / numbered impact -->
@@ -3653,7 +4045,7 @@
           <span class="cd-dot active"></span>
           <span class="cd-dot"></span>
         </div>
-        <div class="cd-logo">The Finance Woman</div>
+        <div  class="cd-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
       </div>
     </div>
 
@@ -3663,7 +4055,7 @@
     <div class="ig-post t-checklist">
       <div class="cl-header">
         <span class="cl-save">Save this checklist</span>
-        <span class="cl-logo">The Finance Woman</span>
+        <span  class="cl-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></span>
       </div>
       <div class="cl-title">Your self-employed financial MOT</div>
       <div class="cl-items">
@@ -3694,7 +4086,7 @@
       <div class="q-line"></div>
       <div class="q-sub">Most self-employed people set one up and never check it again. Sound familiar?</div>
       <div class="q-cta">Drop a 🙋 if that's you</div>
-      <div class="q-logo">The Finance Woman</div>
+      <div  class="q-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- Hot Take / Unpopular Opinion -->
@@ -3705,7 +4097,7 @@
       <div class="ht-explanation">I see it all the time — people earning £60k+ with no pension, no protection, and no idea where their money goes. Income isn't the problem.</div>
       <div class="ht-footer">
         <span class="ht-agree">Agree or disagree? 👇</span>
-        <span class="ht-logo">The Finance Woman</span>
+        <span  class="ht-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></span>
       </div>
     </div>
 
@@ -3713,7 +4105,7 @@
 
     <!-- iMessage Conversation -->
     <div class="ig-post t-imessage">
-      <div class="im-logo">The Finance Woman</div>
+      <div  class="im-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
       <div class="im-kicker">Real message I received...</div>
       <div class="im-chat">
         <div class="im-bubble them">Hey... quick question.</div>
@@ -3733,15 +4125,15 @@
       </div>
       <div class="sb-searching">Searching... for years.</div>
       <div class="sb-answer">Still searching, or ready to <em>know</em>?</div>
-      <div class="sb-cta">Book a free call →</div>
-      <div class="sb-logo">The Finance Woman</div>
+      <div class="sb-cta">Free call — link in bio →</div>
+      <div  class="sb-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- Notification / Reminder -->
     <div class="ig-post t-notification">
       <div class="nf-kicker">Gentle reminder...</div>
       <div class="nf-card">
-        <div class="nf-app-icon">TFW</div>
+        <div class="nf-app-icon"><img src="images/tfw-leaf.svg" alt="TFW" style="width: 22px; height: 22px; filter: brightness(0) invert(1) opacity(0.9);"></div>
         <div class="nf-card-content">
           <div class="nf-card-top">
             <div class="nf-title">The Finance Woman</div>
@@ -3766,8 +4158,8 @@
       <div class="sens-icon"><span class="eye">👁</span></div>
       <div class="sens-title">This post may contain<br>sensitive content.</div>
       <div class="sens-sub">This financial truth may be uncomfortable for people who haven't checked their pension in years.</div>
-      <div class="sens-reveal">See post</div>
-      <div class="sens-logo">The Finance Woman</div>
+      <div class="sens-reveal">Swipe to see post</div>
+      <div  class="sens-logo"><img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- Breaking News -->
@@ -3786,7 +4178,7 @@
       </div>
       <div class="brk-ticker">
         <span class="brk-ticker-text">Don't let this be your headline → Link in bio</span>
-        <span class="brk-ticker-logo">The Finance Woman</span>
+        <span  class="brk-ticker-logo"><img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman"></span>
       </div>
     </div>
 
@@ -3799,12 +4191,12 @@
       <h3>Financial planning isn't about being <em>rich.</em> It's about being <em>ready.</em></h3>
       <div class="divider"></div>
       <div class="subtitle">And you deserve to feel ready.</div>
-      <div class="logo-mark">The Finance Woman</div>
+      <div  class="logo-mark"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- White Clean Stat -->
     <div class="ig-post t-white-stat">
-      <div class="corner-accent">The Finance Woman</div>
+      <div  class="corner-accent"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
       <div class="stat-kicker">Think about this</div>
       <div class="big-number">47%</div>
       <div class="stat-unit">of self-employed women</div>
@@ -3821,7 +4213,7 @@
         <h3>You don't need to have it all figured out to take the first step.</h3>
       </div>
       <div class="bottom-bar">
-        <div class="logo-text">The Finance Woman</div>
+        <div  class="logo-text"><img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman"></div>
         <div class="arrow">→</div>
       </div>
     </div>
@@ -3839,14 +4231,14 @@
           <div class="quote-role">Google Review · ★★★★★</div>
         </div>
       </div>
-      <div class="logo-bottom">The Finance Woman</div>
+      <div  class="logo-bottom"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- White Checklist -->
     <div class="ig-post t-white-checklist">
       <div class="cl-header">
         <span class="cl-save">Save this checklist</span>
-        <span class="cl-logo">The Finance Woman</span>
+        <span  class="cl-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></span>
       </div>
       <div class="cl-title">Before the tax year ends...</div>
       <div class="cl-items">
@@ -3876,8 +4268,8 @@
       <div class="q-main">Do you actually know what happens to your money if <em>you</em> can't work?</div>
       <div class="q-line"></div>
       <div class="q-sub">Most self-employed people don't. And that's exactly why we should talk.</div>
-      <div class="q-cta">Book a free call →</div>
-      <div class="q-logo">The Finance Woman</div>
+      <div class="q-cta">Free call — link in bio →</div>
+      <div  class="q-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
 
@@ -3916,13 +4308,13 @@
         </div>
       </div>
       <div class="tips-footer">
-        <span>The Finance Woman</span>
+        <img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman">
       </div>
     </div>
 
     <!-- Nude iMessage -->
     <div class="ig-post t-nude-imessage">
-      <div class="im-logo">The Finance Woman</div>
+      <div  class="im-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
       <div class="im-kicker">A message I got last week...</div>
       <div class="im-chat">
         <div class="im-bubble them">I've been putting off sorting my finances for literally years</div>
@@ -3939,7 +4331,7 @@
     <div class="ig-post t-rose-editorial">
       <div class="ge-bg"></div>
       <div class="ge-content">
-        <div class="ge-logo">The Finance Woman</div>
+        <div  class="ge-logo"><img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman"></div>
         <div class="ge-kicker">A question for you...</div>
         <h3>"What would life look like if you stopped worrying about money?"</h3>
         <div class="ge-answer">That's not a dream. It's a <em>plan</em>. And I can help you build one — starting with a free, no-pressure call.</div>
@@ -3956,7 +4348,7 @@
       <h3>The best time to sort your finances was <em>years ago.</em> The second best time is <em>today.</em></h3>
       <div class="divider"></div>
       <div class="subtitle">Stop scrolling. Start planning.</div>
-      <div class="logo-mark">The Finance Woman</div>
+      <div  class="logo-mark"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- Rose Photo Overlay v2 -->
@@ -3968,7 +4360,7 @@
         <h3>30 minutes. No jargon. Just a clear picture of where you stand.</h3>
       </div>
       <div class="bottom-bar" style="background: rgba(186,155,136,0.9);">
-        <div class="logo-text">The Finance Woman</div>
+        <div  class="logo-text"><img class="tfw-logo-img" src="images/tfw-logo.svg" alt="The Finance Woman"></div>
         <div class="arrow" style="color: white;">→</div>
       </div>
     </div>
@@ -4013,7 +4405,7 @@
         <div class="glass-unit">per week</div>
         <div class="glass-body">That's what the government pays self-employed people in statutory sick pay. If you can't work, you get nothing.</div>
       </div>
-      <div class="glass-logo">The Finance Woman</div>
+      <div  class="glass-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- POV Card -->
@@ -4021,7 +4413,7 @@
       <div class="pov-label">POV:</div>
       <div class="pov-text">You finally understand your pension and it's not even <em>scary.</em> You actually feel <em>excited</em> about your future.</div>
       <div class="pov-sub">...this could be you after one call</div>
-      <div class="pov-logo">The Finance Woman</div>
+      <div  class="pov-logo"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
       <div class="pov-circle"></div>
     </div>
 
@@ -4067,9 +4459,126 @@
         <span>£ 0.00</span>
       </div>
       <hr class="receipt-divider">
-      <div class="receipt-footer">Time to change this? Free call below 👇</div>
+      <div class="receipt-footer">Time to change this? Free call in bio 👇</div>
       <div class="receipt-barcode">|||| ||| |||| || ||||| ||| ||||</div>
     </div>
+
+    <!-- ============ BOLD NEW TEMPLATES ============ -->
+
+    <!-- Type Hero: Massive typography, editorial punch -->
+    <div class="ig-post t-type-hero">
+      <div class="th-accent-line"></div>
+      <div class="th-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 14px;"></div>
+      <div class="th-big">Your <em>pension</em> is your future salary.</div>
+      <div class="th-sub">Stop treating it like an afterthought.</div>
+    </div>
+
+    <!-- Diagonal Split: Asymmetric colour blocking -->
+    <div class="ig-post t-diagonal-split">
+      <div class="ds-bg-bottom"></div>
+      <div class="ds-bg-top"></div>
+      <div class="ds-content">
+        <div class="ds-kicker">A perspective shift...</div>
+        <div class="ds-statement">You're not <em>"bad with money."</em> You just never had someone explain it <em>properly.</em></div>
+      </div>
+      <div class="ds-bottom">
+        <div class="ds-cta">Free call — link in bio →</div>
+        <img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px;">
+      </div>
+    </div>
+
+    <!-- Overlap Card: Photo with off-centre panel -->
+    <div class="ig-post t-overlap-card">
+      <img class="oc-photo" src="images/romany-hero.jpg" alt="Romany">
+      <div class="oc-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 14px;"></div>
+      <div class="oc-panel">
+        <div class="oc-tag">Real talk</div>
+        <div class="oc-headline">Nobody is coming to <em>sort your pension</em> for you.</div>
+        <div class="oc-cta">Free call — link in bio →</div>
+      </div>
+    </div>
+
+    <!-- Colour Stack: Three bold colour bars -->
+    <div class="ig-post t-colour-stack" style="position: relative;">
+      <div class="cs-bar cs-bar-1">
+        <div class="cs-text">Stop waiting.</div>
+      </div>
+      <div class="cs-bar cs-bar-2">
+        <div class="cs-text">Start planning.</div>
+      </div>
+      <div class="cs-bar cs-bar-3">
+        <div class="cs-text">Your future self will thank you. Free call — link in bio.</div>
+      </div>
+      <div class="cs-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px;"></div>
+    </div>
+
+    <!-- Minimal Punch: Extreme negative space -->
+    <div class="ig-post t-minimal-punch">
+      <div class="mp-corner mp-corner-tl"></div>
+      <div class="mp-corner mp-corner-br"></div>
+      <div class="mp-statement">The state pension is £11,502 a year.<br>Could <em>you</em> live on that?</div>
+      <div class="mp-line"></div>
+      <div class="mp-sub">Let's build something better</div>
+      <div class="mp-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px;"></div>
+    </div>
+
+    <!-- Type Hero v2: Rose palette -->
+    <div class="ig-post t-type-hero" style="background: var(--brand-rose);">
+      <div class="th-accent-line" style="background: var(--brand-burgundy);"></div>
+      <div class="th-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 14px; filter: brightness(0) invert(1); opacity: 0.4;"></div>
+      <div class="th-big" style="color: white; font-size: 80px;">Self-employed? <em style="color: var(--brand-blush);">Protect</em> your income.</div>
+      <div class="th-sub" style="color: rgba(255,255,255,0.6);">Income protection from £5/month. Seriously.</div>
+    </div>
+
+    <!-- Diagonal Split v2: Olive + Cream -->
+    <div class="ig-post t-diagonal-split">
+      <div class="ds-bg-bottom" style="background: var(--cream);"></div>
+      <div class="ds-bg-top" style="background: var(--olive);"></div>
+      <div class="ds-content">
+        <div class="ds-kicker" style="color: var(--gold);">Let me ask you something...</div>
+        <div class="ds-statement">If you couldn't work for 6 months, what would happen to your <em>family?</em></div>
+      </div>
+      <div class="ds-bottom">
+        <div class="ds-cta" style="color: var(--olive);">This is why protection matters →</div>
+        <img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px; filter: brightness(0); opacity: 0.3;">
+      </div>
+    </div>
+
+    <!-- Overlap Card v2: With dog photo -->
+    <div class="ig-post t-overlap-card">
+      <img class="oc-photo" src="images/romany-with-dog-hero.jpg" alt="Romany with dog">
+      <div class="oc-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 14px;"></div>
+      <div class="oc-panel" style="background: var(--olive); width: 68%;">
+        <div class="oc-tag" style="color: var(--gold-light);">Behind the business</div>
+        <div class="oc-headline">I became an adviser because no one <em style="color: var(--gold-light);">explained</em> this stuff to me either.</div>
+        <div class="oc-cta">My story →</div>
+      </div>
+    </div>
+
+    <!-- Minimal Punch v2: Burgundy -->
+    <div class="ig-post t-minimal-punch" style="background: var(--brand-burgundy);">
+      <div class="mp-corner mp-corner-tl" style="border-color: rgba(255,255,255,0.08);"></div>
+      <div class="mp-corner mp-corner-br" style="border-color: rgba(255,255,255,0.08);"></div>
+      <div class="mp-statement" style="color: var(--cream);">Every month you delay costs you <em style="color: var(--gold-light);">thousands</em> in retirement.</div>
+      <div class="mp-line" style="background: var(--gold);"></div>
+      <div class="mp-sub" style="color: rgba(245,240,232,0.4);">The maths doesn't lie</div>
+      <div class="mp-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px; filter: brightness(0) invert(1); opacity: 0.3;"></div>
+    </div>
+
+    <!-- Colour Stack v2: Softer palette -->
+    <div class="ig-post t-colour-stack" style="position: relative;">
+      <div class="cs-bar" style="background: var(--brand-nude); flex: 1; display: flex; align-items: center; padding: 0 28px;">
+        <div class="cs-text" style="font-size: 32px; color: white;">You deserve clarity.</div>
+      </div>
+      <div class="cs-bar" style="background: var(--brand-blush); flex: 1; display: flex; align-items: center; padding: 0 28px;">
+        <div class="cs-text" style="font-size: 24px; color: var(--brand-burgundy);">Not confusion.</div>
+      </div>
+      <div class="cs-bar" style="background: white; flex: 1; display: flex; align-items: center; padding: 0 28px;">
+        <div class="cs-text" style="font-size: 13px; color: var(--brand-nude); font-family: 'Manrope', sans-serif; font-weight: 500;">Financial advice that actually makes sense. Free call — link in bio.</div>
+      </div>
+      <div class="cs-leaf" style="position: absolute; bottom: 14px; right: 20px;"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px; filter: brightness(0); opacity: 0.2;"></div>
+    </div>
+
 
     <!-- ============ BOLD CAROUSELS ============ -->
     <!-- CAROUSEL 1: Client Story -->
@@ -4083,7 +4592,7 @@
           <div class="c-line"></div>
           <div class="c-big" style="font-size: 48px;">She just didn't feel good about <em>money.</em></div>
           <div class="c-swipe">Swipe for her story</div>
-          <div class="c-logo">The Finance Woman</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
         </div>
 
         <!-- Doing well on the surface -->
@@ -4175,7 +4684,7 @@
           <div style="height: 20px;"></div>
           <div class="c-serif" style="font-size: 14px; opacity: 0.5;">For business owners who are done winging it.</div>
           <div class="c-swipe">Swipe to check yourself</div>
-          <div class="c-logo">The Finance Woman</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
         </div>
 
         <!-- Foundation -->
@@ -4231,7 +4740,7 @@
           <div class="c-big" style="font-size: 34px;">If your business feels more organised than your personal finances...</div>
           <div class="c-line"></div>
           <div class="c-bold" style="margin-top: 8px;">This is your sign.</div>
-          <div class="c-logo">The Finance Woman</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
         </div>
 
       </div>
@@ -4248,7 +4757,7 @@
           <div style="height: 12px;"></div>
           <div class="c-serif" style="font-size: 13px; opacity: 0.5;">Not because you're bad with money.</div>
           <div class="c-swipe">Swipe</div>
-          <div class="c-logo">The Finance Woman</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
         </div>
 
         <!-- Sign 1 -->
@@ -4333,7 +4842,7 @@
           <div class="c-body" style="line-height: 2;">Compliance. Tax returns.<br>What's already happened.</div>
           <div style="height: 16px;"></div>
           <div class="c-serif" style="font-size: 15px; opacity: 0.5;">Looking back.</div>
-          <div class="c-logo">The Finance Woman</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
         </div>
 
         <!-- Financial Advisers -->
@@ -4344,7 +4853,7 @@
           <div class="c-body" style="line-height: 2;">Strategy. Structure.<br>What happens next.</div>
           <div style="height: 16px;"></div>
           <div class="c-serif" style="font-size: 15px; opacity: 0.5;">Looking forward.</div>
-          <div class="c-logo">The Finance Woman</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
         </div>
 
         <!-- Do you need both? -->
@@ -4354,7 +4863,7 @@
           <div class="c-big" style="font-size: 42px;">Same team.</div>
           <div style="height: 20px;"></div>
           <div class="c-body">The best outcomes happen when both are aligned.</div>
-          <div class="c-logo">The Finance Woman</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
         </div>
 
       </div>
@@ -4371,7 +4880,7 @@
           <div class="c-line"></div>
           <div class="c-big" style="font-size: 46px;">Not afraid of <em>hurting your feelings</em></div>
           <div class="c-swipe">Swipe for honest truths</div>
-          <div class="c-logo">The Finance Woman</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
         </div>
 
         <!-- Setup -->
@@ -4431,6 +4940,312 @@
           <div class="c-body" style="font-size: 16px; opacity: 0.7;">no buffer<br><span class="c-highlight" style="margin-top: 4px; display: inline-block;">blurred</span> boundaries<br>unprotected income</div>
           <div style="height: 16px;"></div>
           <div class="c-serif" style="opacity: 0.5;">Fix those first. Everything else becomes easier.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CAROUSEL 6: The Cost of Waiting -->
+    <div class="carousel-group">
+      <div class="carousel-group-label">Carousel <span>8 slides</span></div>
+      <div class="carousel-slides">
+
+        <!-- Hook -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 52px;">Every year you wait is costing you thousands.</div>
+          <div class="c-line"></div>
+          <div class="c-serif" style="font-size: 15px; opacity: 0.5;">Swipe to see exactly how much.</div>
+          <div class="c-swipe">Swipe</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
+        </div>
+
+        <!-- Compound growth intro -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-bold" style="font-size: 30px;">Let's talk about compound growth.</div>
+          <div class="c-body">It's not magic. It's maths.<br><br>Your money doesn't just grow — it grows on top of its own growth.<br><br>But it needs <em>time</em> to work.</div>
+        </div>
+
+        <!-- Age 25 -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 36px;">Start at 25. Put in £200/month.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-big" style="font-size: 64px; color: var(--gold-light);">£290,000+</div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="opacity: 0.6;">by age 65. You contributed £96k.<br>Compound growth did the rest.</div>
+        </div>
+
+        <!-- Age 35 -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 36px;">Start at 35 instead. Same £200/month.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-big" style="font-size: 64px; color: var(--gold-light);">£164,000</div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="opacity: 0.6;">That 10-year delay didn't cost you £24k in missed contributions.<br><br>It cost you <strong>£126,000.</strong></div>
+        </div>
+
+        <!-- Age 45 -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 36px;">Wait until 45. Same £200/month.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-big" style="font-size: 64px; color: var(--gold-light);">£73,000</div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="opacity: 0.6;">You've lost <strong>£217,000</strong> compared to starting at 25.<br><br>Same amount. The only difference? Time.</div>
+        </div>
+
+        <!-- Self-employed reality -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-big" style="font-size: 52px; color: var(--brand-burgundy);">80%</div>
+          <div class="c-bold">of self-employed people have no private pension.</div>
+          <div class="c-body">No employer auto-enrolling you.<br>No one matching your contributions.<br>No one even reminding you.<br><br>If you don't set this up, it simply doesn't happen.</div>
+        </div>
+
+        <!-- Reframe -->
+        <div class="ig-post c-slide bg-blush">
+          <div class="c-bold" style="font-size: 32px;">This isn't about being perfect.</div>
+          <div style="height: 12px;"></div>
+          <div class="c-big" style="font-size: 38px;">It's about starting.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-body">Even £100/month started today beats £300/month in five years.<br><br>The second best time is now.</div>
+        </div>
+
+        <!-- CTA -->
+        <div class="ig-post c-slide c-split bg-burg" style="padding: 0;">
+          <div class="c-split-text">
+            <div class="c-bold" style="font-size: 22px; line-height: 1.1;">Let's work out your numbers.</div>
+            <div style="height: 8px;"></div>
+            <div class="c-serif" style="font-size: 13px; opacity: 0.55;">Free 30-min call. No jargon. Just clarity.</div>
+            <div style="height: 12px;"></div>
+            <div class="c-swipe" style="position: static; font-size: 9px;">Link in bio</div>
+          </div>
+          <div class="c-split-photo">
+            <img src="images/romany-on-the-phone.jpg" alt="Romany">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CAROUSEL 7: Client Transformation (Before vs After) -->
+    <div class="carousel-group">
+      <div class="carousel-group-label">Carousel <span>8 slides</span></div>
+      <div class="carousel-slides">
+
+        <!-- Hook -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 44px;">Before working with a financial adviser</div>
+          <div class="c-big" style="font-size: 44px;">vs. <em>after.</em></div>
+          <div style="height: 12px;"></div>
+          <div class="c-serif" style="font-size: 14px; opacity: 0.5;">(It's not what you'd expect.)</div>
+          <div class="c-swipe">Swipe</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
+        </div>
+
+        <!-- Before: emotions -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-bold" style="font-size: 42px; opacity: 0.3;">Before</div>
+          <div class="c-body" style="font-style: italic; line-height: 1.8;">"I know I should be doing something about my pension but I just... haven't."<br><br>"I'm earning good money but I've got no idea where it's going."<br><br>"Every time I think about finances I feel this knot in my stomach."</div>
+        </div>
+
+        <!-- Before: behaviours -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-bold">The pattern:</div>
+          <div class="c-body" style="line-height: 1.8;">Avoid opening letters.<br>Guess your tax bill.<br>No idea what you'd do if you couldn't work for 3 months.<br><br>Put "sort pension" on your list every January.<br><br>Never do it.</div>
+        </div>
+
+        <!-- Turning point -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 42px;">Then something shifts.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-body" style="opacity: 0.7;">Maybe a friend gets ill and can't work.<br>Maybe you see a post like this one.<br>Maybe you just get tired of the knot.<br><br>You book the call. You show up.<br><br>And the first thing you realise is:<br><strong>nobody is judging you.</strong></div>
+        </div>
+
+        <!-- After: clarity -->
+        <div class="ig-post c-slide bg-blush">
+          <div class="c-bold" style="font-size: 42px; opacity: 0.3;">After</div>
+          <div class="c-body" style="font-style: italic; line-height: 1.8;">"I actually know my numbers now. Properly."<br><br>"I've got a pension set up and running — I don't even think about it."<br><br>"For the first time, I feel like I'm building something."</div>
+        </div>
+
+        <!-- After: identity shift -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-bold" style="font-size: 28px; margin-bottom: 16px;">The real change isn't financial.</div>
+          <div class="c-big" style="font-size: 38px;">It's how you <em>feel.</em></div>
+          <div style="height: 20px;"></div>
+          <div class="c-body" style="line-height: 2;">Reactive → Intentional<br>Earning → Building<br>Guessing → Structured<br>Avoiding → In control</div>
+        </div>
+
+        <!-- The surprise -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-bold">The thing that surprises people most?</div>
+          <div class="c-body" style="line-height: 1.7;">It wasn't hard.<br>It wasn't scary.<br>It wasn't full of jargon.<br><br>It was a conversation.<br>With someone who listened.<br>Then a plan that made sense.<br><br><strong>The hardest part was booking the call.</strong></div>
+        </div>
+
+        <!-- CTA -->
+        <div class="ig-post c-slide c-split bg-burg" style="padding: 0;">
+          <div class="c-split-text">
+            <div class="c-bold" style="font-size: 22px; line-height: 1.1;">Ready for your "after"?</div>
+            <div style="height: 8px;"></div>
+            <div class="c-serif" style="font-size: 13px; opacity: 0.55;">No judgement. Just someone in your corner.</div>
+            <div style="height: 12px;"></div>
+            <div class="c-swipe" style="position: static; font-size: 9px;">Link in bio</div>
+          </div>
+          <div class="c-split-photo">
+            <img src="images/romany-with-dog-casual.jpg" alt="Romany">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CAROUSEL 8: First Meeting Experience -->
+    <div class="carousel-group">
+      <div class="carousel-group-label">Carousel <span>8 slides</span></div>
+      <div class="carousel-slides">
+
+        <!-- Hook -->
+        <div class="ig-post c-slide bg-blush">
+          <div class="c-big" style="font-size: 40px; color: var(--brand-burgundy);">What actually happens in your first call with a financial adviser.</div>
+          <div style="height: 12px;"></div>
+          <div class="c-serif" style="font-size: 14px; opacity: 0.5; color: var(--brand-burgundy);">(Spoiler: nobody looks at spreadsheets.)</div>
+          <div class="c-swipe" style="color: var(--brand-burgundy); border-color: rgba(76,19,21,0.2);">Swipe</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
+        </div>
+
+        <!-- Acknowledge fears -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-bold" style="font-size: 28px;">Why you haven't booked yet:</div>
+          <div class="c-body" style="font-style: italic; line-height: 1.9; opacity: 0.8;">"What if they judge me for not having a pension at 38?"<br><br>"What if I can't answer their questions?"<br><br>"What if they try to sell me something?"<br><br>"What if I feel stupid?"</div>
+          <div style="height: 12px;"></div>
+          <div class="c-body"><strong>None of them come true.</strong></div>
+        </div>
+
+        <!-- What you DON'T need -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-bold">What you don't need to bring:</div>
+          <div class="c-body" style="line-height: 2.2;">— A perfect financial history<br>— Your exact earnings for 5 years<br>— A budget spreadsheet<br>— Any idea what a SIPP is<br>— Your life figured out<br><br>Come as you are. That's the point.</div>
+        </div>
+
+        <!-- What happens pt 1 -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-bold">What the first 30 minutes look like:</div>
+          <div class="c-body" style="line-height: 1.7;">We have a cuppa (virtually).<br><br>I ask about your <em>life</em>. Not just money. What does your business look like? What keeps you up at night? What do you want your future to feel like?<br><br>This isn't an interrogation.<br>It's a conversation.</div>
+        </div>
+
+        <!-- What happens pt 2 -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-bold">Then we look at the gaps.</div>
+          <div class="c-body" style="line-height: 1.8; margin-top: 12px;">Together. Gently.<br><br>What happens to your income if you can't work?<br><br>Are you paying more tax than you need to?<br><br>Is future-you going to thank present-you?<br><br>Everything in plain English. Always.</div>
+        </div>
+
+        <!-- What I'll never do -->
+        <div class="ig-post c-slide bg-blush">
+          <div class="c-bold" style="color: var(--brand-burgundy);">What I will never do:</div>
+          <div class="c-body" style="line-height: 2.2; color: var(--brand-burgundy);">— Pressure you to sign anything<br>— Make you feel bad<br>— Use jargon to sound clever<br>— Rush you into decisions<br>— Judge your savings<br><br>This call is free. It's for you.</div>
+        </div>
+
+        <!-- What changes -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-bold" style="font-size: 28px;">After that first call:</div>
+          <div class="c-body" style="line-height: 1.8;">You'll know where you stand. Properly.<br><br>You'll understand what you need (and what you don't).<br><br>You'll have a sense of what's possible.<br><br>And that knot in your stomach?<br><strong>It starts to loosen.</strong></div>
+        </div>
+
+        <!-- CTA -->
+        <div class="ig-post c-slide c-split bg-burg" style="padding: 0;">
+          <div class="c-split-text">
+            <div class="c-bold" style="font-size: 20px; line-height: 1.15;">30 minutes. Free. No obligation.</div>
+            <div style="height: 8px;"></div>
+            <div class="c-serif" style="font-size: 12px; opacity: 0.55;">One conversation to start.</div>
+            <div style="height: 12px;"></div>
+            <div class="c-swipe" style="position: static; font-size: 9px;">Link in bio</div>
+          </div>
+          <div class="c-split-photo">
+            <img src="images/romany-hero.jpg" alt="Romany">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CAROUSEL 9: Decision Timeline (Two Versions of You) -->
+    <div class="carousel-group">
+      <div class="carousel-group-label">Carousel <span>8 slides</span></div>
+      <div class="carousel-slides">
+
+        <!-- Hook -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 46px;">Two versions of you exist one year from now.</div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="opacity: 0.6;">Only one of them feels calm about money.</div>
+          <div class="c-swipe">Swipe to see the difference</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
+        </div>
+
+        <!-- The fork -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-bold" style="font-size: 32px;">You're standing at a fork.</div>
+          <div class="c-body" style="line-height: 1.7;"><strong>Path A:</strong> Close this app. Keep doing what you're doing. Nothing changes.<br><br><strong>Path B:</strong> Spend 30 minutes having an honest conversation. Everything shifts.<br><br>Both are easy. Only one costs you.</div>
+        </div>
+
+        <!-- Path A: 1 year -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-bold" style="font-size: 22px; opacity: 0.4;">Path A</div>
+          <div class="c-big" style="font-size: 40px;">One year from now.</div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="opacity: 0.7;">Still no pension. Another year of growth lost — worth £5,000-10,000 in future value.<br><br>Still no income protection.<br>Still one illness away from zero.<br><br>Nothing bad happened.<br>But nothing good happened either.</div>
+        </div>
+
+        <!-- Path A: 5 years -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-bold" style="font-size: 22px; opacity: 0.4;">Path A</div>
+          <div class="c-big" style="font-size: 40px;">Five years from now.</div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="opacity: 0.7;">Your pension is £30,000-60,000 lighter than it could have been.<br><br>You've paid thousands more tax than necessary.<br><br>You're still "meaning to sort it."<br><br>The gap is now much harder to close.</div>
+        </div>
+
+        <!-- Path B: 1 year -->
+        <div class="ig-post c-slide bg-blush">
+          <div class="c-bold" style="font-size: 22px; opacity: 0.4; color: var(--brand-burgundy);">Path B</div>
+          <div class="c-big" style="font-size: 40px; color: var(--brand-burgundy);">One year from now.</div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="color: var(--brand-burgundy); opacity: 0.8;">Pension running quietly in the background.<br><br>Income protected — if something happens, you're covered.<br><br>Tax structured properly.<br><br>You check in once a quarter. No stress. Just progress.</div>
+        </div>
+
+        <!-- Path B: 5 years -->
+        <div class="ig-post c-slide bg-blush">
+          <div class="c-bold" style="font-size: 22px; opacity: 0.4; color: var(--brand-burgundy);">Path B</div>
+          <div class="c-big" style="font-size: 40px; color: var(--brand-burgundy);">Five years from now.</div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="color: var(--brand-burgundy); opacity: 0.8;">Pension growing steadily — compound growth doing its thing.<br><br>Savings structured. Tax optimised. Family protected.<br><br>You feel calm. In control.<br><br>Not because everything is perfect — but because you have a plan.</div>
+        </div>
+
+        <!-- The truth -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 36px;">The difference between these two people?</div>
+          <div class="c-line"></div>
+          <div class="c-big" style="font-size: 36px;">One 30-minute conversation.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-body" style="opacity: 0.6;">That's it. That's what separates "I'll get round to it" from "I'm glad I started when I did."</div>
+        </div>
+
+        <!-- CTA -->
+        <div class="ig-post c-slide c-split bg-burg" style="padding: 0;">
+          <div class="c-split-text">
+            <div class="c-bold" style="font-size: 20px; line-height: 1.15;">Which version will you be?</div>
+            <div style="height: 8px;"></div>
+            <div class="c-serif" style="font-size: 12px; opacity: 0.55;">Free call. No pressure. Just clarity.</div>
+            <div style="height: 12px;"></div>
+            <div class="c-swipe" style="position: static; font-size: 9px;">Link in bio</div>
+          </div>
+          <div class="c-split-photo">
+            <img src="images/romany-with-dog-hero.jpg" alt="Romany">
+          </div>
         </div>
 
       </div>
