@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Instagram Templates – The Finance Woman</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&family=Caveat:wght@400;500;600;700&family=Ovo&display=swap" rel="stylesheet">
   <style>
     :root {
       --burgundy: #4A1A2E;
@@ -19,6 +19,13 @@
       --charcoal: #2C2C2C;
       --warm-white: #FEFCF9;
       --sage: #8B9B7A;
+      /* Canva brand kit colors */
+      --brand-burgundy: #4c1315;
+      --brand-gold: #ad9b58;
+      --brand-dark-olive: #323217;
+      --brand-nude: #ba9b88;
+      --brand-rose: #c37d69;
+      --brand-blush: #faeeeb;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1606,97 +1613,101 @@
        NOTIFICATION / REMINDER
        ================================ */
     .t-notification {
-      background: var(--olive);
-      background-image: radial-gradient(ellipse at 30% 70%, rgba(90,107,60,0.4) 0%, transparent 50%);
-      padding: 30px 24px;
+      background: var(--burgundy);
+      background-image: radial-gradient(ellipse at 50% 40%, rgba(107,45,69,0.5) 0%, transparent 60%);
+      padding: 32px 28px 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       text-align: center;
       position: relative;
     }
     .t-notification .nf-kicker {
       font-family: 'Caveat', cursive;
-      font-size: 15px;
+      font-size: 26px;
       color: var(--gold);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      align-self: flex-start;
+      padding-left: 4px;
     }
     .t-notification .nf-card {
-      background: rgba(245,240,232,0.08);
-      border: 1px solid rgba(245,240,232,0.12);
-      border-radius: 14px;
-      padding: 20px;
-      width: 85%;
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 16px 20px 14px;
+      width: 78%;
       text-align: left;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      box-shadow:
+        0 4px 12px rgba(0,0,0,0.2),
+        0 12px 24px rgba(0,0,0,0.15),
+        0 1px 0 rgba(255,255,255,0.1) inset;
+      position: relative;
     }
-    .t-notification .nf-card-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 10px;
+    .t-notification .nf-card::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 8%;
+      right: 8%;
+      height: 4px;
+      background: rgba(200,190,175,0.5);
+      border-radius: 0 0 10px 10px;
+      filter: blur(1px);
     }
-    .t-notification .nf-icon {
-      width: 28px;
-      height: 28px;
-      background: var(--gold);
-      border-radius: 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: var(--olive);
-      font-weight: 700;
-    }
-    .t-notification .nf-app {
+    .t-notification .nf-now {
       font-family: 'Manrope', sans-serif;
       font-size: 10px;
       font-weight: 600;
-      color: rgba(245,240,232,0.5);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .t-notification .nf-now {
-      margin-left: auto;
-      font-family: 'Manrope', sans-serif;
-      font-size: 9px;
-      color: rgba(245,240,232,0.3);
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 8px;
     }
     .t-notification .nf-title {
       font-family: 'Manrope', sans-serif;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
-      color: var(--cream);
-      margin-bottom: 4px;
+      color: var(--charcoal);
+      margin-bottom: 3px;
     }
     .t-notification .nf-body {
       font-family: 'Manrope', sans-serif;
-      font-size: 11px;
-      color: rgba(245,240,232,0.6);
+      font-size: 12px;
+      color: #666;
       line-height: 1.4;
     }
     .t-notification .nf-main {
       font-family: 'Playfair Display', serif;
-      font-size: 22px;
+      font-size: 28px;
       font-weight: 600;
       color: var(--cream);
-      line-height: 1.3;
-      margin-bottom: 6px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      padding: 0 6px;
     }
-    .t-notification .nf-sub {
+    .t-notification .nf-line {
+      width: 80%;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 16px;
+    }
+    .t-notification .nf-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      width: 100%;
+    }
+    .t-notification .nf-footer span {
       font-family: 'Manrope', sans-serif;
-      font-size: 11px;
-      color: rgba(245,240,232,0.5);
-    }
-    .t-notification .nf-logo {
-      position: absolute;
-      bottom: 14px;
-      font-family: 'Playfair Display', serif;
-      font-size: 8px;
+      font-size: 10px;
+      font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(245,240,232,0.25);
+      color: rgba(245,240,232,0.5);
+    }
+    .t-notification .nf-footer .arrow {
+      color: var(--gold);
+      font-size: 16px;
     }
 
     /* ================================
@@ -1785,6 +1796,1244 @@
       z-index: 1;
     }
 
+/* ================================
+       NEW: BLUSH BOLD STATEMENT
+       ================================ */
+    .t-blush-statement {
+      background: var(--brand-blush);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 35px;
+      text-align: center;
+      position: relative;
+    }
+    .t-blush-statement .top-accent {
+      font-family: 'Caveat', cursive;
+      color: var(--brand-rose);
+      font-size: 16px;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+    .t-blush-statement h3 {
+      font-family: 'Ovo', serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: var(--brand-burgundy);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .t-blush-statement h3 em {
+      font-style: italic;
+      color: var(--brand-rose);
+    }
+    .t-blush-statement .divider {
+      width: 50px;
+      height: 2px;
+      background: var(--brand-rose);
+      margin-bottom: 20px;
+    }
+    .t-blush-statement .subtitle {
+      font-family: 'Ovo', serif;
+      font-size: 13px;
+      color: var(--brand-nude);
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+    .t-blush-statement .logo-mark {
+      font-family: 'Ovo', serif;
+      font-size: 11px;
+      color: var(--brand-nude);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 20px;
+    }
+
+    /* ================================
+       NEW: WHITE CLEAN STAT POST
+       ================================ */
+    .t-white-stat {
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 35px;
+      text-align: center;
+      position: relative;
+    }
+    .t-white-stat .stat-kicker {
+      font-family: 'Ovo', serif;
+      font-size: 11px;
+      color: var(--brand-rose);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .t-white-stat .big-number {
+      font-family: 'Ovo', serif;
+      font-size: 80px;
+      color: var(--brand-burgundy);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .t-white-stat .stat-unit {
+      font-family: 'Caveat', cursive;
+      font-size: 22px;
+      color: var(--brand-rose);
+      margin-bottom: 20px;
+    }
+    .t-white-stat .stat-body {
+      font-family: 'Ovo', serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      max-width: 280px;
+      margin-bottom: 24px;
+    }
+    .t-white-stat .stat-cta {
+      display: inline-block;
+      padding: 10px 24px;
+      background: var(--brand-rose);
+      color: white;
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 30px;
+    }
+    .t-white-stat .corner-accent {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-family: 'Ovo', serif;
+      font-size: 10px;
+      color: var(--brand-nude);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ================================
+       NEW: NUDE QUOTE
+       ================================ */
+    .t-nude-quote {
+      background: var(--brand-nude);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 44px 38px;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-nude-quote::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+    }
+    .t-nude-quote::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 250px;
+      height: 250px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+    }
+    .t-nude-quote .quote-mark {
+      font-family: 'Ovo', serif;
+      font-size: 100px;
+      color: white;
+      line-height: 0.5;
+      margin-bottom: 16px;
+      opacity: 0.35;
+      position: relative;
+      z-index: 1;
+    }
+    .t-nude-quote blockquote {
+      font-family: 'Ovo', serif;
+      font-size: 23px;
+      color: white;
+      line-height: 1.4;
+      font-style: italic;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
+    }
+    .t-nude-quote .quote-attribution {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.25);
+    }
+    .t-nude-quote .quote-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Ovo', serif;
+      font-size: 16px;
+      color: var(--brand-nude);
+      font-weight: 600;
+    }
+    .t-nude-quote .quote-name {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      color: white;
+      font-weight: 600;
+    }
+    .t-nude-quote .quote-role {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+    }
+    .t-nude-quote .logo-bottom {
+      position: absolute;
+      bottom: 20px;
+      right: 24px;
+      font-family: 'Ovo', serif;
+      font-size: 10px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+
+    /* ================================
+       NEW: ROSE PHOTO OVERLAY
+       ================================ */
+    .t-rose-overlay {
+      position: relative;
+      overflow: hidden;
+    }
+    .t-rose-overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .t-rose-overlay .overlay-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(195,125,105,0.88) 0%, rgba(195,125,105,0.4) 50%, transparent 100%);
+    }
+    .t-rose-overlay .text-content {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      right: 100px;
+    }
+    .t-rose-overlay .kicker {
+      font-family: 'Caveat', cursive;
+      color: white;
+      font-size: 18px;
+      margin-bottom: 10px;
+      opacity: 0.85;
+    }
+    .t-rose-overlay h3 {
+      font-family: 'Ovo', serif;
+      font-size: 28px;
+      color: #fff;
+      line-height: 1.25;
+    }
+    .t-rose-overlay .bottom-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px 30px;
+      background: rgba(76,19,21,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .t-rose-overlay .bottom-bar .logo-text {
+      font-family: 'Ovo', serif;
+      font-size: 11px;
+      color: var(--brand-blush);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .t-rose-overlay .bottom-bar .arrow {
+      color: var(--brand-rose);
+      font-size: 20px;
+    }
+
+    /* ================================
+       NEW: WHITE CHECKLIST
+       ================================ */
+    .t-white-checklist {
+      background: white;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .t-white-checklist .cl-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .t-white-checklist .cl-save {
+      font-family: 'Caveat', cursive;
+      font-size: 14px;
+      color: var(--brand-rose);
+    }
+    .t-white-checklist .cl-logo {
+      font-family: 'Ovo', serif;
+      font-size: 8px;
+      color: var(--brand-nude);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .t-white-checklist .cl-title {
+      font-family: 'Ovo', serif;
+      font-size: 20px;
+      color: var(--brand-burgundy);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .t-white-checklist .cl-items {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .t-white-checklist .cl-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 9px 12px;
+      background: var(--brand-blush);
+      border-radius: 8px;
+    }
+    .t-white-checklist .cl-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--brand-rose);
+      flex-shrink: 0;
+      margin-top: 1px;
+      position: relative;
+    }
+    .t-white-checklist .cl-item.done .cl-check {
+      background: var(--brand-rose);
+    }
+    .t-white-checklist .cl-item.done .cl-check::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .t-white-checklist .cl-text {
+      font-family: 'Ovo', serif;
+      font-size: 11.5px;
+      color: var(--charcoal);
+      line-height: 1.35;
+    }
+    .t-white-checklist .cl-text strong {
+      color: var(--brand-burgundy);
+    }
+    .t-white-checklist .cl-footer {
+      margin-top: 16px;
+      text-align: center;
+      font-family: 'Caveat', cursive;
+      font-size: 13px;
+      color: var(--brand-rose);
+    }
+
+    /* ================================
+       NEW: ROSE TIPS LIST
+       ================================ */
+    .t-rose-tips {
+      background: var(--brand-rose);
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-rose-tips::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, white, rgba(255,255,255,0.5), white);
+    }
+    .t-rose-tips .tips-header {
+      text-align: center;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    .t-rose-tips .tips-header .tag {
+      font-family: 'Caveat', cursive;
+      color: white;
+      font-size: 17px;
+      margin-bottom: 6px;
+      opacity: 0.8;
+    }
+    .t-rose-tips .tips-header h3 {
+      font-family: 'Ovo', serif;
+      font-size: 22px;
+      color: white;
+      line-height: 1.25;
+    }
+    .t-rose-tips .tip-items {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+    .t-rose-tips .tip-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      border-left: 2px solid white;
+    }
+    .t-rose-tips .tip-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Ovo', serif;
+      font-size: 13px;
+      color: var(--brand-rose);
+      flex-shrink: 0;
+    }
+    .t-rose-tips .tip-text {
+      font-family: 'Ovo', serif;
+      font-size: 12.5px;
+      color: white;
+      line-height: 1.4;
+      padding-top: 3px;
+    }
+    .t-rose-tips .tips-footer {
+      text-align: center;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .t-rose-tips .tips-footer span {
+      font-family: 'Ovo', serif;
+      font-size: 10px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* ================================
+       NEW: BLUSH QUESTION/HOOK
+       ================================ */
+    .t-blush-question {
+      background: var(--brand-blush);
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-blush-question::before {
+      content: '?';
+      position: absolute;
+      top: -20px;
+      right: -10px;
+      font-family: 'Ovo', serif;
+      font-size: 200px;
+      color: var(--brand-rose);
+      line-height: 1;
+      opacity: 0.06;
+    }
+    .t-blush-question .q-kicker {
+      font-family: 'Caveat', cursive;
+      font-size: 16px;
+      color: var(--brand-rose);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+    .t-blush-question .q-main {
+      font-family: 'Ovo', serif;
+      font-size: 26px;
+      color: var(--brand-burgundy);
+      line-height: 1.25;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .t-blush-question .q-main em {
+      font-style: italic;
+      color: var(--brand-rose);
+    }
+    .t-blush-question .q-line {
+      width: 40px;
+      height: 2px;
+      background: var(--brand-rose);
+      margin-bottom: 16px;
+    }
+    .t-blush-question .q-sub {
+      font-family: 'Ovo', serif;
+      font-size: 12px;
+      color: var(--brand-nude);
+      line-height: 1.5;
+      max-width: 260px;
+      position: relative;
+      z-index: 1;
+    }
+    .t-blush-question .q-cta {
+      margin-top: 20px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: white;
+      background: var(--brand-rose);
+      padding: 10px 22px;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .t-blush-question .q-logo {
+      position: absolute;
+      bottom: 14px;
+      font-family: 'Ovo', serif;
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--brand-nude);
+    }
+
+    /* ================================
+       NEW: WHITE SPLIT PHOTO
+       ================================ */
+    .t-white-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: white;
+    }
+    .t-white-split .split-photo {
+      overflow: hidden;
+    }
+    .t-white-split .split-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .t-white-split .split-text {
+      padding: 28px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .t-white-split .split-tag {
+      font-family: 'Caveat', cursive;
+      color: var(--brand-rose);
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+    .t-white-split h3 {
+      font-family: 'Ovo', serif;
+      font-size: 20px;
+      color: var(--brand-burgundy);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .t-white-split .split-body {
+      font-family: 'Ovo', serif;
+      font-size: 11px;
+      color: #888;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .t-white-split .split-cta {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      color: white;
+      background: var(--brand-rose);
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+
+    /* ================================
+       NEW: NUDE iMESSAGE
+       ================================ */
+    .t-nude-imessage {
+      background: var(--brand-blush);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .t-nude-imessage .im-logo {
+      font-family: 'Ovo', serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--brand-nude);
+      margin-bottom: 10px;
+    }
+    .t-nude-imessage .im-kicker {
+      font-family: 'Caveat', cursive;
+      font-size: 15px;
+      color: var(--brand-rose);
+      margin-bottom: 18px;
+    }
+    .t-nude-imessage .im-chat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      justify-content: center;
+    }
+    .t-nude-imessage .im-bubble {
+      max-width: 75%;
+      padding: 10px 14px;
+      border-radius: 16px;
+      font-family: 'Ovo', serif;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .t-nude-imessage .im-bubble.them {
+      background: white;
+      color: var(--charcoal);
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+    .t-nude-imessage .im-bubble.me {
+      background: var(--brand-rose);
+      color: white;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+      font-weight: 600;
+    }
+    .t-nude-imessage .im-bubble.them.big {
+      font-size: 14px;
+      padding: 12px 16px;
+    }
+    .t-nude-imessage .im-footer {
+      margin-top: 14px;
+      font-family: 'Caveat', cursive;
+      font-size: 13px;
+      color: var(--brand-rose);
+      text-align: center;
+    }
+
+    /* ================================
+       NEW: ROSE GRADIENT EDITORIAL
+       ================================ */
+    .t-rose-editorial {
+      background: var(--brand-burgundy);
+      position: relative;
+      overflow: hidden;
+      padding: 32px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .t-rose-editorial .ge-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 80%, rgba(195,125,105,0.35) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(250,238,235,0.12) 0%, transparent 40%),
+        radial-gradient(ellipse at 50% 50%, rgba(186,155,136,0.2) 0%, transparent 60%);
+    }
+    .t-rose-editorial .ge-content {
+      position: relative;
+      z-index: 1;
+    }
+    .t-rose-editorial .ge-logo {
+      font-family: 'Ovo', serif;
+      font-size: 10px;
+      color: rgba(250,238,235,0.4);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .t-rose-editorial .ge-kicker {
+      font-family: 'Caveat', cursive;
+      color: var(--brand-rose);
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .t-rose-editorial h3 {
+      font-family: 'Ovo', serif;
+      font-size: 28px;
+      color: var(--brand-blush);
+      line-height: 1.25;
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+    .t-rose-editorial .ge-answer {
+      font-family: 'Ovo', serif;
+      font-size: 13px;
+      color: rgba(250,238,235,0.65);
+      line-height: 1.55;
+      margin-bottom: 24px;
+    }
+    .t-rose-editorial .ge-answer em {
+      color: var(--brand-rose);
+      font-style: italic;
+    }
+    .t-rose-editorial .ge-cta {
+      display: inline-block;
+      padding: 10px 22px;
+      border: 1px solid var(--brand-rose);
+      color: var(--brand-rose);
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 30px;
+    }
+    .t-rose-editorial .ge-circle {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(195,125,105,0.12);
+    }
+    .t-rose-editorial .ge-circle-1 {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      right: -80px;
+    }
+    .t-rose-editorial .ge-circle-2 {
+      width: 200px;
+      height: 200px;
+      bottom: -60px;
+      left: -60px;
+    }
+    .t-rose-editorial .ge-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--brand-rose), transparent);
+    }
+
+    /* ================================
+       NEW: NOTES APP HOT TAKE
+       ================================ */
+    .t-notes-app {
+      background: #ffffff;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: -apple-system, 'Helvetica Neue', sans-serif;
+      position: relative;
+    }
+    .t-notes-app .notes-statusbar {
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: #999;
+    }
+    .t-notes-app .notes-nav {
+      padding: 4px 16px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .t-notes-app .notes-nav .back {
+      font-size: 13px;
+      color: #FFB800;
+    }
+    .t-notes-app .notes-nav .done {
+      font-size: 13px;
+      color: #FFB800;
+      font-weight: 600;
+    }
+    .t-notes-app .notes-body {
+      flex: 1;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .t-notes-app .notes-title {
+      font-family: -apple-system, 'Helvetica Neue', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    .t-notes-app .notes-date {
+      font-size: 10px;
+      color: #999;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .t-notes-app .notes-list {
+      list-style: none;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .t-notes-app .notes-list li {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+      padding-left: 6px;
+    }
+    .t-notes-app .notes-list li::before {
+      content: '• ';
+      color: #FFB800;
+    }
+    .t-notes-app .notes-footer {
+      padding: 12px 20px;
+      border-top: 1px solid #f0f0f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .t-notes-app .notes-footer .char-count {
+      font-size: 10px;
+      color: #ccc;
+    }
+    .t-notes-app .notes-footer .handle {
+      font-size: 10px;
+      color: var(--brand-rose);
+      font-family: 'Ovo', serif;
+    }
+
+    /* ================================
+       NEW: GLASSMORPHISM STAT CARD
+       ================================ */
+    .t-glass-stat {
+      background: linear-gradient(135deg, var(--brand-burgundy) 0%, var(--brand-rose) 50%, var(--brand-nude) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 35px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-glass-stat .glass-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(40px);
+    }
+    .t-glass-stat .glass-orb-1 {
+      width: 200px;
+      height: 200px;
+      background: rgba(250,238,235,0.2);
+      top: -60px;
+      right: -40px;
+    }
+    .t-glass-stat .glass-orb-2 {
+      width: 150px;
+      height: 150px;
+      background: rgba(195,125,105,0.3);
+      bottom: -30px;
+      left: -30px;
+    }
+    .t-glass-stat .glass-card {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 30px 24px;
+      width: 85%;
+      position: relative;
+      z-index: 1;
+    }
+    .t-glass-stat .glass-kicker {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .t-glass-stat .glass-number {
+      font-family: 'Ovo', serif;
+      font-size: 72px;
+      color: white;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .t-glass-stat .glass-unit {
+      font-family: 'Caveat', cursive;
+      font-size: 20px;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 14px;
+    }
+    .t-glass-stat .glass-body {
+      font-family: 'Ovo', serif;
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+    }
+    .t-glass-stat .glass-logo {
+      position: absolute;
+      bottom: 16px;
+      font-family: 'Ovo', serif;
+      font-size: 9px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+
+    /* ================================
+       NEW: POV CARD
+       ================================ */
+    .t-pov {
+      background: var(--brand-blush);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-pov .pov-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--brand-rose);
+      margin-bottom: 16px;
+    }
+    .t-pov .pov-text {
+      font-family: 'Ovo', serif;
+      font-size: 28px;
+      color: var(--brand-burgundy);
+      line-height: 1.3;
+      margin-bottom: 28px;
+    }
+    .t-pov .pov-text em {
+      font-style: italic;
+      color: var(--brand-rose);
+    }
+    .t-pov .pov-sub {
+      font-family: 'Caveat', cursive;
+      font-size: 18px;
+      color: var(--brand-nude);
+    }
+    .t-pov .pov-logo {
+      position: absolute;
+      bottom: 16px;
+      right: 20px;
+      font-family: 'Ovo', serif;
+      font-size: 9px;
+      color: var(--brand-nude);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .t-pov .pov-circle {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 1px solid rgba(195,125,105,0.08);
+      bottom: -100px;
+      right: -80px;
+    }
+
+    /* ================================
+       NEW: RED FLAG / GREEN FLAG
+       ================================ */
+    .t-flags {
+      display: grid;
+      grid-template-rows: auto 1fr 1fr;
+      overflow: hidden;
+    }
+    .t-flags .flags-header {
+      padding: 24px 24px 16px;
+      background: white;
+      text-align: center;
+    }
+    .t-flags .flags-header .flags-kicker {
+      font-family: 'Manrope', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--brand-rose);
+      margin-bottom: 6px;
+    }
+    .t-flags .flags-header h3 {
+      font-family: 'Ovo', serif;
+      font-size: 18px;
+      color: var(--brand-burgundy);
+      line-height: 1.3;
+    }
+    .t-flags .flag-row {
+      padding: 18px 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .t-flags .flag-row.red {
+      background: #f9f0f0;
+    }
+    .t-flags .flag-row.green {
+      background: #f0f5ee;
+    }
+    .t-flags .flag-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .t-flags .flag-text {
+      font-family: 'Ovo', serif;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .t-flags .flag-row.red .flag-text {
+      color: #8B3A3A;
+    }
+    .t-flags .flag-row.green .flag-text {
+      color: #3A5A2A;
+    }
+    .t-flags .flag-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .t-flags .flag-row.red .flag-label { color: #C0392B; }
+    .t-flags .flag-row.green .flag-label { color: #27AE60; }
+
+    /* ================================
+       NEW: FAUX RECEIPT
+       ================================ */
+    .t-receipt {
+      background: #f8f6f1;
+      padding: 20px 28px;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Courier New', monospace;
+      position: relative;
+    }
+    .t-receipt::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 12px;
+      background: repeating-linear-gradient(90deg, transparent, transparent 8px, #f8f6f1 8px, #f8f6f1 10px);
+      background-color: #ddd;
+      mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12 L5 0 L10 12 L15 0 L20 12' fill='%23f8f6f1'/%3E%3C/svg%3E");
+      -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12 L5 0 L10 12 L15 0 L20 12' fill='%23f8f6f1'/%3E%3C/svg%3E");
+      mask-size: 20px 12px;
+      -webkit-mask-size: 20px 12px;
+    }
+    .t-receipt .receipt-header {
+      text-align: center;
+      padding-top: 12px;
+      margin-bottom: 14px;
+    }
+    .t-receipt .receipt-header h3 {
+      font-family: 'Ovo', serif;
+      font-size: 16px;
+      color: var(--brand-burgundy);
+      letter-spacing: 1px;
+    }
+    .t-receipt .receipt-header .receipt-sub {
+      font-family: 'Courier New', monospace;
+      font-size: 9px;
+      color: #999;
+      margin-top: 4px;
+    }
+    .t-receipt .receipt-divider {
+      border: none;
+      border-top: 1px dashed #ccc;
+      margin: 10px 0;
+    }
+    .t-receipt .receipt-items {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .t-receipt .receipt-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #555;
+    }
+    .t-receipt .receipt-item .item-name {
+      flex: 1;
+    }
+    .t-receipt .receipt-item .item-value {
+      font-weight: 700;
+      color: var(--brand-burgundy);
+      text-align: right;
+    }
+    .t-receipt .receipt-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--brand-burgundy);
+      padding-top: 8px;
+    }
+    .t-receipt .receipt-footer {
+      text-align: center;
+      margin-top: 12px;
+      font-family: 'Caveat', cursive;
+      font-size: 14px;
+      color: var(--brand-rose);
+    }
+    .t-receipt .receipt-barcode {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 7px;
+      color: #ccc;
+      letter-spacing: 4px;
+    }
+
+    /* ================================
+       NEW: SPOTIFY WRAPPED STYLE
+       ================================ */
+    .t-wrapped {
+      background: linear-gradient(160deg, #1a0a12 0%, var(--brand-burgundy) 40%, var(--brand-rose) 100%);
+      padding: 30px 26px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-wrapped .wrapped-year {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 20px;
+    }
+    .t-wrapped .wrapped-title {
+      font-family: 'Ovo', serif;
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 6px;
+    }
+    .t-wrapped .wrapped-big {
+      font-family: 'Manrope', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      color: white;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .t-wrapped .wrapped-big span {
+      color: var(--brand-rose);
+      background: linear-gradient(90deg, #faeeeb, var(--brand-rose));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .t-wrapped .wrapped-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+      justify-content: center;
+    }
+    .t-wrapped .wrapped-stat {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .t-wrapped .wrapped-stat-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--brand-blush);
+      min-width: 70px;
+    }
+    .t-wrapped .wrapped-stat-label {
+      font-family: 'Ovo', serif;
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.3;
+    }
+    .t-wrapped .wrapped-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .t-wrapped .wrapped-cta {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--brand-burgundy);
+      background: var(--brand-blush);
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+    .t-wrapped .wrapped-logo {
+      font-family: 'Ovo', serif;
+      font-size: 8px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .t-wrapped .wrapped-circle {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.05);
+    }
+    .t-wrapped .wrapped-circle-1 { width: 300px; height: 300px; top: -120px; right: -100px; }
+    .t-wrapped .wrapped-circle-2 { width: 200px; height: 200px; bottom: -80px; left: -60px; }
+
     /* ================================
        LIGHTBOX
        ================================ */
@@ -1823,6 +3072,368 @@
     .lightbox-hint {
       color: #888;
       font-size: 12px;
+    }
+
+    /* ================================
+       SENSITIVE CONTENT PARODY
+       ================================ */
+    .t-sensitive {
+      background: #262626;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-sensitive .sens-blur-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--burgundy);
+      background-image:
+        radial-gradient(ellipse at 30% 40%, rgba(196,148,61,0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(107,45,69,0.4) 0%, transparent 50%);
+      filter: blur(28px);
+      opacity: 0.6;
+    }
+    .t-sensitive .sens-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid rgba(245,240,232,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .t-sensitive .sens-icon .eye {
+      font-size: 22px;
+      opacity: 0.5;
+    }
+    .t-sensitive .sens-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 6px;
+      position: relative;
+      z-index: 1;
+    }
+    .t-sensitive .sens-sub {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      color: rgba(245,240,232,0.45);
+      line-height: 1.5;
+      max-width: 260px;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .t-sensitive .sens-reveal {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--cream);
+      padding: 10px 28px;
+      border: 1px solid rgba(245,240,232,0.3);
+      border-radius: 8px;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
+    }
+    .t-sensitive .sens-actual {
+      position: relative;
+      z-index: 1;
+      padding: 16px 20px;
+      border-radius: 12px;
+      background: rgba(74,26,46,0.5);
+      border: 1px solid rgba(196,148,61,0.2);
+    }
+    .t-sensitive .sens-actual .sens-kicker {
+      font-family: 'Caveat', cursive;
+      font-size: 14px;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .t-sensitive .sens-actual .sens-message {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--cream);
+      line-height: 1.3;
+    }
+    .t-sensitive .sens-actual .sens-message em {
+      color: var(--gold);
+      font-style: italic;
+    }
+    .t-sensitive .sens-logo {
+      position: absolute;
+      bottom: 14px;
+      font-family: 'Playfair Display', serif;
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.2);
+      z-index: 1;
+    }
+
+    /* ================================
+       BREAKING NEWS FORMAT
+       ================================ */
+    .t-breaking {
+      background: #1a0a10;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-breaking .brk-top-bar {
+      background: #B91C1C;
+      padding: 8px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .t-breaking .brk-live {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .t-breaking .brk-live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 6px rgba(255,255,255,0.6);
+    }
+    .t-breaking .brk-live-text {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .t-breaking .brk-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      margin-left: auto;
+    }
+    .t-breaking .brk-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 28px 24px;
+      position: relative;
+    }
+    .t-breaking .brk-body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(185,28,28,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(196,148,61,0.06) 0%, transparent 40%);
+    }
+    .t-breaking .brk-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 25px;
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.25;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .t-breaking .brk-headline em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .t-breaking .brk-sub {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      color: rgba(245,240,232,0.55);
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+      padding-left: 12px;
+      border-left: 2px solid var(--gold);
+    }
+    .t-breaking .brk-ticker {
+      background: var(--burgundy);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .t-breaking .brk-ticker-text {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.5px;
+    }
+    .t-breaking .brk-ticker-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.35);
+    }
+    .t-breaking .brk-side-line {
+      position: absolute;
+      left: 0;
+      top: 40px;
+      bottom: 40px;
+      width: 3px;
+      background: linear-gradient(180deg, transparent, #B91C1C, var(--gold), #B91C1C, transparent);
+    }
+
+    /* ================================
+       AIRDROP FORMAT
+       ================================ */
+    .t-airdrop {
+      background: #000;
+      background-image:
+        radial-gradient(ellipse at 50% 40%, rgba(30,30,40,1) 0%, transparent 70%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-airdrop .ad-blur-circles {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .t-airdrop .ad-blur-circles .circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.3;
+    }
+    .t-airdrop .ad-blur-circles .c1 {
+      width: 200px;
+      height: 200px;
+      background: var(--burgundy);
+      top: -40px;
+      left: -40px;
+    }
+    .t-airdrop .ad-blur-circles .c2 {
+      width: 180px;
+      height: 180px;
+      background: var(--gold);
+      bottom: -30px;
+      right: -30px;
+      opacity: 0.15;
+    }
+    .t-airdrop .ad-card {
+      background: rgba(44,44,46,0.85);
+      border-radius: 20px;
+      padding: 28px 24px 20px;
+      width: 82%;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .t-airdrop .ad-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 12px;
+      border: 2px solid var(--gold);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .t-airdrop .ad-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .t-airdrop .ad-sender {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 2px;
+    }
+    .t-airdrop .ad-wants {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 16px;
+    }
+    .t-airdrop .ad-note {
+      background: rgba(0,0,0,0.3);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .t-airdrop .ad-note-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--cream);
+      line-height: 1.35;
+    }
+    .t-airdrop .ad-note-text em {
+      color: var(--gold);
+      font-style: italic;
+    }
+    .t-airdrop .ad-buttons {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+    }
+    .t-airdrop .ad-btn {
+      flex: 1;
+      padding: 10px;
+      border-radius: 12px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .t-airdrop .ad-btn.decline {
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.6);
+    }
+    .t-airdrop .ad-btn.accept {
+      background: var(--gold);
+      color: var(--burgundy);
+    }
+    .t-airdrop .ad-footer {
+      margin-top: 18px;
+      font-family: 'Caveat', cursive;
+      font-size: 14px;
+      color: var(--gold);
+      position: relative;
+      z-index: 1;
+    }
+    .t-airdrop .ad-logo {
+      position: absolute;
+      bottom: 12px;
+      font-family: 'Playfair Display', serif;
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.15);
+      z-index: 1;
     }
 
     /* Click hint */
@@ -2260,19 +3871,446 @@
 
     <!-- Notification / Reminder -->
     <div class="ig-post t-notification">
-      <div class="nf-kicker">Gentle reminder...</div>
+      <div class="nf-kicker">Gentle reminder</div>
       <div class="nf-card">
-        <div class="nf-card-header">
-          <div class="nf-icon">£</div>
-          <div class="nf-app">Financial Checkup</div>
-          <div class="nf-now">now</div>
-        </div>
-        <div class="nf-title">Your future called.</div>
-        <div class="nf-body">It wants a plan. Your pension, protection, and tax allowances need attention.</div>
+        <div class="nf-now">Now</div>
+        <div class="nf-title">Financial Checkup Reminder</div>
+        <div class="nf-body">Your future called. It wants a plan.</div>
       </div>
-      <div class="nf-main">Will you answer?</div>
-      <div class="nf-sub">Free 30-minute checkup · Link in bio</div>
-      <div class="nf-logo">The Finance Woman</div>
+      <div class="nf-main">Have you checked in on your future lately?</div>
+      <div class="nf-line"></div>
+      <div class="nf-footer">
+        <span>Swipe to read</span>
+        <span class="arrow">→</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 9: Viral / Pattern Interrupt Templates -->
+<div class="template-section">
+  <div class="template-row">
+
+    <!-- Sensitive Content Parody -->
+    <div class="ig-post t-sensitive">
+      <div class="sens-blur-bg"></div>
+      <div class="sens-icon"><span class="eye">👁</span></div>
+      <div class="sens-title">This post may contain sensitive content.</div>
+      <div class="sens-sub">This financial truth may be uncomfortable for people who haven't checked their pension in years.</div>
+      <div class="sens-reveal">Tap to reveal</div>
+      <div class="sens-actual">
+        <div class="sens-kicker">The truth is...</div>
+        <div class="sens-message">If you're self-employed with <em>no pension</em>, you're planning to work <em>forever</em>.</div>
+      </div>
+      <div class="sens-logo">The Finance Woman</div>
+    </div>
+
+    <!-- Breaking News -->
+    <div class="ig-post t-breaking">
+      <div class="brk-top-bar">
+        <div class="brk-live">
+          <div class="brk-live-dot"></div>
+          <span class="brk-live-text">Live</span>
+        </div>
+        <span class="brk-label">Breaking News</span>
+      </div>
+      <div class="brk-body">
+        <div class="brk-side-line"></div>
+        <div class="brk-headline">Self-employed woman discovers she'll receive <em>£0</em> in sick pay if she can't work</div>
+        <div class="brk-sub">Millions of self-employed workers in the UK have no income protection. No statutory sick pay. No safety net. Are you one of them?</div>
+      </div>
+      <div class="brk-ticker">
+        <span class="brk-ticker-text">Don't let this be your headline → Link in bio</span>
+        <span class="brk-ticker-logo">The Finance Woman</span>
+      </div>
+    </div>
+
+    <!-- AirDrop Format -->
+    <div class="ig-post t-airdrop">
+      <div class="ad-blur-circles">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+      </div>
+      <div class="ad-card">
+        <div class="ad-avatar">
+          <img src="images/romany-hero.jpg" alt="Romany">
+        </div>
+        <div class="ad-sender">The Finance Woman</div>
+        <div class="ad-wants">would like to share a note</div>
+        <div class="ad-note">
+          <div class="ad-note-text">Your pension isn't going to <em>sort itself out</em>. This is your sign to book that free call.</div>
+        </div>
+        <div class="ad-buttons">
+          <div class="ad-btn decline">Decline</div>
+          <div class="ad-btn accept">Accept</div>
+        </div>
+      </div>
+      <div class="ad-footer">Will you accept? 👀</div>
+      <div class="ad-logo">The Finance Woman</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 9: Pink / Nude / Blush Templates (NEW) -->
+<div class="template-section">
+  <h2>Pink, Nude &amp; Blush Palette</h2>
+  <p class="section-desc">Softer tones using the full Canva brand palette — rose, nude, blush &amp; white</p>
+  <div class="template-row">
+
+    <!-- Blush Bold Statement -->
+    <div class="ig-post t-blush-statement">
+      <div class="top-accent">Here's the truth...</div>
+      <h3>Financial planning isn't about being <em>rich.</em> It's about being <em>ready.</em></h3>
+      <div class="divider"></div>
+      <div class="subtitle">And you deserve to feel ready.</div>
+      <div class="logo-mark">The Finance Woman</div>
+    </div>
+
+    <!-- White Clean Stat -->
+    <div class="ig-post t-white-stat">
+      <div class="corner-accent">The Finance Woman</div>
+      <div class="stat-kicker">Think about this</div>
+      <div class="big-number">47%</div>
+      <div class="stat-unit">of self-employed women</div>
+      <div class="stat-body">have no pension at all. You work hard for your money — it should be working hard for your future too.</div>
+      <div class="stat-cta">Let's change that →</div>
+    </div>
+
+    <!-- Rose Photo Overlay -->
+    <div class="ig-post t-rose-overlay">
+      <img src="../images/romany-hero.jpg" alt="Romany">
+      <div class="overlay-gradient"></div>
+      <div class="text-content">
+        <div class="kicker">Something I always say...</div>
+        <h3>You don't need to have it all figured out to take the first step.</h3>
+      </div>
+      <div class="bottom-bar">
+        <div class="logo-text">The Finance Woman</div>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 10: More Pink / Nude -->
+<div class="template-section">
+  <div class="template-row">
+
+    <!-- Nude Quote -->
+    <div class="ig-post t-nude-quote">
+      <div class="quote-mark">"</div>
+      <blockquote>Romany made me feel so at ease. For the first time, I actually understand where my money is going.</blockquote>
+      <div class="quote-attribution">
+        <div class="quote-avatar">S</div>
+        <div>
+          <div class="quote-name">Sarah M.</div>
+          <div class="quote-role">Google Review · ★★★★★</div>
+        </div>
+      </div>
+      <div class="logo-bottom">The Finance Woman</div>
+    </div>
+
+    <!-- White Checklist -->
+    <div class="ig-post t-white-checklist">
+      <div class="cl-header">
+        <span class="cl-save">Save this checklist</span>
+        <span class="cl-logo">The Finance Woman</span>
+      </div>
+      <div class="cl-title">Before the tax year ends...</div>
+      <div class="cl-items">
+        <div class="cl-item done">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>ISA allowance:</strong> Have you used your £20,000 tax-free allowance?</div>
+        </div>
+        <div class="cl-item done">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Pension contributions:</strong> Topped up before 5th April?</div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Dividend planning:</strong> Staying within the tax-free dividend allowance?</div>
+        </div>
+        <div class="cl-item">
+          <div class="cl-check"></div>
+          <div class="cl-text"><strong>Review your plan:</strong> Has anything changed this year that affects your goals?</div>
+        </div>
+      </div>
+      <div class="cl-footer">How many can you tick off?</div>
+    </div>
+
+    <!-- Blush Question -->
+    <div class="ig-post t-blush-question">
+      <div class="q-kicker">Let's be honest...</div>
+      <div class="q-main">Do you actually know what happens to your money if <em>you</em> can't work?</div>
+      <div class="q-line"></div>
+      <div class="q-sub">Most self-employed people don't. And that's exactly why we should talk.</div>
+      <div class="q-cta">Book a free call →</div>
+      <div class="q-logo">The Finance Woman</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 11: Pink Photo + Engagement -->
+<div class="template-section">
+  <div class="template-row">
+
+    <!-- White Split Photo -->
+    <div class="ig-post t-white-split">
+      <div class="split-photo">
+        <img src="../images/romany-with-dog-casual.jpg" alt="Romany with her dog">
+      </div>
+      <div class="split-text">
+        <div class="split-tag">Behind the scenes</div>
+        <h3>The best meetings happen with a cuppa and a dog on your lap.</h3>
+        <div class="split-body">That's the kind of financial advice I believe in. Relaxed, honest, and totally judgement-free.</div>
+        <div class="split-cta">Book a chat →</div>
+      </div>
+    </div>
+
+    <!-- Rose Tips -->
+    <div class="ig-post t-rose-tips">
+      <div class="tips-header">
+        <div class="tag">Bookmark this one</div>
+        <h3>3 signs you need income protection</h3>
+      </div>
+      <div class="tip-items">
+        <div class="tip-item">
+          <div class="tip-number">1</div>
+          <div class="tip-text">You're the main breadwinner and you're self-employed</div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-number">2</div>
+          <div class="tip-text">You don't have 6+ months of savings to fall back on</div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-number">3</div>
+          <div class="tip-text">You have a mortgage or dependents relying on your income</div>
+        </div>
+      </div>
+      <div class="tips-footer">
+        <span>The Finance Woman</span>
+      </div>
+    </div>
+
+    <!-- Nude iMessage -->
+    <div class="ig-post t-nude-imessage">
+      <div class="im-logo">The Finance Woman</div>
+      <div class="im-kicker">A message I got last week...</div>
+      <div class="im-chat">
+        <div class="im-bubble them">I've been putting off sorting my finances for literally years</div>
+        <div class="im-bubble me">You're here now. That's what matters.</div>
+        <div class="im-bubble them big">I just didn't know where to start</div>
+        <div class="im-bubble me">That's exactly what our first call is for.</div>
+      </div>
+      <div class="im-footer">No judgement. Just clarity.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 12: Rose Editorial + Carousel -->
+<div class="template-section">
+  <div class="template-row">
+
+    <!-- Rose Editorial -->
+    <div class="ig-post t-rose-editorial">
+      <div class="ge-bg"></div>
+      <div class="ge-content">
+        <div class="ge-logo">The Finance Woman</div>
+        <div class="ge-kicker">A question for you...</div>
+        <h3>"What would life look like if you stopped worrying about money?"</h3>
+        <div class="ge-answer">That's not a dream. It's a <em>plan</em>. And I can help you build one — starting with a free, no-pressure call.</div>
+        <div class="ge-cta">Let's talk →</div>
+      </div>
+      <div class="ge-circle ge-circle-1"></div>
+      <div class="ge-circle ge-circle-2"></div>
+      <div class="ge-line"></div>
+    </div>
+
+    <!-- Blush Bold Statement v2 -->
+    <div class="ig-post t-blush-statement">
+      <div class="top-accent">Unpopular opinion...</div>
+      <h3>The best time to sort your finances was <em>years ago.</em> The second best time is <em>today.</em></h3>
+      <div class="divider"></div>
+      <div class="subtitle">Stop scrolling. Start planning.</div>
+      <div class="logo-mark">The Finance Woman</div>
+    </div>
+
+    <!-- Rose Photo Overlay v2 -->
+    <div class="ig-post t-rose-overlay">
+      <img src="../images/romany-on-the-phone.jpg" alt="Romany on the phone">
+      <div class="overlay-gradient" style="background: linear-gradient(180deg, rgba(186,155,136,0.85) 0%, rgba(186,155,136,0.3) 50%, transparent 100%);"></div>
+      <div class="text-content">
+        <div class="kicker">What our calls actually look like...</div>
+        <h3>30 minutes. No jargon. Just a clear picture of where you stand.</h3>
+      </div>
+      <div class="bottom-bar" style="background: rgba(186,155,136,0.9);">
+        <div class="logo-text">The Finance Woman</div>
+        <div class="arrow" style="color: white;">→</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 13: Creative / Viral Formats -->
+<div class="template-section">
+  <h2>Creative &amp; Viral Formats</h2>
+  <p class="section-desc">Trending formats that stop the scroll — Notes app, glassmorphism, receipts, Wrapped</p>
+  <div class="template-row">
+
+    <!-- Notes App Hot Take -->
+    <div class="ig-post t-notes-app">
+      <div class="notes-statusbar">
+        <span>9:41</span>
+        <span>100%</span>
+      </div>
+      <div class="notes-nav">
+        <span class="back">< Notes</span>
+        <span class="done">Done</span>
+      </div>
+      <div class="notes-body">
+        <div class="notes-title">things I need people to stop saying about money</div>
+        <div class="notes-date">16 February 2026 at 09:41</div>
+        <ul class="notes-list">
+          <li>"I'll sort my pension when I'm older"</li>
+          <li>"I don't earn enough for financial advice"</li>
+          <li>"I'm self-employed so I can't get a mortgage"</li>
+          <li>"Income protection is a waste of money"</li>
+          <li>"I'll just rely on the state pension"</li>
+          <li>"I'm too young to worry about this"</li>
+        </ul>
+      </div>
+      <div class="notes-footer">
+        <span class="char-count">247 characters</span>
+        <span class="handle">@thefinancewoman</span>
+      </div>
+    </div>
+
+    <!-- Glassmorphism Stat -->
+    <div class="ig-post t-glass-stat">
+      <div class="glass-orb glass-orb-1"></div>
+      <div class="glass-orb glass-orb-2"></div>
+      <div class="glass-card">
+        <div class="glass-kicker">The reality</div>
+        <div class="glass-number">£0</div>
+        <div class="glass-unit">per week</div>
+        <div class="glass-body">That's what the government pays self-employed people in statutory sick pay. If you can't work, you get nothing.</div>
+      </div>
+      <div class="glass-logo">The Finance Woman</div>
+    </div>
+
+    <!-- POV Card -->
+    <div class="ig-post t-pov">
+      <div class="pov-label">POV:</div>
+      <div class="pov-text">You finally understand your pension and it's not even <em>scary.</em> You actually feel <em>excited</em> about your future.</div>
+      <div class="pov-sub">...this could be you after one call</div>
+      <div class="pov-logo">The Finance Woman</div>
+      <div class="pov-circle"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 14: More Creative Formats -->
+<div class="template-section">
+  <div class="template-row">
+
+    <!-- Red Flag / Green Flag -->
+    <div class="ig-post t-flags">
+      <div class="flags-header">
+        <div class="flags-kicker">Choose wisely</div>
+        <h3>Red flags vs green flags when choosing a financial adviser</h3>
+      </div>
+      <div class="flag-row red">
+        <span class="flag-icon">🚩</span>
+        <div>
+          <div class="flag-label">Red flag</div>
+          <div class="flag-text">They use jargon and won't explain it. You leave the meeting more confused than when you arrived.</div>
+        </div>
+      </div>
+      <div class="flag-row green">
+        <span class="flag-icon">🟢</span>
+        <div>
+          <div class="flag-label">Green flag</div>
+          <div class="flag-text">They explain everything in plain English and check you actually understand before moving on.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faux Receipt -->
+    <div class="ig-post t-receipt">
+      <div class="receipt-header">
+        <h3>THE FINANCE WOMAN</h3>
+        <div class="receipt-sub">YOUR FINANCIAL HEALTH CHECK</div>
+        <div class="receipt-sub">16/02/2026 · 09:41</div>
+      </div>
+      <hr class="receipt-divider">
+      <div class="receipt-items">
+        <div class="receipt-item">
+          <span class="item-name">Pension contributions</span>
+          <span class="item-value">£0/mo</span>
+        </div>
+        <div class="receipt-item">
+          <span class="item-name">Income protection</span>
+          <span class="item-value">NONE</span>
+        </div>
+        <div class="receipt-item">
+          <span class="item-name">Emergency fund</span>
+          <span class="item-value">2 weeks</span>
+        </div>
+        <div class="receipt-item">
+          <span class="item-name">ISA allowance used</span>
+          <span class="item-value">£0/£20k</span>
+        </div>
+        <div class="receipt-item">
+          <span class="item-name">Last financial review</span>
+          <span class="item-value">NEVER</span>
+        </div>
+        <div class="receipt-item">
+          <span class="item-name">Stress level about £</span>
+          <span class="item-value">HIGH</span>
+        </div>
+      </div>
+      <hr class="receipt-divider">
+      <div class="receipt-total">
+        <span>PEACE OF MIND</span>
+        <span>£ 0.00</span>
+      </div>
+      <hr class="receipt-divider">
+      <div class="receipt-footer">Time to change this? Free call below 👇</div>
+      <div class="receipt-barcode">|||| ||| |||| || ||||| ||| ||||</div>
+    </div>
+
+    <!-- Spotify Wrapped Style -->
+    <div class="ig-post t-wrapped">
+      <div class="wrapped-circle wrapped-circle-1"></div>
+      <div class="wrapped-circle wrapped-circle-2"></div>
+      <div class="wrapped-year">2025 · Wrapped</div>
+      <div class="wrapped-title">Your money this year:</div>
+      <div class="wrapped-big">You earned it.<br>But did you <span>protect</span> it?</div>
+      <div class="wrapped-stats">
+        <div class="wrapped-stat">
+          <div class="wrapped-stat-num">365</div>
+          <div class="wrapped-stat-label">days without income protection</div>
+        </div>
+        <div class="wrapped-stat">
+          <div class="wrapped-stat-num">£0</div>
+          <div class="wrapped-stat-label">added to your pension this year</div>
+        </div>
+        <div class="wrapped-stat">
+          <div class="wrapped-stat-num">12</div>
+          <div class="wrapped-stat-label">months closer to retirement with no plan</div>
+        </div>
+      </div>
+      <div class="wrapped-footer">
+        <div class="wrapped-cta">Make 2026 different →</div>
+        <div class="wrapped-logo">The Finance Woman</div>
+      </div>
     </div>
 
   </div>
