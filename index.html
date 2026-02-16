@@ -1613,9 +1613,8 @@
        NOTIFICATION / REMINDER
        ================================ */
     .t-notification {
-      background: var(--burgundy);
-      background-image: radial-gradient(ellipse at 50% 40%, rgba(107,45,69,0.5) 0%, transparent 60%);
-      padding: 32px 28px 28px;
+      background: var(--brand-blush);
+      padding: 36px 24px 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1624,50 +1623,60 @@
     }
     .t-notification .nf-kicker {
       font-family: 'Caveat', cursive;
-      font-size: 26px;
-      color: var(--gold);
-      margin-bottom: 18px;
-      align-self: flex-start;
-      padding-left: 4px;
+      font-size: 24px;
+      color: var(--brand-rose);
+      margin-bottom: 22px;
     }
     .t-notification .nf-card {
-      background: var(--cream);
-      border-radius: 16px;
-      padding: 16px 20px 14px;
-      width: 78%;
+      background: white;
+      border-radius: 20px;
+      padding: 14px 18px;
+      width: 88%;
       text-align: left;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
       box-shadow:
-        0 4px 12px rgba(0,0,0,0.2),
-        0 12px 24px rgba(0,0,0,0.15),
-        0 1px 0 rgba(255,255,255,0.1) inset;
-      position: relative;
+        0 2px 8px rgba(0,0,0,0.06),
+        0 8px 24px rgba(76,19,21,0.08);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
     }
-    .t-notification .nf-card::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 8%;
-      right: 8%;
-      height: 4px;
-      background: rgba(200,190,175,0.5);
-      border-radius: 0 0 10px 10px;
-      filter: blur(1px);
+    .t-notification .nf-app-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--brand-burgundy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: 'Ovo', serif;
+      font-size: 16px;
+      color: var(--brand-blush);
+      font-weight: 700;
+    }
+    .t-notification .nf-card-content {
+      flex: 1;
+      min-width: 0;
+    }
+    .t-notification .nf-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
     }
     .t-notification .nf-now {
       font-family: 'Manrope', sans-serif;
       font-size: 10px;
-      font-weight: 600;
-      color: var(--gold);
-      text-align: center;
-      margin-bottom: 8px;
+      font-weight: 500;
+      color: #999;
     }
     .t-notification .nf-title {
       font-family: 'Manrope', sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
-      color: var(--charcoal);
-      margin-bottom: 3px;
+      color: var(--brand-burgundy);
+      margin-bottom: 2px;
     }
     .t-notification .nf-body {
       font-family: 'Manrope', sans-serif;
@@ -1676,38 +1685,37 @@
       line-height: 1.4;
     }
     .t-notification .nf-main {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      font-weight: 600;
-      color: var(--cream);
-      line-height: 1.2;
+      font-family: 'Ovo', serif;
+      font-size: 26px;
+      color: var(--brand-burgundy);
+      line-height: 1.25;
       margin-bottom: 20px;
-      padding: 0 6px;
+      padding: 0 8px;
     }
     .t-notification .nf-line {
-      width: 80%;
-      height: 1px;
-      background: var(--gold);
+      width: 50px;
+      height: 2px;
+      background: var(--brand-rose);
       margin-bottom: 16px;
+      border-radius: 1px;
     }
     .t-notification .nf-footer {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 60px;
-      width: 100%;
+      gap: 8px;
     }
     .t-notification .nf-footer span {
       font-family: 'Manrope', sans-serif;
-      font-size: 10px;
+      font-size: 9px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(245,240,232,0.5);
+      color: var(--brand-nude);
     }
     .t-notification .nf-footer .arrow {
-      color: var(--gold);
-      font-size: 16px;
+      color: var(--brand-rose);
+      font-size: 14px;
     }
 
     /* ================================
@@ -2778,73 +2786,6 @@
     }
 
     /* ================================
-       NEW: RED FLAG / GREEN FLAG
-       ================================ */
-    .t-flags {
-      display: grid;
-      grid-template-rows: auto 1fr 1fr;
-      overflow: hidden;
-    }
-    .t-flags .flags-header {
-      padding: 24px 24px 16px;
-      background: white;
-      text-align: center;
-    }
-    .t-flags .flags-header .flags-kicker {
-      font-family: 'Manrope', sans-serif;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--brand-rose);
-      margin-bottom: 6px;
-    }
-    .t-flags .flags-header h3 {
-      font-family: 'Ovo', serif;
-      font-size: 18px;
-      color: var(--brand-burgundy);
-      line-height: 1.3;
-    }
-    .t-flags .flag-row {
-      padding: 18px 22px;
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-    .t-flags .flag-row.red {
-      background: #f9f0f0;
-    }
-    .t-flags .flag-row.green {
-      background: #f0f5ee;
-    }
-    .t-flags .flag-icon {
-      font-size: 20px;
-      flex-shrink: 0;
-      line-height: 1;
-    }
-    .t-flags .flag-text {
-      font-family: 'Ovo', serif;
-      font-size: 13px;
-      line-height: 1.4;
-    }
-    .t-flags .flag-row.red .flag-text {
-      color: #8B3A3A;
-    }
-    .t-flags .flag-row.green .flag-text {
-      color: #3A5A2A;
-    }
-    .t-flags .flag-label {
-      font-family: 'Manrope', sans-serif;
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-    .t-flags .flag-row.red .flag-label { color: #C0392B; }
-    .t-flags .flag-row.green .flag-label { color: #27AE60; }
-
-    /* ================================
        NEW: FAUX RECEIPT
        ================================ */
     .t-receipt {
@@ -2935,106 +2876,6 @@
     }
 
     /* ================================
-       NEW: SPOTIFY WRAPPED STYLE
-       ================================ */
-    .t-wrapped {
-      background: linear-gradient(160deg, #1a0a12 0%, var(--brand-burgundy) 40%, var(--brand-rose) 100%);
-      padding: 30px 26px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-    }
-    .t-wrapped .wrapped-year {
-      font-family: 'Manrope', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 20px;
-    }
-    .t-wrapped .wrapped-title {
-      font-family: 'Ovo', serif;
-      font-size: 16px;
-      color: rgba(255,255,255,0.6);
-      margin-bottom: 6px;
-    }
-    .t-wrapped .wrapped-big {
-      font-family: 'Manrope', sans-serif;
-      font-size: 42px;
-      font-weight: 800;
-      color: white;
-      line-height: 1.05;
-      margin-bottom: 20px;
-    }
-    .t-wrapped .wrapped-big span {
-      color: var(--brand-rose);
-      background: linear-gradient(90deg, #faeeeb, var(--brand-rose));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .t-wrapped .wrapped-stats {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex: 1;
-      justify-content: center;
-    }
-    .t-wrapped .wrapped-stat {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .t-wrapped .wrapped-stat-num {
-      font-family: 'Manrope', sans-serif;
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--brand-blush);
-      min-width: 70px;
-    }
-    .t-wrapped .wrapped-stat-label {
-      font-family: 'Ovo', serif;
-      font-size: 12px;
-      color: rgba(255,255,255,0.6);
-      line-height: 1.3;
-    }
-    .t-wrapped .wrapped-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 16px;
-      padding-top: 12px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    .t-wrapped .wrapped-cta {
-      font-family: 'Manrope', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--brand-burgundy);
-      background: var(--brand-blush);
-      padding: 8px 16px;
-      border-radius: 20px;
-    }
-    .t-wrapped .wrapped-logo {
-      font-family: 'Ovo', serif;
-      font-size: 8px;
-      color: rgba(255,255,255,0.3);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .t-wrapped .wrapped-circle {
-      position: absolute;
-      border-radius: 50%;
-      border: 2px solid rgba(255,255,255,0.05);
-    }
-    .t-wrapped .wrapped-circle-1 { width: 300px; height: 300px; top: -120px; right: -100px; }
-    .t-wrapped .wrapped-circle-2 { width: 200px; height: 200px; bottom: -80px; left: -60px; }
-
-    /* ================================
        LIGHTBOX
        ================================ */
     .lightbox {
@@ -3078,58 +2919,59 @@
        SENSITIVE CONTENT PARODY
        ================================ */
     .t-sensitive {
-      background: #262626;
+      background: #1a1a1a;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 40px 30px;
+      padding: 50px 36px;
       position: relative;
       overflow: hidden;
     }
     .t-sensitive .sens-blur-bg {
       position: absolute;
-      inset: 0;
-      background: var(--burgundy);
+      inset: -20px;
+      background: var(--brand-blush);
       background-image:
-        radial-gradient(ellipse at 30% 40%, rgba(196,148,61,0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 60%, rgba(107,45,69,0.4) 0%, transparent 50%);
-      filter: blur(28px);
-      opacity: 0.6;
+        radial-gradient(ellipse at 30% 30%, var(--brand-rose) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 70%, var(--brand-nude) 0%, transparent 50%);
+      filter: blur(40px);
+      opacity: 0.25;
     }
     .t-sensitive .sens-icon {
-      width: 48px;
-      height: 48px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
-      border: 2px solid rgba(245,240,232,0.25);
+      border: 1.5px solid rgba(255,255,255,0.15);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
       position: relative;
       z-index: 1;
     }
     .t-sensitive .sens-icon .eye {
-      font-size: 22px;
-      opacity: 0.5;
+      font-size: 24px;
+      opacity: 0.4;
+      filter: grayscale(1);
     }
     .t-sensitive .sens-title {
       font-family: 'Manrope', sans-serif;
       font-size: 15px;
       font-weight: 600;
-      color: var(--cream);
-      margin-bottom: 6px;
+      color: #e8e8e8;
+      margin-bottom: 10px;
       position: relative;
       z-index: 1;
     }
     .t-sensitive .sens-sub {
       font-family: 'Manrope', sans-serif;
-      font-size: 12px;
-      color: rgba(245,240,232,0.45);
-      line-height: 1.5;
-      max-width: 260px;
-      margin-bottom: 24px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+      max-width: 280px;
+      margin-bottom: 32px;
       position: relative;
       z-index: 1;
     }
@@ -3137,47 +2979,22 @@
       font-family: 'Manrope', sans-serif;
       font-size: 14px;
       font-weight: 600;
-      color: var(--cream);
-      padding: 10px 28px;
-      border: 1px solid rgba(245,240,232,0.3);
+      color: white;
+      padding: 12px 32px;
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: 8px;
-      margin-bottom: 28px;
       position: relative;
       z-index: 1;
-    }
-    .t-sensitive .sens-actual {
-      position: relative;
-      z-index: 1;
-      padding: 16px 20px;
-      border-radius: 12px;
-      background: rgba(74,26,46,0.5);
-      border: 1px solid rgba(196,148,61,0.2);
-    }
-    .t-sensitive .sens-actual .sens-kicker {
-      font-family: 'Caveat', cursive;
-      font-size: 14px;
-      color: var(--gold);
-      margin-bottom: 6px;
-    }
-    .t-sensitive .sens-actual .sens-message {
-      font-family: 'Playfair Display', serif;
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--cream);
-      line-height: 1.3;
-    }
-    .t-sensitive .sens-actual .sens-message em {
-      color: var(--gold);
-      font-style: italic;
+      letter-spacing: 0.3px;
     }
     .t-sensitive .sens-logo {
       position: absolute;
-      bottom: 14px;
-      font-family: 'Playfair Display', serif;
+      bottom: 18px;
+      font-family: 'Ovo', serif;
       font-size: 8px;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: rgba(245,240,232,0.2);
+      color: rgba(255,255,255,0.15);
       z-index: 1;
     }
 
@@ -3871,13 +3688,18 @@
 
     <!-- Notification / Reminder -->
     <div class="ig-post t-notification">
-      <div class="nf-kicker">Gentle reminder</div>
+      <div class="nf-kicker">Gentle reminder...</div>
       <div class="nf-card">
-        <div class="nf-now">Now</div>
-        <div class="nf-title">Financial Checkup Reminder</div>
-        <div class="nf-body">Your future called. It wants a plan.</div>
+        <div class="nf-app-icon">TFW</div>
+        <div class="nf-card-content">
+          <div class="nf-card-top">
+            <div class="nf-title">The Finance Woman</div>
+            <div class="nf-now">now</div>
+          </div>
+          <div class="nf-body">Your future self called. She wants a plan.</div>
+        </div>
       </div>
-      <div class="nf-main">Have you checked in on your future lately?</div>
+      <div class="nf-main">Have you checked in on your finances lately?</div>
       <div class="nf-line"></div>
       <div class="nf-footer">
         <span>Swipe to read</span>
@@ -3896,13 +3718,9 @@
     <div class="ig-post t-sensitive">
       <div class="sens-blur-bg"></div>
       <div class="sens-icon"><span class="eye">👁</span></div>
-      <div class="sens-title">This post may contain sensitive content.</div>
+      <div class="sens-title">This post may contain<br>sensitive content.</div>
       <div class="sens-sub">This financial truth may be uncomfortable for people who haven't checked their pension in years.</div>
-      <div class="sens-reveal">Tap to reveal</div>
-      <div class="sens-actual">
-        <div class="sens-kicker">The truth is...</div>
-        <div class="sens-message">If you're self-employed with <em>no pension</em>, you're planning to work <em>forever</em>.</div>
-      </div>
+      <div class="sens-reveal">See post</div>
       <div class="sens-logo">The Finance Woman</div>
     </div>
 
@@ -4160,7 +3978,7 @@
 <!-- SECTION 13: Creative / Viral Formats -->
 <div class="template-section">
   <h2>Creative &amp; Viral Formats</h2>
-  <p class="section-desc">Trending formats that stop the scroll — Notes app, glassmorphism, receipts, Wrapped</p>
+  <p class="section-desc">Trending formats that stop the scroll — Notes app, glassmorphism, receipts &amp; more</p>
   <div class="template-row">
 
     <!-- Notes App Hot Take -->
@@ -4220,28 +4038,6 @@
 <div class="template-section">
   <div class="template-row">
 
-    <!-- Red Flag / Green Flag -->
-    <div class="ig-post t-flags">
-      <div class="flags-header">
-        <div class="flags-kicker">Choose wisely</div>
-        <h3>Red flags vs green flags when choosing a financial adviser</h3>
-      </div>
-      <div class="flag-row red">
-        <span class="flag-icon">🚩</span>
-        <div>
-          <div class="flag-label">Red flag</div>
-          <div class="flag-text">They use jargon and won't explain it. You leave the meeting more confused than when you arrived.</div>
-        </div>
-      </div>
-      <div class="flag-row green">
-        <span class="flag-icon">🟢</span>
-        <div>
-          <div class="flag-label">Green flag</div>
-          <div class="flag-text">They explain everything in plain English and check you actually understand before moving on.</div>
-        </div>
-      </div>
-    </div>
-
     <!-- Faux Receipt -->
     <div class="ig-post t-receipt">
       <div class="receipt-header">
@@ -4284,33 +4080,6 @@
       <hr class="receipt-divider">
       <div class="receipt-footer">Time to change this? Free call below 👇</div>
       <div class="receipt-barcode">|||| ||| |||| || ||||| ||| ||||</div>
-    </div>
-
-    <!-- Spotify Wrapped Style -->
-    <div class="ig-post t-wrapped">
-      <div class="wrapped-circle wrapped-circle-1"></div>
-      <div class="wrapped-circle wrapped-circle-2"></div>
-      <div class="wrapped-year">2025 · Wrapped</div>
-      <div class="wrapped-title">Your money this year:</div>
-      <div class="wrapped-big">You earned it.<br>But did you <span>protect</span> it?</div>
-      <div class="wrapped-stats">
-        <div class="wrapped-stat">
-          <div class="wrapped-stat-num">365</div>
-          <div class="wrapped-stat-label">days without income protection</div>
-        </div>
-        <div class="wrapped-stat">
-          <div class="wrapped-stat-num">£0</div>
-          <div class="wrapped-stat-label">added to your pension this year</div>
-        </div>
-        <div class="wrapped-stat">
-          <div class="wrapped-stat-num">12</div>
-          <div class="wrapped-stat-label">months closer to retirement with no plan</div>
-        </div>
-      </div>
-      <div class="wrapped-footer">
-        <div class="wrapped-cta">Make 2026 different →</div>
-        <div class="wrapped-logo">The Finance Woman</div>
-      </div>
     </div>
 
   </div>
