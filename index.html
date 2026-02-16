@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Instagram Templates – The Finance Woman</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&family=Caveat:wght@400;500;600;700&family=Ovo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&family=Caveat:wght@400;500;600;700&family=Ovo&family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
     :root {
       --burgundy: #4A1A2E;
@@ -3159,428 +3159,193 @@
     }
 
     /* ================================
-       CAROUSEL: Client Story
+       BOLD CAROUSEL SLIDE SYSTEM
        ================================ */
-    .t-story-slide {
+    /* Base slide */
+    .c-slide {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 38px 34px;
+      padding: 32px 28px;
       position: relative;
+      overflow: hidden;
     }
-    .t-story-slide .slide-num {
-      position: absolute;
-      top: 20px;
-      right: 22px;
-      font-family: 'Manrope', sans-serif;
-      font-size: 10px;
-      letter-spacing: 2px;
-      opacity: 0.35;
+
+    /* Colour backgrounds */
+    .bg-burg { background: var(--brand-burgundy); color: var(--cream); }
+    .bg-nude { background: var(--brand-nude); color: var(--brand-burgundy); }
+    .bg-blush { background: var(--brand-blush); color: var(--brand-burgundy); }
+    .bg-cream { background: var(--cream); color: var(--brand-burgundy); }
+    .bg-olive { background: var(--brand-dark-olive); color: var(--cream); }
+    .bg-rose { background: var(--brand-rose); color: #fff; }
+
+    /* Giant condensed bold headline (Bebas Neue) */
+    .c-big {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 52px;
+      line-height: 0.95;
+      letter-spacing: 1px;
       text-transform: uppercase;
     }
-    .t-story-slide .story-headline {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      font-weight: 500;
-      line-height: 1.25;
-      margin-bottom: 16px;
-    }
-    .t-story-slide .story-headline em {
+    .c-big em {
       font-style: italic;
+      font-family: 'Playfair Display', serif;
+      text-transform: none;
+      font-size: 0.85em;
     }
-    .t-story-slide .story-body {
+
+    /* Giant serif number (ONE, TWO, THREE style) */
+    .c-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 90px;
+      font-weight: 400;
+      line-height: 0.85;
+      opacity: 0.15;
+    }
+
+    /* Bold condensed sub-headline */
+    .c-bold {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      line-height: 1;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    /* Body text - kept minimal */
+    .c-body {
       font-family: 'Manrope', sans-serif;
-      font-size: 13px;
-      line-height: 1.7;
-      opacity: 0.85;
+      font-size: 15px;
+      line-height: 1.55;
+      margin-top: 16px;
     }
-    .t-story-slide .story-body strong {
-      font-weight: 600;
-      opacity: 1;
-    }
-    .t-story-slide .story-list {
-      list-style: none;
-      padding: 0;
-      margin: 12px 0 0;
-    }
-    .t-story-slide .story-list li {
-      font-family: 'Manrope', sans-serif;
-      font-size: 12.5px;
-      line-height: 1.6;
-      padding: 4px 0;
-      padding-left: 20px;
-      position: relative;
-    }
-    .t-story-slide .story-list li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      opacity: 0.5;
-    }
-    .t-story-slide .story-kicker {
-      font-family: 'Caveat', cursive;
+
+    /* Small serif accent text */
+    .c-serif {
+      font-family: 'Playfair Display', serif;
       font-size: 18px;
-      margin-bottom: 10px;
+      font-weight: 400;
+      line-height: 1.4;
       opacity: 0.7;
     }
-    .t-story-slide .story-logo {
+
+    /* Fading repeated text effect */
+    .c-fade-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .c-fade-stack .fade-1 { opacity: 1; }
+    .c-fade-stack .fade-2 { opacity: 0.4; }
+    .c-fade-stack .fade-3 { opacity: 0.15; }
+
+    /* Highlight badge */
+    .c-highlight {
+      display: inline;
+      background: var(--brand-burgundy);
+      color: var(--cream);
+      padding: 2px 8px;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    /* Swipe CTA */
+    .c-swipe {
       position: absolute;
-      bottom: 18px;
-      left: 34px;
-      font-family: 'Playfair Display', serif;
+      bottom: 22px;
+      left: 28px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Manrope', sans-serif;
       font-size: 10px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      opacity: 0.3;
-    }
-    .t-story-slide .story-dots {
-      position: absolute;
-      bottom: 18px;
-      right: 22px;
-      display: flex;
-      gap: 4px;
-    }
-    .t-story-slide .story-dots .dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: currentColor;
-      opacity: 0.2;
-    }
-    .t-story-slide .story-dots .dot.active {
-      opacity: 0.6;
-    }
-
-    /* Story color variants */
-    .story-bg-burgundy {
-      background: var(--brand-burgundy);
-      color: var(--cream);
-    }
-    .story-bg-blush {
-      background: var(--brand-blush);
-      color: var(--brand-burgundy);
-    }
-    .story-bg-cream {
-      background: var(--cream);
-      color: var(--charcoal);
-    }
-    .story-bg-rose {
-      background: var(--brand-rose);
-      color: #fff;
-    }
-    .story-bg-nude {
-      background: var(--brand-nude);
-      color: #fff;
-    }
-    .story-bg-olive {
-      background: var(--brand-dark-olive);
-      color: var(--cream);
-    }
-
-    /* ================================
-       CAROUSEL: Checklist
-       ================================ */
-    .t-checklist-slide {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 36px 32px;
-      position: relative;
-    }
-    .t-checklist-slide .slide-num {
-      position: absolute;
-      top: 20px;
-      right: 22px;
-      font-family: 'Manrope', sans-serif;
-      font-size: 10px;
-      letter-spacing: 2px;
-      opacity: 0.35;
-      text-transform: uppercase;
-    }
-    .t-checklist-slide .check-category {
-      font-family: 'Manrope', sans-serif;
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
       opacity: 0.5;
-      margin-bottom: 12px;
     }
-    .t-checklist-slide .check-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-weight: 500;
-      line-height: 1.25;
-      margin-bottom: 20px;
-    }
-    .t-checklist-slide .check-items {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .t-checklist-slide .check-items li {
-      font-family: 'Manrope', sans-serif;
-      font-size: 12.5px;
-      line-height: 1.5;
-      padding: 7px 0 7px 28px;
-      position: relative;
-      border-bottom: 1px solid rgba(128,128,128,0.1);
-    }
-    .t-checklist-slide .check-items li:last-child {
-      border-bottom: none;
-    }
-    .t-checklist-slide .check-items li::before {
+    .c-swipe::before {
       content: '';
-      position: absolute;
-      left: 0;
-      top: 9px;
-      width: 16px;
-      height: 16px;
-      border: 1.5px solid currentColor;
-      border-radius: 3px;
-      opacity: 0.35;
-    }
-    .t-checklist-slide .check-items li .check-sub {
       display: block;
-      font-size: 11px;
-      opacity: 0.55;
-      margin-top: 2px;
-      font-style: italic;
+      width: 24px;
+      height: 1.5px;
+      background: currentColor;
     }
-    .t-checklist-slide .check-logo {
+
+    /* Logo bottom-right */
+    .c-logo {
       position: absolute;
       bottom: 18px;
-      left: 32px;
+      right: 24px;
       font-family: 'Playfair Display', serif;
       font-size: 10px;
-      letter-spacing: 2.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      opacity: 0.3;
+      opacity: 0.25;
     }
-    .t-checklist-slide .check-dots {
+
+    /* Colour stripe on right edge */
+    .c-stripe-right {
       position: absolute;
-      bottom: 18px;
-      right: 22px;
-      display: flex;
-      gap: 4px;
-    }
-    .t-checklist-slide .check-dots .dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: currentColor;
-      opacity: 0.2;
-    }
-    .t-checklist-slide .check-dots .dot.active {
-      opacity: 0.6;
-    }
-
-    /* Checklist color variants */
-    .check-bg-burgundy {
+      top: 0;
+      right: 0;
+      width: 18px;
+      height: 100%;
       background: var(--brand-burgundy);
-      color: var(--cream);
-    }
-    .check-bg-blush {
-      background: var(--brand-blush);
-      color: var(--brand-burgundy);
-    }
-    .check-bg-cream {
-      background: var(--cream);
-      color: var(--charcoal);
-    }
-    .check-bg-rose {
-      background: var(--brand-rose);
-      color: #fff;
-    }
-    .check-bg-nude {
-      background: var(--brand-nude);
-      color: #fff;
-    }
-    .check-bg-olive {
-      background: var(--brand-dark-olive);
-      color: var(--cream);
     }
 
-    /* ================================
-       CAROUSEL: Comparison (Adviser vs Accountant)
-       ================================ */
-    .t-compare-slide {
+    /* Photo split slide */
+    .c-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+    }
+    .c-split-text {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 36px 32px;
-      position: relative;
+      padding: 24px 20px;
     }
-    .t-compare-slide .slide-num {
-      position: absolute;
-      top: 20px;
-      right: 22px;
-      font-family: 'Manrope', sans-serif;
-      font-size: 10px;
-      letter-spacing: 2px;
-      opacity: 0.35;
-      text-transform: uppercase;
+    .c-split-photo {
+      overflow: hidden;
     }
-    .t-compare-slide .compare-role {
-      font-family: 'Manrope', sans-serif;
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      opacity: 0.5;
-      margin-bottom: 10px;
+    .c-split-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    .t-compare-slide .compare-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-weight: 500;
-      line-height: 1.25;
-      margin-bottom: 16px;
+
+    /* Divider line */
+    .c-line {
+      width: 50px;
+      height: 2px;
+      background: currentColor;
+      opacity: 0.4;
+      margin: 12px 0;
     }
-    .t-compare-slide .compare-body {
-      font-family: 'Manrope', sans-serif;
-      font-size: 12.5px;
-      line-height: 1.65;
-      opacity: 0.85;
-    }
-    .t-compare-slide .compare-body strong {
-      font-weight: 600;
-      opacity: 1;
-    }
-    .t-compare-slide .compare-list {
+
+    /* Bullet list - minimal */
+    .c-bullets {
       list-style: none;
       padding: 0;
       margin: 10px 0 0;
-    }
-    .t-compare-slide .compare-list li {
       font-family: 'Manrope', sans-serif;
-      font-size: 12px;
-      line-height: 1.5;
-      padding: 5px 0 5px 20px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .c-bullets li {
+      padding-left: 16px;
       position: relative;
     }
-    .t-compare-slide .compare-list li::before {
+    .c-bullets li::before {
       content: '';
       position: absolute;
       left: 0;
       top: 10px;
-      width: 8px;
-      height: 8px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: currentColor;
-      opacity: 0.25;
-    }
-    .t-compare-slide .compare-focus {
-      margin-top: 14px;
-      font-family: 'Manrope', sans-serif;
-      font-size: 11.5px;
-      line-height: 1.5;
-      opacity: 0.6;
-      letter-spacing: 0.5px;
-    }
-    .t-compare-slide .compare-emoji-row {
-      margin-top: 12px;
-      font-size: 13px;
-      line-height: 1.7;
-      opacity: 0.7;
-    }
-    .t-compare-slide .compare-logo {
-      position: absolute;
-      bottom: 18px;
-      left: 32px;
-      font-family: 'Playfair Display', serif;
-      font-size: 10px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
       opacity: 0.3;
-    }
-    .t-compare-slide .compare-dots {
-      position: absolute;
-      bottom: 18px;
-      right: 22px;
-      display: flex;
-      gap: 4px;
-    }
-    .t-compare-slide .compare-dots .dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: currentColor;
-      opacity: 0.2;
-    }
-    .t-compare-slide .compare-dots .dot.active {
-      opacity: 0.6;
-    }
-
-    /* ================================
-       CAROUSEL: Numbered Signs / Tips
-       ================================ */
-    .t-signs-slide {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 38px 34px;
-      position: relative;
-    }
-    .t-signs-slide .slide-num {
-      position: absolute;
-      top: 20px;
-      right: 22px;
-      font-family: 'Manrope', sans-serif;
-      font-size: 10px;
-      letter-spacing: 2px;
-      opacity: 0.35;
-      text-transform: uppercase;
-    }
-    .t-signs-slide .sign-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 52px;
-      font-weight: 400;
-      opacity: 0.12;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .t-signs-slide .sign-headline {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 1.3;
-      margin-bottom: 14px;
-    }
-    .t-signs-slide .sign-body {
-      font-family: 'Manrope', sans-serif;
-      font-size: 13px;
-      line-height: 1.7;
-      opacity: 0.8;
-    }
-    .t-signs-slide .sign-body strong {
-      font-weight: 600;
-      opacity: 1;
-    }
-    .t-signs-slide .sign-logo {
-      position: absolute;
-      bottom: 18px;
-      left: 34px;
-      font-family: 'Playfair Display', serif;
-      font-size: 10px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      opacity: 0.3;
-    }
-    .t-signs-slide .sign-dots {
-      position: absolute;
-      bottom: 18px;
-      right: 22px;
-      display: flex;
-      gap: 4px;
-    }
-    .t-signs-slide .sign-dots .dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: currentColor;
-      opacity: 0.2;
-    }
-    .t-signs-slide .sign-dots .dot.active {
-      opacity: 0.6;
     }
 
   </style>
@@ -4306,613 +4071,366 @@
       <div class="receipt-barcode">|||| ||| |||| || ||||| ||| ||||</div>
     </div>
 
-    <!-- ======================================
-         CAROUSEL 1: Client Story
-         "Making good money but not feeling good"
-         ====================================== -->
+    <!-- ============ BOLD CAROUSELS ============ -->
+    <!-- CAROUSEL 1: Client Story -->
     <div class="carousel-group">
-      <div class="carousel-group-label">Carousel Post <span>8 slides</span></div>
+      <div class="carousel-group-label">Carousel <span>8 slides</span></div>
       <div class="carousel-slides">
 
-        <!-- Slide 1: Hook -->
-        <div class="ig-post t-story-slide story-bg-burgundy">
-          <div class="slide-num">01 / 08</div>
-          <div class="story-kicker">A client story...</div>
-          <div class="story-headline">
-            She was good at <em>making</em> money.<br>
-            She just didn't feel good about money.
-          </div>
-          <div class="story-logo">The Finance Woman</div>
-          <div class="story-dots">
-            <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <!-- Hook -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 48px;">She was good at making money.</div>
+          <div class="c-line"></div>
+          <div class="c-big" style="font-size: 48px;">She just didn't feel good about <em>money.</em></div>
+          <div class="c-swipe">Swipe for her story</div>
+          <div class="c-logo">The Finance Woman</div>
+        </div>
+
+        <!-- Doing well on the surface -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 42px;">Business? Thriving.</div>
+          <div style="height: 20px;"></div>
+          <div class="c-big" style="font-size: 42px;">Personal finances?</div>
+          <div style="height: 20px;"></div>
+          <div class="c-fade-stack">
+            <div class="c-big fade-1" style="font-size: 42px;">Noisy.</div>
+            <div class="c-big fade-2" style="font-size: 42px;">Unclear.</div>
+            <div class="c-big fade-3" style="font-size: 42px;">Avoided.</div>
           </div>
         </div>
 
-        <!-- Slide 2: Who she is -->
-        <div class="ig-post t-story-slide story-bg-blush">
-          <div class="slide-num">02 / 08</div>
-          <div class="story-body">
-            She knew how to invest in her business.<br>
-            She understood growth.<br>
-            She was doing well.<br><br>
-            But her <strong>personal finances</strong>?<br><br>
-            They felt noisy.<br>
-            Unclear.<br>
-            Easy to avoid.
-          </div>
-          <div class="story-logo">The Finance Woman</div>
-          <div class="story-dots">
-            <div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <!-- Background -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-big" style="font-size: 38px;">She didn't grow up talking about money.</div>
+          <div style="height: 20px;"></div>
+          <div class="c-body">So investing felt overwhelming.<br>Too many options.<br>No starting point.</div>
+        </div>
+
+        <!-- Bad experience -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 34px;">She tried a "traditional" adviser.</div>
+          <div style="height: 24px;"></div>
+          <div class="c-fade-stack">
+            <div class="c-bold fade-1">Talked at her.</div>
+            <div class="c-bold fade-2">Told her what to do.</div>
+            <div class="c-bold fade-3">Explained nothing.</div>
           </div>
         </div>
 
-        <!-- Slide 3: The background -->
-        <div class="ig-post t-story-slide story-bg-cream">
-          <div class="slide-num">03 / 08</div>
-          <div class="story-body">
-            She didn't grow up talking about money.<br>
-            It wasn't part of family conversations.<br><br>
-            So even now, investing brought up <strong>anxiety</strong>.<br>
-            Overwhelm.<br>
-            Too many options.<br>
-            No clear starting point.
-          </div>
-          <div class="story-logo">The Finance Woman</div>
-          <div class="story-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
+        <!-- The shift -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-big" style="font-size: 42px;">She didn't need fixing.</div>
+          <div class="c-line"></div>
+          <div class="c-big" style="font-size: 42px;">She needed <em>context.</em></div>
         </div>
 
-        <!-- Slide 4: The try -->
-        <div class="ig-post t-story-slide story-bg-rose">
-          <div class="slide-num">04 / 08</div>
-          <div class="story-body">
-            She went to a "traditional" financial adviser.<br><br>
-            In her words:<br><br>
-            <strong>Talked at her.</strong><br>
-            <strong>Told her what to do.</strong><br>
-            <strong>Explained nothing properly.</strong><br><br>
-            She left feeling unheard.<br>
-            And still confused.
-          </div>
-          <div class="story-logo">The Finance Woman</div>
-          <div class="story-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 5: The real shift -->
-        <div class="ig-post t-story-slide story-bg-nude">
-          <div class="slide-num">05 / 08</div>
-          <div class="story-headline" style="font-size: 24px;">
-            It wasn't that she needed "fixing".
-          </div>
-          <div class="story-body">
-            She needed <strong>context</strong>.<br>
-            Someone to slow things down.<br>
-            Explain the why.<br>
-            And actually listen.
-          </div>
-          <div class="story-logo">The Finance Woman</div>
-          <div class="story-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 6: What changed -->
-        <div class="ig-post t-story-slide story-bg-blush">
-          <div class="slide-num">06 / 08</div>
-          <div class="story-body">
-            We mapped where she was.<br>
-            Where she wanted to be.<br>
-            What she wanted her money to <strong>do for her</strong>.<br><br>
-            Everything was explained in a way that finally made sense.<br><br>
-            No judgement.<br>
-            No pressure.
-          </div>
-          <div class="story-logo">The Finance Woman</div>
-          <div class="story-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 7: The outcome -->
-        <div class="ig-post t-story-slide story-bg-olive">
-          <div class="slide-num">07 / 08</div>
-          <div class="story-headline" style="font-size: 22px; margin-bottom: 14px;">What changed:</div>
-          <ul class="story-list">
-            <li>Old pensions reviewed and structured</li>
-            <li>Investments working quietly in the background</li>
-            <li>Income protected & peace of mind</li>
-            <li>Over £5,000 saved in tax every year</li>
-            <li>Working closely with her accountant, full team support</li>
+        <!-- What changed -->
+        <div class="ig-post c-slide bg-blush">
+          <div class="c-bold" style="margin-bottom: 16px;">What changed:</div>
+          <ul class="c-bullets" style="font-size: 14px; line-height: 2;">
+            <li>Pensions reviewed & structured</li>
+            <li>Investments working quietly</li>
+            <li>Income protected</li>
+            <li>£5,000+ saved in tax yearly</li>
+            <li>Full team support</li>
           </ul>
-          <div class="story-logo">The Finance Woman</div>
-          <div class="story-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div>
-          </div>
         </div>
 
-        <!-- Slide 8: The real win -->
-        <div class="ig-post t-story-slide story-bg-burgundy">
-          <div class="slide-num">08 / 08</div>
-          <div class="story-headline" style="font-size: 24px;">
-            She's not doing this alone anymore.
+        <!-- The real win -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 44px;">She's not doing this alone anymore.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-body" style="opacity: 0.65;">A plan. A team.<br>Peace of mind.</div>
+        </div>
+
+        <!-- Close with photo -->
+        <div class="ig-post c-slide c-split bg-burg" style="padding: 0;">
+          <div class="c-split-text">
+            <div class="c-bold" style="font-size: 22px; line-height: 1.1;">Sound familiar?</div>
+            <div style="height: 12px;"></div>
+            <div class="c-serif" style="font-size: 14px; opacity: 0.6;">Let's have a conversation.</div>
+            <div style="height: 16px;"></div>
+            <div class="c-swipe" style="position: static; font-size: 9px;">Link in bio</div>
           </div>
-          <div class="story-body">
-            She has a plan.<br>
-            A team.<br>
-            And <strong>peace of mind</strong>.<br><br>
-            Money working in the background —<br>
-            so she can focus on living her life.
-          </div>
-          <div class="story-logo">The Finance Woman</div>
-          <div class="story-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div>
+          <div class="c-split-photo">
+            <img src="images/romany-with-dog-casual.jpg" alt="Romany">
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- ======================================
-         CAROUSEL 2: 2026 Get-It-Together Checklist
-         ====================================== -->
+    <!-- CAROUSEL 2: 2026 Get-It-Together Checklist -->
     <div class="carousel-group">
-      <div class="carousel-group-label">Carousel Post <span>8 slides</span></div>
+      <div class="carousel-group-label">Carousel <span>8 slides</span></div>
       <div class="carousel-slides">
 
-        <!-- Slide 1: Hook -->
-        <div class="ig-post t-checklist-slide check-bg-burgundy">
-          <div class="slide-num">01 / 08</div>
-          <div class="check-title" style="font-size: 30px; margin-bottom: 12px;">
-            2026:<br>Get-It-Together<br>Checklist
-          </div>
-          <div class="check-category" style="opacity: 0.55; margin-bottom: 0; margin-top: 8px;">For business owners who are done winging it</div>
-          <div class="check-logo">The Finance Woman</div>
-          <div class="check-dots">
-            <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <!-- Hook -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 54px;">2026:</div>
+          <div class="c-big" style="font-size: 54px;">Get-it-together</div>
+          <div class="c-big" style="font-size: 54px;">Checklist</div>
+          <div style="height: 20px;"></div>
+          <div class="c-serif" style="font-size: 14px; opacity: 0.5;">For business owners who are done winging it.</div>
+          <div class="c-swipe">Swipe to check yourself</div>
+          <div class="c-logo">The Finance Woman</div>
+        </div>
+
+        <!-- Foundation -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">01</div>
+          <div class="c-bold">The Foundation</div>
+          <div class="c-body" style="line-height: 2;">Know what you actually earn.<br>Separate business from personal.<br>Have a plan for surplus cash.</div>
+        </div>
+
+        <!-- Future You -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">02</div>
+          <div class="c-bold">Future You</div>
+          <div class="c-body" style="line-height: 2;">Pension reviewed.<br>Contributions intentional.<br>Know why you're investing where you are.</div>
+        </div>
+
+        <!-- Tax -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">03</div>
+          <div class="c-bold">Tax (the quiet leak)</div>
+          <div class="c-body" style="line-height: 2;">Know how much you're paying & why.<br>Use your allowances.<br>Stop paying "lazy tax".</div>
+        </div>
+
+        <!-- Protection -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">04</div>
+          <div class="c-bold">Protection</div>
+          <div class="c-body" style="line-height: 2;">Income protected.<br>Life cover that fits your real life.<br>One bad year doesn't undo five good ones.</div>
+        </div>
+
+        <!-- Structure -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">05</div>
+          <div class="c-bold">Structure</div>
+          <div class="c-body" style="line-height: 2;">Everything in one place.<br>Clear strategy, not a collection of products.<br>Fewer decisions month-to-month.</div>
+        </div>
+
+        <!-- Support -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">06</div>
+          <div class="c-bold">Support</div>
+          <div class="c-body" style="line-height: 2;">Someone who sees the full picture.<br>Adviser + accountant aligned.<br>You're not carrying this alone.</div>
+        </div>
+
+        <!-- Close -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 34px;">If your business feels more organised than your personal finances...</div>
+          <div class="c-line"></div>
+          <div class="c-bold" style="margin-top: 8px;">This is your sign.</div>
+          <div class="c-logo">The Finance Woman</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CAROUSEL 3: 5 Signs You're Ready -->
+    <div class="carousel-group">
+      <div class="carousel-group-label">Carousel <span>8 slides</span></div>
+      <div class="carousel-slides">
+
+        <!-- Hook -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 50px;">5 Signs you're ready for a financial adviser</div>
+          <div style="height: 12px;"></div>
+          <div class="c-serif" style="font-size: 13px; opacity: 0.5;">Not because you're bad with money.</div>
+          <div class="c-swipe">Swipe</div>
+          <div class="c-logo">The Finance Woman</div>
+        </div>
+
+        <!-- Sign 1 -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">01</div>
+          <div class="c-bold">Decisions feel heavier than they should</div>
+          <div class="c-body">You're not struggling.<br>The stakes are just higher now.</div>
+        </div>
+
+        <!-- Sign 2 -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">02</div>
+          <div class="c-bold">You've done "something" but is it right?</div>
+          <div class="c-body">Pensions. ISAs. Old policies.<br>Nothing wrong — just uncoordinated.</div>
+        </div>
+
+        <!-- Sign 3 -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 40px;">You want clarity.</div>
+          <div style="height: 12px;"></div>
+          <div class="c-big" style="font-size: 40px;">Not more</div>
+          <div class="c-fade-stack" style="margin-top: 4px;">
+            <div class="c-big fade-1" style="font-size: 40px;">information.</div>
+            <div class="c-big fade-2" style="font-size: 40px;">information.</div>
+            <div class="c-big fade-3" style="font-size: 40px;">information.</div>
           </div>
         </div>
 
-        <!-- Slide 2: The Foundation -->
-        <div class="ig-post t-checklist-slide check-bg-blush">
-          <div class="slide-num">02 / 08</div>
-          <div class="check-category">The Foundation</div>
-          <ul class="check-items">
-            <li>Know what you actually earn<span class="check-sub">not just turnover vibes</span></li>
-            <li>Separate business money from personal money properly</li>
-            <li>Have a plan for surplus cash<span class="check-sub">not just "it's sitting there"</span></li>
-          </ul>
-          <div class="check-logo">The Finance Woman</div>
-          <div class="check-dots">
-            <div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
+        <!-- Sign 4 -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">04</div>
+          <div class="c-bold">Income has grown. So has exposure.</div>
+          <div class="c-body">No sick pay. More commitments.<br>You're thinking longer-term now.</div>
         </div>
 
-        <!-- Slide 3: Future You -->
-        <div class="ig-post t-checklist-slide check-bg-cream">
-          <div class="slide-num">03 / 08</div>
-          <div class="check-category">Future You</div>
-          <ul class="check-items">
-            <li>Pension reviewed<span class="check-sub">not ignored, not guessed</span></li>
-            <li>Contributions intentional<span class="check-sub">not whatever felt comfortable at the time</span></li>
-            <li>Understand why you're investing where you are</li>
-          </ul>
-          <div class="check-logo">The Finance Woman</div>
-          <div class="check-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
+        <!-- Sign 5 -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">05</div>
+          <div class="c-bold">You don't want to do this alone anymore</div>
+          <div class="c-body">Not because you can't.<br>Because you don't need to.</div>
         </div>
 
-        <!-- Slide 4: Tax -->
-        <div class="ig-post t-checklist-slide check-bg-rose">
-          <div class="slide-num">04 / 08</div>
-          <div class="check-category">Tax (the quiet leak)</div>
-          <ul class="check-items">
-            <li>Know how much tax you're paying<span class="check-sub">and why</span></li>
-            <li>Use allowances available to you<span class="check-sub">ISAs, pensions, company contributions</span></li>
-            <li>Stop paying "lazy tax" through lack of planning</li>
-          </ul>
-          <div class="check-logo">The Finance Woman</div>
-          <div class="check-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
+        <!-- Reality check -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-bold" style="font-size: 28px; margin-bottom: 16px;">Reality check</div>
+          <div class="c-big" style="font-size: 36px;">Most people I work with weren't "behind".</div>
+          <div style="height: 12px;"></div>
+          <div class="c-big" style="font-size: 36px;">They were ready to stop <em>winging it.</em></div>
         </div>
 
-        <!-- Slide 5: Protection -->
-        <div class="ig-post t-checklist-slide check-bg-nude">
-          <div class="slide-num">05 / 08</div>
-          <div class="check-category">Protection (non-negotiable)</div>
-          <ul class="check-items">
-            <li>Income protected<span class="check-sub">no sick pay = no safety net</span></li>
-            <li>Life cover aligned with your real life<span class="check-sub">not an old policy you forgot about</span></li>
-            <li>One bad year doesn't undo five good ones</li>
-          </ul>
-          <div class="check-logo">The Finance Woman</div>
-          <div class="check-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <!-- Close -->
+        <div class="ig-post c-slide c-split bg-burg" style="padding: 0;">
+          <div class="c-split-text">
+            <div class="c-bold" style="font-size: 20px; line-height: 1.15;">Ready?</div>
+            <div style="height: 8px;"></div>
+            <div class="c-serif" style="font-size: 13px; opacity: 0.55;">It starts with a conversation.</div>
+            <div style="height: 12px;"></div>
+            <div class="c-swipe" style="position: static; font-size: 9px;">Link in bio</div>
           </div>
-        </div>
-
-        <!-- Slide 6: Structure -->
-        <div class="ig-post t-checklist-slide check-bg-blush">
-          <div class="slide-num">06 / 08</div>
-          <div class="check-category">Structure</div>
-          <ul class="check-items">
-            <li>Everything in one place<span class="check-sub">not scattered across apps and logins</span></li>
-            <li>Clear strategy<span class="check-sub">not a collection of products</span></li>
-            <li>Fewer decisions to make month-to-month</li>
-          </ul>
-          <div class="check-logo">The Finance Woman</div>
-          <div class="check-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 7: Support -->
-        <div class="ig-post t-checklist-slide check-bg-olive">
-          <div class="slide-num">07 / 08</div>
-          <div class="check-category">Support</div>
-          <ul class="check-items">
-            <li>Someone on your team who sees the full picture</li>
-            <li>Adviser + accountant actually speaking to each other</li>
-            <li>You're not carrying this alone anymore</li>
-          </ul>
-          <div class="check-logo">The Finance Woman</div>
-          <div class="check-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 8: Close -->
-        <div class="ig-post t-checklist-slide check-bg-burgundy">
-          <div class="slide-num">08 / 08</div>
-          <div class="check-title" style="font-size: 22px;">
-            If your business feels more organised than your personal finances...
-          </div>
-          <div class="story-body" style="font-family: 'Manrope', sans-serif; font-size: 13px; line-height: 1.7; opacity: 0.85; color: var(--cream);">
-            This is your sign.<br><br>
-            2026 isn't about doing more.<br>
-            It's about doing it <strong>properly</strong>.
-          </div>
-          <div class="check-logo">The Finance Woman</div>
-          <div class="check-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div>
+          <div class="c-split-photo">
+            <img src="images/romany-on-the-phone.jpg" alt="Romany">
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- ======================================
-         CAROUSEL 3: 5 Signs You're Ready
-         ====================================== -->
+    <!-- CAROUSEL 4: Adviser vs Accountant -->
     <div class="carousel-group">
-      <div class="carousel-group-label">Carousel Post <span>8 slides</span></div>
+      <div class="carousel-group-label">Carousel <span>3 slides</span></div>
       <div class="carousel-slides">
 
-        <!-- Slide 1: Hook -->
-        <div class="ig-post t-signs-slide story-bg-burgundy">
-          <div class="slide-num">01 / 08</div>
-          <div class="sign-headline" style="font-size: 28px;">
-            5 signs you're ready to work with a financial adviser
-          </div>
-          <div class="sign-body" style="font-style: italic; opacity: 0.6;">
-            Not because you're bad with money — but because you're ready for the next layer.
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
+        <!-- Accountants -->
+        <div class="ig-post c-slide bg-cream">
+          <div class="c-bold" style="font-size: 24px; opacity: 0.4; margin-bottom: 8px;">What's the difference?</div>
+          <div class="c-big" style="font-size: 46px;">Your Accountant</div>
+          <div class="c-line"></div>
+          <div class="c-body" style="line-height: 2;">Compliance. Tax returns.<br>What's already happened.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-serif" style="font-size: 15px; opacity: 0.5;">Looking back.</div>
+          <div class="c-logo">The Finance Woman</div>
         </div>
 
-        <!-- Slide 2: Sign 1 -->
-        <div class="ig-post t-signs-slide story-bg-blush">
-          <div class="slide-num">02 / 08</div>
-          <div class="sign-number">01</div>
-          <div class="sign-headline">You're earning well, but decisions feel heavier than they should</div>
-          <div class="sign-body">
-            You're not struggling.<br>
-            You're just aware that the stakes are higher now.
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
+        <!-- Financial Advisers -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-bold" style="font-size: 24px; opacity: 0.4; margin-bottom: 8px;">What's the difference?</div>
+          <div class="c-big" style="font-size: 46px;">Your Adviser</div>
+          <div class="c-line"></div>
+          <div class="c-body" style="line-height: 2;">Strategy. Structure.<br>What happens next.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-serif" style="font-size: 15px; opacity: 0.5;">Looking forward.</div>
+          <div class="c-logo">The Finance Woman</div>
         </div>
 
-        <!-- Slide 3: Sign 2 -->
-        <div class="ig-post t-signs-slide story-bg-cream">
-          <div class="slide-num">03 / 08</div>
-          <div class="sign-number">02</div>
-          <div class="sign-headline">You've done "something"... but you're not sure if it's the right thing</div>
-          <div class="sign-body">
-            Pensions. ISAs. Old policies you haven't looked at in years.<br><br>
-            Nothing feels wrong — just <strong>uncoordinated</strong>.
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 4: Sign 3 -->
-        <div class="ig-post t-signs-slide story-bg-rose">
-          <div class="slide-num">04 / 08</div>
-          <div class="sign-number">03</div>
-          <div class="sign-headline">You want clarity, not more information</div>
-          <div class="sign-body">
-            You're done Googling.<br>
-            Done comparing opinions.<br><br>
-            You want someone to say:<br>
-            <strong>"This matters. This doesn't. Here's why."</strong>
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 5: Sign 4 -->
-        <div class="ig-post t-signs-slide story-bg-nude">
-          <div class="slide-num">05 / 08</div>
-          <div class="sign-number">04</div>
-          <div class="sign-headline">Your income has grown — and so has your exposure</div>
-          <div class="sign-body">
-            No sick pay. More commitments.<br>
-            More to protect if something interrupts your income.<br><br>
-            You're thinking <strong>longer-term</strong> now.
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 6: Sign 5 -->
-        <div class="ig-post t-signs-slide story-bg-blush">
-          <div class="slide-num">06 / 08</div>
-          <div class="sign-number">05</div>
-          <div class="sign-headline">You don't want to do this alone anymore</div>
-          <div class="sign-body">
-            Not because you can't.<br>
-            But because you don't need to.<br><br>
-            You want someone on your team who sees the <strong>full picture</strong>.
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 7: Reality check -->
-        <div class="ig-post t-signs-slide story-bg-olive">
-          <div class="slide-num">07 / 08</div>
-          <div class="sign-headline" style="font-size: 24px;">The reality check</div>
-          <div class="sign-body">
-            Most people I work with weren't "behind".<br><br>
-            They were <strong>capable</strong>.<br>
-            <strong>Successful</strong>.<br>
-            And ready to stop winging it.
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 8: Close -->
-        <div class="ig-post t-signs-slide story-bg-burgundy">
-          <div class="slide-num">08 / 08</div>
-          <div class="sign-headline" style="font-size: 24px;">
-            Being ready for advice isn't about panic.
-          </div>
-          <div class="sign-body">
-            It's about <strong>intention</strong>.<br><br>
-            And that's usually when the best decisions get made.
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div>
-          </div>
+        <!-- Do you need both? -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-big" style="font-size: 42px;">Different roles.</div>
+          <div class="c-big" style="font-size: 42px;">Same team.</div>
+          <div style="height: 20px;"></div>
+          <div class="c-body">The best outcomes happen when both are aligned.</div>
+          <div class="c-logo">The Finance Woman</div>
         </div>
 
       </div>
     </div>
 
-    <!-- ======================================
-         CAROUSEL 4: Adviser vs Accountant
-         ====================================== -->
+    <!-- CAROUSEL 5: Advice I'd Give -->
     <div class="carousel-group">
-      <div class="carousel-group-label">Carousel Post <span>3 slides</span></div>
+      <div class="carousel-group-label">Carousel <span>7 slides</span></div>
       <div class="carousel-slides">
 
-        <!-- Slide 1: Accountants -->
-        <div class="ig-post t-compare-slide story-bg-cream">
-          <div class="slide-num">01 / 03</div>
-          <div class="compare-role">What's the difference?</div>
-          <div class="compare-title">What an accountant does</div>
-          <ul class="compare-list">
-            <li>Keep your business compliant</li>
-            <li>Prepare accounts and tax returns</li>
-            <li>Understand profit, tax due, and cash flow</li>
-            <li>Make sure everything adds up correctly</li>
-          </ul>
-          <div class="compare-focus">accuracy &bull; compliance &bull; reporting</div>
-          <div class="compare-emoji-row">Looking back &bull; Deadlines &bull; What's happened</div>
-          <div class="compare-logo">The Finance Woman</div>
-          <div class="compare-dots">
-            <div class="dot active"></div><div class="dot"></div><div class="dot"></div>
-          </div>
+        <!-- Hook -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 46px;">Advice I'd give as a financial adviser...</div>
+          <div class="c-line"></div>
+          <div class="c-big" style="font-size: 46px;">Not afraid of <em>hurting your feelings</em></div>
+          <div class="c-swipe">Swipe for honest truths</div>
+          <div class="c-logo">The Finance Woman</div>
         </div>
 
-        <!-- Slide 2: Financial Advisers -->
-        <div class="ig-post t-compare-slide story-bg-burgundy">
-          <div class="slide-num">02 / 03</div>
-          <div class="compare-role">What's the difference?</div>
-          <div class="compare-title">What a financial adviser does</div>
-          <ul class="compare-list">
-            <li>Plan what happens next</li>
-            <li>Structure pensions, investments & protection</li>
-            <li>Reduce future tax legally and intentionally</li>
-            <li>Align money with your life and long-term goals</li>
-          </ul>
-          <div class="compare-focus">strategy &bull; structure &bull; future outcomes</div>
-          <div class="compare-emoji-row">Looking forward &bull; Long-term &bull; Decisions</div>
-          <div class="compare-logo">The Finance Woman</div>
-          <div class="compare-dots">
-            <div class="dot"></div><div class="dot active"></div><div class="dot"></div>
-          </div>
+        <!-- Setup -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 38px;">Most people I work with earn well.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-big" style="font-size: 38px;">The problem isn't effort.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-big" style="font-size: 38px;">It's what's missing</div>
+          <div class="c-big" style="font-size: 38px; opacity: 0.4;">underneath.</div>
         </div>
 
-        <!-- Slide 3: Do you need both? -->
-        <div class="ig-post t-compare-slide story-bg-blush">
-          <div class="slide-num">03 / 03</div>
-          <div class="compare-title" style="font-size: 24px;">Do you need both?</div>
-          <div class="compare-body">
-            Often, yes.<br><br>
-            <strong>Accountant:</strong> "This is what's happened and what you owe."<br><br>
-            <strong>Adviser:</strong> "Here's how to structure things better going forward."<br><br>
-            The best outcomes happen when both roles are clear, tax and planning align, and the client isn't stuck in the middle.<br><br>
-            <strong>Different roles. Same team.</strong>
+        <!-- Foundations -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-big" style="font-size: 38px;">It usually comes down to three things.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-big" style="font-size: 38px;">Not tactics. Not hacks.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-fade-stack">
+            <div class="c-big fade-1" style="font-size: 42px;">Foundations.</div>
+            <div class="c-big fade-2" style="font-size: 42px;">Foundations.</div>
+            <div class="c-big fade-3" style="font-size: 42px;">Foundations.</div>
           </div>
-          <div class="compare-logo">The Finance Woman</div>
-          <div class="compare-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot active"></div>
-          </div>
+          <div style="height: 16px;"></div>
+          <div class="c-serif" style="opacity: 0.5;">Here's the first. &rarr;</div>
         </div>
 
-      </div>
-    </div>
-
-    <!-- ======================================
-         CAROUSEL 5: Advice I'd Give If I Wasn't
-         Afraid of Hurting Your Feelings
-         ====================================== -->
-    <div class="carousel-group">
-      <div class="carousel-group-label">Carousel Post <span>7 slides</span></div>
-      <div class="carousel-slides">
-
-        <!-- Slide 1: Hook -->
-        <div class="ig-post t-signs-slide story-bg-burgundy">
-          <div class="slide-num">01 / 07</div>
-          <div class="sign-headline" style="font-size: 22px;">
-            Advice I'd give you as a financial adviser, after working with hundreds of business owners...
-          </div>
-          <div class="sign-body" style="font-style: italic; opacity: 0.55; margin-top: 8px;">
-            If I wasn't afraid of hurting your feelings.
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
+        <!-- Tip 1 -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">ONE</div>
+          <div class="c-bold" style="font-size: 32px;">Emergency fund = freedom</div>
+          <div class="c-body">Not fear. Options.<br>Say no, pivot, walk away.<br><br><span class="c-highlight">If you're self-employed, this is non-negotiable.</span></div>
         </div>
 
-        <!-- Slide 2: Set-up -->
-        <div class="ig-post t-signs-slide story-bg-blush">
-          <div class="slide-num">02 / 07</div>
-          <div class="sign-body">
-            Most people I work with earn well.<br>
-            They're sensible with money.<br><br>
-            The problem usually isn't effort —<br>
-            it's what's <strong>missing underneath</strong>.<br><br>
-            These three things make the biggest difference.
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
+        <!-- Tip 2 -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">TWO</div>
+          <div class="c-bold" style="font-size: 30px;">Know exactly what money is for</div>
+          <div class="c-body">Day-to-day. Tax. Long-term.<br><br>One pot = hard decisions.<br>Clarity removes decision fatigue.</div>
         </div>
 
-        <!-- Slide 3: Tip 1 - Emergency fund -->
-        <div class="ig-post t-signs-slide story-bg-cream">
-          <div class="slide-num">03 / 07</div>
-          <div class="sign-number">01</div>
-          <div class="sign-headline">An emergency fund = freedom</div>
-          <div class="sign-body" style="font-size: 12px;">
-            This isn't about fear. It's about <strong>options</strong>.<br><br>
-            A proper emergency fund lets you:<br>
-            &bull; Leave investments where they are<br>
-            &bull; Plan tax in advance, not react under pressure<br>
-            &bull; Say no, pivot, or walk away if you need to<br>
-            &bull; Protect your nervous system when income fluctuates
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
+        <!-- Tip 3 -->
+        <div class="ig-post c-slide bg-nude">
+          <div class="c-stripe-right"></div>
+          <div class="c-num">THREE</div>
+          <div class="c-bold" style="font-size: 28px;">Protect your income before you grow it</div>
+          <div class="c-body">Self-employed?<br>No sick pay. No safety net.<br>Your income is the asset.</div>
         </div>
 
-        <!-- Slide 4: Tip 2 - Know what money is for -->
-        <div class="ig-post t-signs-slide story-bg-rose">
-          <div class="slide-num">04 / 07</div>
-          <div class="sign-number">02</div>
-          <div class="sign-headline">Know exactly what money is for what</div>
-          <div class="sign-body" style="font-size: 12px;">
-            You need clear separation between:<br><br>
-            &bull; Day-to-day spending<br>
-            &bull; Short-term savings (tax, emergencies)<br>
-            &bull; Long-term money (pensions & investments)<br><br>
-            If everything sits in one pot, every decision feels harder than it should.<br><br>
-            <strong>Labelling money removes decision fatigue.</strong>
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 5: Tip 3 - Protect income -->
-        <div class="ig-post t-signs-slide story-bg-nude">
-          <div class="slide-num">05 / 07</div>
-          <div class="sign-number">03</div>
-          <div class="sign-headline">Protect your income before you try to grow it</div>
-          <div class="sign-body" style="font-size: 12px;">
-            If you're self-employed:<br>
-            No sick pay. No employer safety net.<br><br>
-            <strong>Your income is the asset.</strong><br><br>
-            Income protection means one bad year doesn't wipe out five good ones.
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 6: Reality check -->
-        <div class="ig-post t-signs-slide story-bg-olive">
-          <div class="slide-num">06 / 07</div>
-          <div class="sign-headline" style="font-size: 22px;">The reality check</div>
-          <div class="sign-body">
-            Most financial stress doesn't come from lack of knowledge.<br><br>
-            It comes from:<br>
-            &bull; No buffer<br>
-            &bull; Blurred boundaries with money<br>
-            &bull; Income that isn't protected<br><br>
-            <strong>Fix those first. Everything else becomes easier.</strong>
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div>
-          </div>
-        </div>
-
-        <!-- Slide 7: Close -->
-        <div class="ig-post t-signs-slide story-bg-burgundy">
-          <div class="slide-num">07 / 07</div>
-          <div class="sign-headline" style="font-size: 26px;">
-            Being careful is good.<br>
-            Being prepared is better.
-          </div>
-          <div class="sign-body" style="margin-top: 12px;">
-            Strong finances aren't clever.<br>
-            They're <strong>well-set-up</strong>.
-          </div>
-          <div class="sign-logo">The Finance Woman</div>
-          <div class="sign-dots">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div>
-          </div>
+        <!-- Reality check -->
+        <div class="ig-post c-slide bg-burg">
+          <div class="c-bold" style="font-size: 32px; margin-bottom: 12px;">Reality check</div>
+          <div class="c-big" style="font-size: 32px;">Most financial stress doesn't come from not knowing what to do.</div>
+          <div style="height: 16px;"></div>
+          <div class="c-body" style="font-size: 16px; opacity: 0.7;">no buffer<br><span class="c-highlight" style="margin-top: 4px; display: inline-block;">blurred</span> boundaries<br>unprotected income</div>
+          <div style="height: 16px;"></div>
+          <div class="c-serif" style="opacity: 0.5;">Fix those first. Everything else becomes easier.</div>
         </div>
 
       </div>
