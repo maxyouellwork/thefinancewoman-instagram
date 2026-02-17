@@ -3740,6 +3740,366 @@
       opacity: 0.5;
     }
 
+    /* ================================
+       BOLD TEMPLATE 6: Bento Grid
+       4-panel grid with different info chunks
+       ================================ */
+    .t-bento {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1.2fr 0.8fr;
+      gap: 3px;
+      background: #2C2C2C;
+      overflow: hidden;
+    }
+    .t-bento .bn-cell {
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .t-bento .bn-cell-1 {
+      background: var(--brand-burgundy);
+      grid-column: 1 / -1;
+      grid-row: 1;
+      padding: 28px 24px;
+    }
+    .t-bento .bn-cell-2 { background: var(--brand-rose); }
+    .t-bento .bn-cell-3 { background: var(--brand-blush); }
+    .t-bento .bn-big {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: white;
+      line-height: 1.2;
+    }
+    .t-bento .bn-big em { color: var(--gold-light); font-style: italic; }
+    .t-bento .bn-sub {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 8px;
+    }
+    .t-bento .bn-stat {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 44px;
+      color: white;
+      line-height: 1;
+    }
+    .t-bento .bn-stat-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+    .t-bento .bn-cell-3 .bn-stat { color: var(--brand-burgundy); }
+    .t-bento .bn-cell-3 .bn-stat-label { color: rgba(76,19,21,0.6); }
+
+    /* ================================
+       BOLD TEMPLATE 7: Highlighted Text
+       Clean background with marker-style highlights
+       ================================ */
+    .t-highlight {
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 36px 30px;
+      position: relative;
+    }
+    .t-highlight .hl-tag {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--brand-nude);
+      margin-bottom: 20px;
+    }
+    .t-highlight .hl-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #333;
+      line-height: 1.7;
+    }
+    .t-highlight .hl-text mark {
+      background: linear-gradient(180deg, transparent 55%, rgba(195,125,105,0.3) 55%);
+      color: inherit;
+      padding: 0 2px;
+    }
+    .t-highlight .hl-text mark.gold {
+      background: linear-gradient(180deg, transparent 55%, rgba(173,155,88,0.3) 55%);
+    }
+    .t-highlight .hl-footer {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .t-highlight .hl-cta {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--brand-rose);
+    }
+
+    /* ================================
+       BOLD TEMPLATE 8: Ticket / Boarding Pass
+       Event-style ticket format
+       ================================ */
+    .t-ticket {
+      background: var(--brand-blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .t-ticket .tk-card {
+      background: white;
+      border-radius: 12px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .t-ticket .tk-top {
+      background: var(--brand-burgundy);
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .t-ticket .tk-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .t-ticket .tk-type {
+      font-family: 'Manrope', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      background: rgba(196,148,61,0.15);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .t-ticket .tk-body {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+    }
+    .t-ticket .tk-row {
+      display: flex;
+      gap: 20px;
+    }
+    .t-ticket .tk-field {
+      flex: 1;
+    }
+    .t-ticket .tk-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--brand-nude);
+      margin-bottom: 4px;
+    }
+    .t-ticket .tk-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--brand-burgundy);
+    }
+    .t-ticket .tk-value.big {
+      font-size: 22px;
+    }
+    .t-ticket .tk-divider {
+      border: none;
+      border-top: 2px dashed rgba(186,155,136,0.3);
+      margin: 0;
+    }
+    .t-ticket .tk-bottom {
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .t-ticket .tk-barcode {
+      font-family: monospace;
+      font-size: 18px;
+      letter-spacing: 2px;
+      color: rgba(76,19,21,0.15);
+    }
+    .t-ticket .tk-seat {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      color: var(--brand-burgundy);
+    }
+    /* Scallop cutouts on ticket sides */
+    .t-ticket .tk-card::before,
+    .t-ticket .tk-card::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: var(--brand-blush);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .t-ticket .tk-card::before { left: -10px; }
+    .t-ticket .tk-card::after { right: -10px; }
+
+    /* ================================
+       BOLD TEMPLATE 9: Gradient Aura
+       Soft organic gradient blobs with floating text
+       ================================ */
+    .t-aura {
+      background: #1a1520;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-aura .au-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+    }
+    .t-aura .au-blob-1 {
+      width: 250px;
+      height: 250px;
+      background: rgba(76,19,21,0.5);
+      top: -60px;
+      right: -40px;
+    }
+    .t-aura .au-blob-2 {
+      width: 200px;
+      height: 200px;
+      background: rgba(195,125,105,0.4);
+      bottom: -40px;
+      left: -30px;
+    }
+    .t-aura .au-blob-3 {
+      width: 150px;
+      height: 150px;
+      background: rgba(173,155,88,0.25);
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .t-aura .au-kicker {
+      font-family: 'Caveat', cursive;
+      font-size: 18px;
+      color: var(--brand-rose);
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .t-aura .au-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.35;
+      position: relative;
+      z-index: 1;
+    }
+    .t-aura .au-text em {
+      color: var(--brand-rose);
+      font-style: italic;
+    }
+    .t-aura .au-footer {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 1;
+    }
+    .t-aura .au-cta {
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ================================
+       BOLD TEMPLATE 10: Polaroid Stack
+       Tilted photo with handwritten caption
+       ================================ */
+    .t-polaroid {
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+    }
+    .t-polaroid .pl-frame {
+      background: white;
+      padding: 12px 12px 50px;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+      transform: rotate(-3deg);
+      width: 85%;
+      position: relative;
+    }
+    .t-polaroid .pl-shadow {
+      position: absolute;
+      inset: 8px;
+      background: var(--cream-dark);
+      transform: rotate(4deg);
+      z-index: -1;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .t-polaroid .pl-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+    }
+    .t-polaroid .pl-caption {
+      font-family: 'Caveat', cursive;
+      font-size: 18px;
+      color: var(--brand-burgundy);
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.3;
+    }
+    .t-polaroid .pl-tape {
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%) rotate(2deg);
+      width: 60px;
+      height: 20px;
+      background: rgba(173,155,88,0.25);
+      border: 1px solid rgba(173,155,88,0.15);
+    }
+    .t-polaroid .pl-leaf {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+
   </style>
 </head>
 <body>
@@ -4522,61 +4882,102 @@
       <div class="mp-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px;"></div>
     </div>
 
-    <!-- Type Hero v2: Rose palette -->
-    <div class="ig-post t-type-hero" style="background: var(--brand-rose);">
-      <div class="th-accent-line" style="background: var(--brand-burgundy);"></div>
-      <div class="th-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 14px; filter: brightness(0) invert(1); opacity: 0.4;"></div>
-      <div class="th-big" style="color: white; font-size: 80px;">Self-employed? <em style="color: var(--brand-blush);">Protect</em> your income.</div>
-      <div class="th-sub" style="color: rgba(255,255,255,0.6);">Income protection from £5/month. Seriously.</div>
-    </div>
-
-    <!-- Diagonal Split v2: Olive + Cream -->
-    <div class="ig-post t-diagonal-split">
-      <div class="ds-bg-bottom" style="background: var(--cream);"></div>
-      <div class="ds-bg-top" style="background: var(--olive);"></div>
-      <div class="ds-content">
-        <div class="ds-kicker" style="color: var(--gold);">Let me ask you something...</div>
-        <div class="ds-statement">If you couldn't work for 6 months, what would happen to your <em>family?</em></div>
+    <!-- Bento Grid: 4-panel info grid -->
+    <div class="ig-post t-bento">
+      <div class="bn-cell bn-cell-1">
+        <div class="bn-big">Self-employed? Here's what you're <em>missing.</em></div>
+        <div class="bn-sub">The numbers that keep financial advisers up at night.</div>
       </div>
-      <div class="ds-bottom">
-        <div class="ds-cta" style="color: var(--olive);">This is why protection matters →</div>
-        <img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px; filter: brightness(0); opacity: 0.3;">
+      <div class="bn-cell bn-cell-2">
+        <div class="bn-stat">80%</div>
+        <div class="bn-stat-label">have no private pension</div>
+      </div>
+      <div class="bn-cell bn-cell-3">
+        <div class="bn-stat">£0</div>
+        <div class="bn-stat-label">statutory sick pay for you</div>
       </div>
     </div>
 
-    <!-- Overlap Card v2: With dog photo -->
-    <div class="ig-post t-overlap-card">
-      <img class="oc-photo" src="images/romany-with-dog-hero.jpg" alt="Romany with dog">
-      <div class="oc-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 14px;"></div>
-      <div class="oc-panel" style="background: var(--olive); width: 68%;">
-        <div class="oc-tag" style="color: var(--gold-light);">Behind the business</div>
-        <div class="oc-headline">I became an adviser because no one <em style="color: var(--gold-light);">explained</em> this stuff to me either.</div>
-        <div class="oc-cta">My story →</div>
+    <!-- Highlighted Text: Marker-style emphasis -->
+    <div class="ig-post t-highlight">
+      <div class="hl-tag">Read that again</div>
+      <div class="hl-text">
+        If you're self-employed, <mark>nobody is sorting your pension for you.</mark> No employer. No auto-enrolment. No safety net. Every month you don't act, you're not just standing still — you're <mark class="gold">falling behind.</mark>
+      </div>
+      <div class="hl-footer">
+        <div class="hl-cta">Free call — link in bio →</div>
+        <img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px; filter: brightness(0); opacity: 0.2;">
       </div>
     </div>
 
-    <!-- Minimal Punch v2: Burgundy -->
-    <div class="ig-post t-minimal-punch" style="background: var(--brand-burgundy);">
-      <div class="mp-corner mp-corner-tl" style="border-color: rgba(255,255,255,0.08);"></div>
-      <div class="mp-corner mp-corner-br" style="border-color: rgba(255,255,255,0.08);"></div>
-      <div class="mp-statement" style="color: var(--cream);">Every month you delay costs you <em style="color: var(--gold-light);">thousands</em> in retirement.</div>
-      <div class="mp-line" style="background: var(--gold);"></div>
-      <div class="mp-sub" style="color: rgba(245,240,232,0.4);">The maths doesn't lie</div>
-      <div class="mp-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px; filter: brightness(0) invert(1); opacity: 0.3;"></div>
+    <!-- Ticket: Boarding pass to financial clarity -->
+    <div class="ig-post t-ticket">
+      <div class="tk-card">
+        <div class="tk-top">
+          <div class="tk-brand">The Finance Woman</div>
+          <div class="tk-type">Boarding Pass</div>
+        </div>
+        <div class="tk-body">
+          <div class="tk-row">
+            <div class="tk-field">
+              <div class="tk-label">From</div>
+              <div class="tk-value big">Overwhelmed</div>
+            </div>
+            <div class="tk-field">
+              <div class="tk-label">To</div>
+              <div class="tk-value big">In Control</div>
+            </div>
+          </div>
+          <div class="tk-row">
+            <div class="tk-field">
+              <div class="tk-label">Passenger</div>
+              <div class="tk-value">You (yes, you)</div>
+            </div>
+            <div class="tk-field">
+              <div class="tk-label">Duration</div>
+              <div class="tk-value">30 min</div>
+            </div>
+          </div>
+          <div class="tk-row">
+            <div class="tk-field">
+              <div class="tk-label">Cost</div>
+              <div class="tk-value">Free</div>
+            </div>
+            <div class="tk-field">
+              <div class="tk-label">Jargon Level</div>
+              <div class="tk-value">Zero</div>
+            </div>
+          </div>
+        </div>
+        <hr class="tk-divider">
+        <div class="tk-bottom">
+          <div class="tk-barcode">||||| |||| ||| |||||| |||</div>
+          <div class="tk-seat">LINK IN BIO</div>
+        </div>
+      </div>
     </div>
 
-    <!-- Colour Stack v2: Softer palette -->
-    <div class="ig-post t-colour-stack" style="position: relative;">
-      <div class="cs-bar" style="background: var(--brand-nude); flex: 1; display: flex; align-items: center; padding: 0 28px;">
-        <div class="cs-text" style="font-size: 32px; color: white;">You deserve clarity.</div>
+    <!-- Gradient Aura: Dark moody with glowing blobs -->
+    <div class="ig-post t-aura">
+      <div class="au-blob au-blob-1"></div>
+      <div class="au-blob au-blob-2"></div>
+      <div class="au-blob au-blob-3"></div>
+      <div class="au-kicker">A thought for tonight...</div>
+      <div class="au-text">You work so hard to build your business. Who's building your <em>future?</em></div>
+      <div class="au-footer">
+        <div class="au-cta">@thefinancewoman</div>
       </div>
-      <div class="cs-bar" style="background: var(--brand-blush); flex: 1; display: flex; align-items: center; padding: 0 28px;">
-        <div class="cs-text" style="font-size: 24px; color: var(--brand-burgundy);">Not confusion.</div>
+    </div>
+
+    <!-- Polaroid Stack: Tilted photo with handwritten caption -->
+    <div class="ig-post t-polaroid">
+      <div class="pl-shadow"></div>
+      <div class="pl-frame">
+        <div class="pl-tape"></div>
+        <img class="pl-photo" src="images/romany-with-dog-casual.jpg" alt="Romany with her dog">
+        <div class="pl-caption">The face of someone who genuinely loves talking about pensions</div>
       </div>
-      <div class="cs-bar" style="background: white; flex: 1; display: flex; align-items: center; padding: 0 28px;">
-        <div class="cs-text" style="font-size: 13px; color: var(--brand-nude); font-family: 'Manrope', sans-serif; font-weight: 500;">Financial advice that actually makes sense. Free call — link in bio.</div>
-      </div>
-      <div class="cs-leaf" style="position: absolute; bottom: 14px; right: 20px;"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px; filter: brightness(0); opacity: 0.2;"></div>
+      <div class="pl-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px; filter: brightness(0); opacity: 0.2;"></div>
     </div>
 
 
