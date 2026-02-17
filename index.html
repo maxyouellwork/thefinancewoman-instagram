@@ -3607,6 +3607,10 @@
        Path A = dark olive, Path B = blush/gold
        ================================ */
     .c-theme-contrast .c-slide.cc-neutral { background: var(--brand-burgundy); }
+    .c-theme-contrast .c-slide.cc-path-a,
+    .c-theme-contrast .c-slide.cc-path-b {
+      justify-content: flex-start;
+    }
     .c-theme-contrast .c-slide.cc-path-a {
       background: var(--brand-dark-olive);
       color: rgba(232,224,212,0.6);
@@ -3619,18 +3623,33 @@
     }
     .c-theme-contrast .cc-path-badge {
       display: inline-block;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 4px;
       font-family: 'Manrope', sans-serif;
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 12px;
     }
     .c-theme-contrast .cc-path-a-badge {
-      background: rgba(255,255,255,0.06);
-      color: rgba(232,224,212,0.4);
+      background: rgba(50,50,23,0.15);
+      color: rgba(50,50,23,0.5);
+    }
+    /* Fork slide: structured path options */
+    .c-theme-contrast .cc-fork-option {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    .c-theme-contrast .cc-fork-option .cc-path-badge {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .c-theme-contrast .cc-fork-option .cc-fork-text {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
     }
     .c-theme-contrast .c-slide.cc-path-b {
       background: linear-gradient(135deg, var(--brand-blush) 0%, #f5e6df 100%);
@@ -5829,13 +5848,22 @@
         <!-- The fork -->
         <div class="ig-post c-slide" style="background: #f5f0e8; color: var(--brand-dark-olive);">
           <div class="c-bold" style="font-size: 28px; color: var(--brand-dark-olive);">You're standing at a fork.</div>
-          <div style="height: 12px;"></div>
-          <div class="c-body" style="line-height: 1.7; color: var(--brand-dark-olive);"><span class="cc-path-badge cc-path-a-badge">A</span> Close this app. Keep doing what you're doing. Nothing changes.<br><br><span class="cc-path-badge cc-path-b-badge">B</span> Spend 30 minutes having an honest conversation. Everything shifts.<br><br>Both are easy. Only one costs you.</div>
+          <div style="height: 16px;"></div>
+          <div class="cc-fork-option">
+            <span class="cc-path-badge cc-path-a-badge">A</span>
+            <span class="cc-fork-text">Close this app. Keep doing what you're doing. Nothing changes.</span>
+          </div>
+          <div class="cc-fork-option">
+            <span class="cc-path-badge cc-path-b-badge">B</span>
+            <span class="cc-fork-text">Spend 30 minutes having an honest conversation. Everything shifts.</span>
+          </div>
+          <div class="c-body" style="color: var(--brand-dark-olive); opacity: 0.5; font-style: italic;">Both are easy. Only one costs you.</div>
         </div>
 
         <!-- Path A: 1 year -->
         <div class="ig-post c-slide cc-path-a">
-          <div class="cc-path-badge cc-path-a-badge" style="margin-bottom: 10px;">Path A</div>
+          <div class="cc-path-badge cc-path-a-badge">Path A</div>
+          <div style="height: 8px;"></div>
           <div class="c-big" style="font-size: 36px;">One year from now.</div>
           <div style="height: 12px;"></div>
           <div class="c-body">Still no pension. Another year of growth lost — worth £5,000-10,000 in future value.<br><br>Still no income protection.<br>Still one illness away from zero.<br><br>Nothing bad happened.<br>But nothing good happened either.</div>
@@ -5843,7 +5871,8 @@
 
         <!-- Path A: 5 years -->
         <div class="ig-post c-slide cc-path-a">
-          <div class="cc-path-badge cc-path-a-badge" style="margin-bottom: 10px;">Path A</div>
+          <div class="cc-path-badge cc-path-a-badge">Path A</div>
+          <div style="height: 8px;"></div>
           <div class="c-big" style="font-size: 36px;">Five years from now.</div>
           <div style="height: 12px;"></div>
           <div class="c-body">Your pension is £30,000-60,000 lighter than it could have been.<br><br>You've paid thousands more tax than necessary.<br><br>You're still "meaning to sort it."<br><br>The gap is now much harder to close.</div>
@@ -5851,7 +5880,8 @@
 
         <!-- Path B: 1 year -->
         <div class="ig-post c-slide cc-path-b">
-          <div class="cc-path-badge cc-path-b-badge" style="margin-bottom: 10px;">Path B</div>
+          <div class="cc-path-badge cc-path-b-badge">Path B</div>
+          <div style="height: 8px;"></div>
           <div class="c-big" style="font-size: 36px;">One year from now.</div>
           <div style="height: 12px;"></div>
           <div class="c-body">Pension running quietly in the background.<br><br>Income protected — if something happens, you're covered.<br><br>Tax structured properly.<br><br>You check in once a quarter. No stress. Just progress.</div>
@@ -5859,7 +5889,8 @@
 
         <!-- Path B: 5 years -->
         <div class="ig-post c-slide cc-path-b">
-          <div class="cc-path-badge cc-path-b-badge" style="margin-bottom: 10px;">Path B</div>
+          <div class="cc-path-badge cc-path-b-badge">Path B</div>
+          <div style="height: 8px;"></div>
           <div class="c-big" style="font-size: 36px;">Five years from now.</div>
           <div style="height: 12px;"></div>
           <div class="c-body">Pension growing steadily — compound growth doing its thing.<br><br>Savings structured. Tax optimised. Family protected.<br><br>You feel calm. In control.<br><br>Not because everything is perfect — but because you have a plan.</div>
