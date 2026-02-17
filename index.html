@@ -3102,14 +3102,14 @@
 
     /* SVG logo/leaf for all templates */
     .tfw-logo-img {
-      height: 16px;
+      height: 22px;
       width: auto;
       display: inline-block;
       vertical-align: middle;
-      opacity: 0.7;
+      opacity: 0.8;
     }
 
-    /* Smaller leaf placements (8-9px text originals) */
+    /* Leaf accent placements */
     .cl-logo .tfw-logo-img,
     .q-logo .tfw-logo-img,
     .ht-logo .tfw-logo-img,
@@ -3119,21 +3119,21 @@
     .im-logo .tfw-logo-img,
     .glass-logo .tfw-logo-img,
     .pov-logo .tfw-logo-img {
-      height: 12px;
+      height: 18px;
     }
 
-    /* Full logo featured placements */
+    /* Full text logo featured placements */
     .logo-text .tfw-logo-img {
-      height: 14px;
+      height: 28px;
     }
     .ge-logo .tfw-logo-img,
     .top-logo .tfw-logo-img,
     .myth-footer .tfw-logo-img {
-      height: 12px;
+      height: 24px;
     }
     .sens-logo .tfw-logo-img,
     .brk-ticker-logo .tfw-logo-img {
-      height: 10px;
+      height: 20px;
     }
 
     /* White logo on dark backgrounds */
@@ -3375,8 +3375,8 @@
       position: absolute;
       bottom: 16px;
       right: 20px;
-      height: 14px;
-      opacity: 0.3;
+      height: 20px;
+      opacity: 0.45;
     }
 
     /* Colour stripe on right edge */
@@ -3445,6 +3445,210 @@
     }
 
     /* ================================
+       CAROUSEL THEME: Data (Cost of Waiting)
+       Dark charcoal with gold accent numbers
+       ================================ */
+    .c-theme-data .c-slide { background: #1c1c1e; color: #e8e0d4; }
+    .c-theme-data .c-slide.cd-accent { background: var(--brand-burgundy); }
+    .c-theme-data .c-big { color: #e8e0d4; }
+    .c-theme-data .c-num-huge {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 80px;
+      color: var(--gold-light);
+      line-height: 0.9;
+      letter-spacing: 2px;
+    }
+    .c-theme-data .c-num-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      color: rgba(232,224,212,0.5);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+    .c-theme-data .c-bar {
+      height: 6px;
+      background: rgba(232,224,212,0.1);
+      border-radius: 3px;
+      margin-top: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .c-theme-data .c-bar-fill {
+      height: 100%;
+      background: var(--gold-light);
+      border-radius: 3px;
+    }
+    .c-theme-data .c-vs {
+      display: flex;
+      gap: 2px;
+      margin-top: 12px;
+    }
+    .c-theme-data .c-vs-col {
+      flex: 1;
+      padding: 14px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .c-theme-data .c-vs-col.dim { background: rgba(255,255,255,0.04); }
+    .c-theme-data .c-vs-col.bright { background: rgba(196,148,61,0.15); }
+
+    /* ================================
+       CAROUSEL THEME: Journey (Client Transformation)
+       Before = cool muted, After = warm rose
+       ================================ */
+    .c-theme-journey .c-slide.cj-before {
+      background: #3a3a3c;
+      color: #b0aca6;
+    }
+    .c-theme-journey .c-slide.cj-before .c-big,
+    .c-theme-journey .c-slide.cj-before .c-bold {
+      color: #b0aca6;
+    }
+    .c-theme-journey .c-slide.cj-pivot {
+      background: var(--brand-burgundy);
+    }
+    .c-theme-journey .c-slide.cj-after {
+      background: var(--brand-blush);
+      color: var(--brand-burgundy);
+    }
+    .c-theme-journey .c-slide.cj-after .c-big,
+    .c-theme-journey .c-slide.cj-after .c-bold {
+      color: var(--brand-burgundy);
+    }
+    .c-theme-journey .c-slide.cj-after .c-body {
+      color: rgba(76,19,21,0.75);
+    }
+    .c-theme-journey .cj-phase-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.4;
+      margin-bottom: 14px;
+    }
+    .c-theme-journey .cj-arrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 14px 0;
+    }
+    .c-theme-journey .cj-arrow span {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .c-theme-journey .cj-arrow::before {
+      content: '→';
+      font-size: 16px;
+      opacity: 0.4;
+    }
+
+    /* ================================
+       CAROUSEL THEME: Warm (First Meeting)
+       Cream/blush/white, open and inviting
+       ================================ */
+    .c-theme-warm .c-slide { background: #faf7f3; color: var(--brand-burgundy); }
+    .c-theme-warm .c-slide.cw-rose { background: var(--brand-rose); color: white; }
+    .c-theme-warm .c-slide.cw-rose .c-big,
+    .c-theme-warm .c-slide.cw-rose .c-bold { color: white; }
+    .c-theme-warm .c-big,
+    .c-theme-warm .c-bold { color: var(--brand-burgundy); }
+    .c-theme-warm .c-body { color: rgba(76,19,21,0.65); }
+    .c-theme-warm .cw-emoji {
+      font-size: 36px;
+      margin-bottom: 14px;
+    }
+    .c-theme-warm .cw-check-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+    .c-theme-warm .cw-check-list li {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(76,19,21,0.06);
+      color: rgba(76,19,21,0.7);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .c-theme-warm .cw-check-list li::before {
+      content: '✕';
+      color: var(--brand-rose);
+      font-weight: 700;
+      font-size: 11px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .c-theme-warm .cw-check-list.green li::before {
+      content: '✓';
+      color: var(--sage);
+    }
+    .c-theme-warm .cw-pill {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(195,125,105,0.12);
+      border-radius: 20px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--brand-rose);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    /* ================================
+       CAROUSEL THEME: Contrast (Decision Timeline)
+       Path A = dark olive, Path B = blush/gold
+       ================================ */
+    .c-theme-contrast .c-slide.cc-neutral { background: var(--brand-burgundy); }
+    .c-theme-contrast .c-slide.cc-path-a {
+      background: var(--brand-dark-olive);
+      color: rgba(232,224,212,0.6);
+    }
+    .c-theme-contrast .c-slide.cc-path-a .c-big {
+      color: rgba(232,224,212,0.7);
+    }
+    .c-theme-contrast .c-slide.cc-path-a .c-bold {
+      color: rgba(232,224,212,0.5);
+    }
+    .c-theme-contrast .cc-path-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .c-theme-contrast .cc-path-a-badge {
+      background: rgba(255,255,255,0.06);
+      color: rgba(232,224,212,0.4);
+    }
+    .c-theme-contrast .c-slide.cc-path-b {
+      background: linear-gradient(135deg, var(--brand-blush) 0%, #f5e6df 100%);
+      color: var(--brand-burgundy);
+    }
+    .c-theme-contrast .c-slide.cc-path-b .c-big,
+    .c-theme-contrast .c-slide.cc-path-b .c-bold {
+      color: var(--brand-burgundy);
+    }
+    .c-theme-contrast .c-slide.cc-path-b .c-body {
+      color: rgba(76,19,21,0.7);
+    }
+    .c-theme-contrast .cc-path-b-badge {
+      background: rgba(76,19,21,0.08);
+      color: var(--brand-burgundy);
+    }
+
+    /* ================================
        BOLD TEMPLATE 1: Type Hero
        Massive oversized typography, editorial punch
        ================================ */
@@ -3459,11 +3663,11 @@
     }
     .t-type-hero .th-big {
       font-family: 'Playfair Display', serif;
-      font-size: 90px;
+      font-size: 56px;
       font-weight: 700;
-      line-height: 0.88;
+      line-height: 0.95;
       color: var(--brand-burgundy);
-      letter-spacing: -2px;
+      letter-spacing: -1px;
       margin-bottom: 12px;
     }
     .t-type-hero .th-big em {
@@ -3732,12 +3936,14 @@
     .t-colour-stack .tfw-logo-img,
     .t-minimal-punch .tfw-logo-img {
       filter: brightness(0);
-      opacity: 0.25;
+      opacity: 0.35;
+      height: 18px;
     }
     .t-diagonal-split .tfw-logo-img,
     .t-overlap-card .oc-leaf .tfw-logo-img {
       filter: brightness(0) invert(1);
-      opacity: 0.5;
+      opacity: 0.6;
+      height: 18px;
     }
 
     /* ================================
@@ -4828,7 +5034,7 @@
     <!-- Type Hero: Massive typography, editorial punch -->
     <div class="ig-post t-type-hero">
       <div class="th-accent-line"></div>
-      <div class="th-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 14px;"></div>
+      <div class="th-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
       <div class="th-big">Your <em>pension</em> is your future salary.</div>
       <div class="th-sub">Stop treating it like an afterthought.</div>
     </div>
@@ -4843,14 +5049,14 @@
       </div>
       <div class="ds-bottom">
         <div class="ds-cta">Free call — link in bio →</div>
-        <img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px;">
+        <img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman">
       </div>
     </div>
 
     <!-- Overlap Card: Photo with off-centre panel -->
     <div class="ig-post t-overlap-card">
       <img class="oc-photo" src="images/romany-hero.jpg" alt="Romany">
-      <div class="oc-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 14px;"></div>
+      <div class="oc-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
       <div class="oc-panel">
         <div class="oc-tag">Real talk</div>
         <div class="oc-headline">Nobody is coming to <em>sort your pension</em> for you.</div>
@@ -4869,7 +5075,7 @@
       <div class="cs-bar cs-bar-3">
         <div class="cs-text">Your future self will thank you. Free call — link in bio.</div>
       </div>
-      <div class="cs-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px;"></div>
+      <div class="cs-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- Minimal Punch: Extreme negative space -->
@@ -4879,7 +5085,7 @@
       <div class="mp-statement">The state pension is £11,502 a year.<br>Could <em>you</em> live on that?</div>
       <div class="mp-line"></div>
       <div class="mp-sub">Let's build something better</div>
-      <div class="mp-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px;"></div>
+      <div class="mp-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman"></div>
     </div>
 
     <!-- Bento Grid: 4-panel info grid -->
@@ -4906,7 +5112,7 @@
       </div>
       <div class="hl-footer">
         <div class="hl-cta">Free call — link in bio →</div>
-        <img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px; filter: brightness(0); opacity: 0.2;">
+        <img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="filter: brightness(0); opacity: 0.3;">
       </div>
     </div>
 
@@ -4977,7 +5183,7 @@
         <img class="pl-photo" src="images/romany-with-dog-casual.jpg" alt="Romany with her dog">
         <div class="pl-caption">The face of someone who genuinely loves talking about pensions</div>
       </div>
-      <div class="pl-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="height: 12px; filter: brightness(0); opacity: 0.2;"></div>
+      <div class="pl-leaf"><img class="tfw-logo-img" src="images/tfw-leaf.svg" alt="The Finance Woman" style="filter: brightness(0); opacity: 0.3;"></div>
     </div>
 
 
@@ -5346,79 +5552,97 @@
       </div>
     </div>
 
-    <!-- CAROUSEL 6: The Cost of Waiting -->
-    <div class="carousel-group">
-      <div class="carousel-group-label">Carousel <span>8 slides</span></div>
+    <!-- CAROUSEL 6: The Cost of Waiting — DATA THEME (dark + gold numbers) -->
+    <div class="carousel-group c-theme-data">
+      <div class="carousel-group-label">Carousel <span>8 slides · Cost of Waiting</span></div>
       <div class="carousel-slides">
 
         <!-- Hook -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-big" style="font-size: 52px;">Every year you wait is costing you thousands.</div>
-          <div class="c-line"></div>
-          <div class="c-serif" style="font-size: 15px; opacity: 0.5;">Swipe to see exactly how much.</div>
-          <div class="c-swipe">Swipe</div>
+        <div class="ig-post c-slide">
+          <div class="c-big" style="font-size: 48px; color: var(--gold-light);">Every year you wait is costing you thousands.</div>
+          <div class="c-line" style="background: var(--gold-light);"></div>
+          <div class="c-serif" style="font-size: 14px; opacity: 0.4;">Swipe to see exactly how much.</div>
+          <div class="c-swipe" style="color: var(--gold-light); border-color: rgba(196,148,61,0.2);">Swipe</div>
           <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
         </div>
 
         <!-- Compound growth intro -->
-        <div class="ig-post c-slide bg-nude">
-          <div class="c-stripe-right"></div>
-          <div class="c-bold" style="font-size: 30px;">Let's talk about compound growth.</div>
-          <div class="c-body">It's not magic. It's maths.<br><br>Your money doesn't just grow — it grows on top of its own growth.<br><br>But it needs <em>time</em> to work.</div>
+        <div class="ig-post c-slide cd-accent">
+          <div class="c-bold" style="font-size: 28px;">Let's talk about compound growth.</div>
+          <div class="c-body" style="opacity: 0.7;">It's not magic. It's maths.<br><br>Your money doesn't just grow — it grows on top of its own growth.<br><br>But it needs <em>time</em> to work.</div>
         </div>
 
         <!-- Age 25 -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-big" style="font-size: 36px;">Start at 25. Put in £200/month.</div>
-          <div style="height: 16px;"></div>
-          <div class="c-big" style="font-size: 64px; color: var(--gold-light);">£290,000+</div>
+        <div class="ig-post c-slide">
+          <div class="c-body" style="opacity: 0.4; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">Start at 25 · £200/month</div>
           <div style="height: 12px;"></div>
-          <div class="c-body" style="opacity: 0.6;">by age 65. You contributed £96k.<br>Compound growth did the rest.</div>
+          <div class="c-num-huge">£290,000+</div>
+          <div class="c-num-label">by age 65</div>
+          <div class="c-bar"><div class="c-bar-fill" style="width: 100%;"></div></div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="opacity: 0.4; font-size: 12px;">You contributed £96k. Growth did £194k.</div>
         </div>
 
         <!-- Age 35 -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-big" style="font-size: 36px;">Start at 35 instead. Same £200/month.</div>
-          <div style="height: 16px;"></div>
-          <div class="c-big" style="font-size: 64px; color: var(--gold-light);">£164,000</div>
+        <div class="ig-post c-slide">
+          <div class="c-body" style="opacity: 0.4; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">Start at 35 · Same £200/month</div>
           <div style="height: 12px;"></div>
-          <div class="c-body" style="opacity: 0.6;">That 10-year delay didn't cost you £24k in missed contributions.<br><br>It cost you <strong>£126,000.</strong></div>
+          <div class="c-num-huge">£164,000</div>
+          <div class="c-num-label">10 years later = £126,000 less</div>
+          <div class="c-bar"><div class="c-bar-fill" style="width: 57%;"></div></div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="opacity: 0.4; font-size: 12px;">The delay cost you far more than the missed contributions.</div>
         </div>
 
         <!-- Age 45 -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-big" style="font-size: 36px;">Wait until 45. Same £200/month.</div>
-          <div style="height: 16px;"></div>
-          <div class="c-big" style="font-size: 64px; color: var(--gold-light);">£73,000</div>
+        <div class="ig-post c-slide">
+          <div class="c-body" style="opacity: 0.4; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">Wait until 45 · Same £200/month</div>
           <div style="height: 12px;"></div>
-          <div class="c-body" style="opacity: 0.6;">You've lost <strong>£217,000</strong> compared to starting at 25.<br><br>Same amount. The only difference? Time.</div>
+          <div class="c-num-huge">£73,000</div>
+          <div class="c-num-label">£217,000 less than starting at 25</div>
+          <div class="c-bar"><div class="c-bar-fill" style="width: 25%;"></div></div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="opacity: 0.4; font-size: 12px;">Same amount. Wildly different outcome.</div>
         </div>
 
-        <!-- Self-employed reality -->
-        <div class="ig-post c-slide bg-nude">
-          <div class="c-stripe-right"></div>
-          <div class="c-big" style="font-size: 52px; color: var(--brand-burgundy);">80%</div>
-          <div class="c-bold">of self-employed people have no private pension.</div>
-          <div class="c-body">No employer auto-enrolling you.<br>No one matching your contributions.<br>No one even reminding you.<br><br>If you don't set this up, it simply doesn't happen.</div>
+        <!-- All three compared -->
+        <div class="ig-post c-slide">
+          <div class="c-bold" style="font-size: 22px; margin-bottom: 16px;">Same £200/month. Three very different outcomes.</div>
+          <div class="c-vs">
+            <div class="c-vs-col bright">
+              <div style="font-family: 'Bebas Neue'; font-size: 28px; color: var(--gold-light);">£290k</div>
+              <div style="font-size: 10px; opacity: 0.5; margin-top: 4px;">Age 25</div>
+            </div>
+            <div class="c-vs-col dim">
+              <div style="font-family: 'Bebas Neue'; font-size: 28px; color: rgba(232,224,212,0.5);">£164k</div>
+              <div style="font-size: 10px; opacity: 0.3; margin-top: 4px;">Age 35</div>
+            </div>
+            <div class="c-vs-col dim">
+              <div style="font-family: 'Bebas Neue'; font-size: 28px; color: rgba(232,224,212,0.3);">£73k</div>
+              <div style="font-size: 10px; opacity: 0.2; margin-top: 4px;">Age 45</div>
+            </div>
+          </div>
+          <div style="height: 16px;"></div>
+          <div class="c-body" style="opacity: 0.4;">The only variable? When you started.</div>
         </div>
 
         <!-- Reframe -->
-        <div class="ig-post c-slide bg-blush">
-          <div class="c-bold" style="font-size: 32px;">This isn't about being perfect.</div>
-          <div style="height: 12px;"></div>
-          <div class="c-big" style="font-size: 38px;">It's about starting.</div>
+        <div class="ig-post c-slide cd-accent">
+          <div class="c-big" style="font-size: 36px;">This isn't about being perfect.</div>
+          <div class="c-line" style="background: var(--gold-light);"></div>
+          <div class="c-big" style="font-size: 36px;">It's about <em>starting.</em></div>
           <div style="height: 16px;"></div>
-          <div class="c-body">Even £100/month started today beats £300/month in five years.<br><br>The second best time is now.</div>
+          <div class="c-body" style="opacity: 0.6;">Even £100/month started today beats £300/month in five years.</div>
         </div>
 
         <!-- CTA -->
-        <div class="ig-post c-slide c-split bg-burg" style="padding: 0;">
+        <div class="ig-post c-slide c-split" style="padding: 0; background: #1c1c1e;">
           <div class="c-split-text">
-            <div class="c-bold" style="font-size: 22px; line-height: 1.1;">Let's work out your numbers.</div>
+            <div class="c-bold" style="font-size: 20px; line-height: 1.15; color: var(--gold-light);">Let's work out your numbers.</div>
             <div style="height: 8px;"></div>
-            <div class="c-serif" style="font-size: 13px; opacity: 0.55;">Free 30-min call. No jargon. Just clarity.</div>
+            <div class="c-serif" style="font-size: 12px; opacity: 0.35; color: #e8e0d4;">Free 30-min call. No jargon.</div>
             <div style="height: 12px;"></div>
-            <div class="c-swipe" style="position: static; font-size: 9px;">Link in bio</div>
+            <div class="c-swipe" style="position: static; font-size: 9px; color: var(--gold-light); border-color: rgba(196,148,61,0.2);">Link in bio</div>
           </div>
           <div class="c-split-photo">
             <img src="images/romany-on-the-phone.jpg" alt="Romany">
@@ -5428,71 +5652,69 @@
       </div>
     </div>
 
-    <!-- CAROUSEL 7: Client Transformation (Before vs After) -->
-    <div class="carousel-group">
-      <div class="carousel-group-label">Carousel <span>8 slides</span></div>
+    <!-- CAROUSEL 7: Client Transformation — JOURNEY THEME (cool before → warm after) -->
+    <div class="carousel-group c-theme-journey">
+      <div class="carousel-group-label">Carousel <span>8 slides · Client Transformation</span></div>
       <div class="carousel-slides">
 
         <!-- Hook -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-big" style="font-size: 44px;">Before working with a financial adviser</div>
-          <div class="c-big" style="font-size: 44px;">vs. <em>after.</em></div>
+        <div class="ig-post c-slide" style="background: #2a2a2c; color: #e8e0d4;">
+          <div class="c-big" style="font-size: 40px; color: rgba(232,224,212,0.4);">Before working with a financial adviser</div>
+          <div class="c-big" style="font-size: 40px;">vs. <em style="color: var(--brand-rose);">after.</em></div>
           <div style="height: 12px;"></div>
-          <div class="c-serif" style="font-size: 14px; opacity: 0.5;">(It's not what you'd expect.)</div>
-          <div class="c-swipe">Swipe</div>
+          <div class="c-serif" style="font-size: 14px; opacity: 0.35;">(It's not what you'd expect.)</div>
+          <div class="c-swipe" style="color: var(--brand-rose); border-color: rgba(195,125,105,0.25);">Swipe</div>
           <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
         </div>
 
         <!-- Before: emotions -->
-        <div class="ig-post c-slide bg-nude">
-          <div class="c-stripe-right"></div>
-          <div class="c-bold" style="font-size: 42px; opacity: 0.3;">Before</div>
-          <div class="c-body" style="font-style: italic; line-height: 1.8;">"I know I should be doing something about my pension but I just... haven't."<br><br>"I'm earning good money but I've got no idea where it's going."<br><br>"Every time I think about finances I feel this knot in my stomach."</div>
+        <div class="ig-post c-slide cj-before">
+          <div class="cj-phase-label">BEFORE</div>
+          <div class="c-body" style="font-style: italic; line-height: 1.8; color: rgba(255,255,255,0.6);">"I know I should be doing something about my pension but I just... haven't."<br><br>"I'm earning good money but I've got no idea where it's going."<br><br>"Every time I think about finances I feel this knot in my stomach."</div>
         </div>
 
         <!-- Before: behaviours -->
-        <div class="ig-post c-slide bg-nude">
-          <div class="c-stripe-right"></div>
-          <div class="c-bold">The pattern:</div>
-          <div class="c-body" style="line-height: 1.8;">Avoid opening letters.<br>Guess your tax bill.<br>No idea what you'd do if you couldn't work for 3 months.<br><br>Put "sort pension" on your list every January.<br><br>Never do it.</div>
+        <div class="ig-post c-slide cj-before">
+          <div class="cj-phase-label">BEFORE</div>
+          <div class="c-bold" style="color: rgba(255,255,255,0.5);">The pattern:</div>
+          <div class="c-body" style="line-height: 1.8; color: rgba(255,255,255,0.5);">Avoid opening letters.<br>Guess your tax bill.<br>No idea what you'd do if you couldn't work for 3 months.<br><br>Put "sort pension" on your list every January.<br><br>Never do it.</div>
         </div>
 
-        <!-- Turning point -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-big" style="font-size: 42px;">Then something shifts.</div>
+        <!-- Turning point (pivot) -->
+        <div class="ig-post c-slide cj-pivot">
+          <div class="c-big" style="font-size: 40px; color: white;">Then something shifts.</div>
           <div style="height: 16px;"></div>
-          <div class="c-body" style="opacity: 0.7;">Maybe a friend gets ill and can't work.<br>Maybe you see a post like this one.<br>Maybe you just get tired of the knot.<br><br>You book the call. You show up.<br><br>And the first thing you realise is:<br><strong>nobody is judging you.</strong></div>
+          <div class="c-body" style="opacity: 0.8; color: rgba(255,255,255,0.85);">Maybe a friend gets ill and can't work.<br>Maybe you see a post like this one.<br>Maybe you just get tired of the knot.<br><br>You book the call. You show up.<br><br>And the first thing you realise is:<br><strong>nobody is judging you.</strong></div>
         </div>
 
         <!-- After: clarity -->
-        <div class="ig-post c-slide bg-blush">
-          <div class="c-bold" style="font-size: 42px; opacity: 0.3;">After</div>
-          <div class="c-body" style="font-style: italic; line-height: 1.8;">"I actually know my numbers now. Properly."<br><br>"I've got a pension set up and running — I don't even think about it."<br><br>"For the first time, I feel like I'm building something."</div>
+        <div class="ig-post c-slide cj-after">
+          <div class="cj-phase-label" style="color: var(--brand-burgundy); border-color: var(--brand-burgundy);">AFTER</div>
+          <div class="c-body" style="font-style: italic; line-height: 1.8; color: var(--brand-burgundy);">"I actually know my numbers now. Properly."<br><br>"I've got a pension set up and running — I don't even think about it."<br><br>"For the first time, I feel like I'm building something."</div>
         </div>
 
         <!-- After: identity shift -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-bold" style="font-size: 28px; margin-bottom: 16px;">The real change isn't financial.</div>
-          <div class="c-big" style="font-size: 38px;">It's how you <em>feel.</em></div>
-          <div style="height: 20px;"></div>
-          <div class="c-body" style="line-height: 2;">Reactive → Intentional<br>Earning → Building<br>Guessing → Structured<br>Avoiding → In control</div>
+        <div class="ig-post c-slide cj-after">
+          <div class="c-bold" style="font-size: 24px; margin-bottom: 12px; color: var(--brand-burgundy);">The real change isn't financial.</div>
+          <div class="c-big" style="font-size: 36px; color: var(--brand-burgundy);">It's how you <em>feel.</em></div>
+          <div style="height: 16px;"></div>
+          <div class="c-body" style="line-height: 2.2; color: var(--brand-burgundy); opacity: 0.7;">Reactive → Intentional<br>Earning → Building<br>Guessing → Structured<br>Avoiding → In control</div>
         </div>
 
         <!-- The surprise -->
-        <div class="ig-post c-slide bg-nude">
-          <div class="c-stripe-right"></div>
-          <div class="c-bold">The thing that surprises people most?</div>
-          <div class="c-body" style="line-height: 1.7;">It wasn't hard.<br>It wasn't scary.<br>It wasn't full of jargon.<br><br>It was a conversation.<br>With someone who listened.<br>Then a plan that made sense.<br><br><strong>The hardest part was booking the call.</strong></div>
+        <div class="ig-post c-slide cj-after">
+          <div class="c-bold" style="color: var(--brand-burgundy);">The thing that surprises people most?</div>
+          <div class="c-body" style="line-height: 1.7; color: var(--brand-burgundy); opacity: 0.8;">It wasn't hard.<br>It wasn't scary.<br>It wasn't full of jargon.<br><br>It was a conversation.<br>With someone who listened.<br>Then a plan that made sense.<br><br><strong>The hardest part was booking the call.</strong></div>
         </div>
 
         <!-- CTA -->
-        <div class="ig-post c-slide c-split bg-burg" style="padding: 0;">
+        <div class="ig-post c-slide c-split" style="padding: 0; background: var(--brand-blush);">
           <div class="c-split-text">
-            <div class="c-bold" style="font-size: 22px; line-height: 1.1;">Ready for your "after"?</div>
+            <div class="c-bold" style="font-size: 20px; line-height: 1.15; color: var(--brand-burgundy);">Ready for your "after"?</div>
             <div style="height: 8px;"></div>
-            <div class="c-serif" style="font-size: 13px; opacity: 0.55;">No judgement. Just someone in your corner.</div>
+            <div class="c-serif" style="font-size: 12px; opacity: 0.55; color: var(--brand-burgundy);">No judgement. Just someone in your corner.</div>
             <div style="height: 12px;"></div>
-            <div class="c-swipe" style="position: static; font-size: 9px;">Link in bio</div>
+            <div class="c-swipe" style="position: static; font-size: 9px; color: var(--brand-burgundy); border-color: rgba(76,19,21,0.2);">Link in bio</div>
           </div>
           <div class="c-split-photo">
             <img src="images/romany-with-dog-casual.jpg" alt="Romany">
@@ -5502,68 +5724,85 @@
       </div>
     </div>
 
-    <!-- CAROUSEL 8: First Meeting Experience -->
-    <div class="carousel-group">
-      <div class="carousel-group-label">Carousel <span>8 slides</span></div>
+    <!-- CAROUSEL 8: First Meeting — WARM THEME (cream/blush, inviting) -->
+    <div class="carousel-group c-theme-warm">
+      <div class="carousel-group-label">Carousel <span>8 slides · First Meeting Experience</span></div>
       <div class="carousel-slides">
 
         <!-- Hook -->
-        <div class="ig-post c-slide bg-blush">
-          <div class="c-big" style="font-size: 40px; color: var(--brand-burgundy);">What actually happens in your first call with a financial adviser.</div>
-          <div style="height: 12px;"></div>
-          <div class="c-serif" style="font-size: 14px; opacity: 0.5; color: var(--brand-burgundy);">(Spoiler: nobody looks at spreadsheets.)</div>
-          <div class="c-swipe" style="color: var(--brand-burgundy); border-color: rgba(76,19,21,0.2);">Swipe</div>
-          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
+        <div class="ig-post c-slide">
+          <div class="cw-emoji" style="font-size: 36px;">☕</div>
+          <div class="c-big" style="font-size: 36px;">What actually happens in your first call with a financial adviser.</div>
+          <div style="height: 10px;"></div>
+          <div class="c-serif" style="font-size: 13px; opacity: 0.4; color: var(--brand-burgundy);">(Spoiler: nobody looks at spreadsheets.)</div>
+          <div class="c-swipe" style="color: var(--brand-burgundy); border-color: rgba(76,19,21,0.15);">Swipe</div>
+          <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman" style="filter: brightness(0); opacity: 0.15;">
         </div>
 
         <!-- Acknowledge fears -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-bold" style="font-size: 28px;">Why you haven't booked yet:</div>
-          <div class="c-body" style="font-style: italic; line-height: 1.9; opacity: 0.8;">"What if they judge me for not having a pension at 38?"<br><br>"What if I can't answer their questions?"<br><br>"What if they try to sell me something?"<br><br>"What if I feel stupid?"</div>
-          <div style="height: 12px;"></div>
+        <div class="ig-post c-slide cw-rose">
+          <div class="c-bold" style="font-size: 24px;">Why you haven't booked yet:</div>
+          <div class="c-body" style="font-style: italic; line-height: 1.9; opacity: 0.9;">"What if they judge me for not having a pension at 38?"<br><br>"What if I can't answer their questions?"<br><br>"What if they try to sell me something?"<br><br>"What if I feel stupid?"</div>
+          <div style="height: 10px;"></div>
           <div class="c-body"><strong>None of them come true.</strong></div>
         </div>
 
         <!-- What you DON'T need -->
-        <div class="ig-post c-slide bg-nude">
-          <div class="c-stripe-right"></div>
+        <div class="ig-post c-slide">
           <div class="c-bold">What you don't need to bring:</div>
-          <div class="c-body" style="line-height: 2.2;">— A perfect financial history<br>— Your exact earnings for 5 years<br>— A budget spreadsheet<br>— Any idea what a SIPP is<br>— Your life figured out<br><br>Come as you are. That's the point.</div>
+          <div class="cw-check-list">
+            <li>A perfect financial history</li>
+            <li>Your exact earnings for 5 years</li>
+            <li>A budget spreadsheet</li>
+            <li>Any idea what a SIPP is</li>
+            <li>Your life figured out</li>
+          </div>
+          <div style="height: 10px;"></div>
+          <div class="c-body" style="font-style: italic; opacity: 0.6;">Come as you are. That's the point.</div>
         </div>
 
         <!-- What happens pt 1 -->
-        <div class="ig-post c-slide bg-nude">
-          <div class="c-stripe-right"></div>
-          <div class="c-bold">What the first 30 minutes look like:</div>
-          <div class="c-body" style="line-height: 1.7;">We have a cuppa (virtually).<br><br>I ask about your <em>life</em>. Not just money. What does your business look like? What keeps you up at night? What do you want your future to feel like?<br><br>This isn't an interrogation.<br>It's a conversation.</div>
+        <div class="ig-post c-slide">
+          <div class="cw-pill">The first 30 minutes</div>
+          <div style="height: 14px;"></div>
+          <div class="c-body" style="line-height: 1.8;">We have a cuppa (virtually).<br><br>I ask about your <em>life</em>. Not just money. What does your business look like? What keeps you up at night? What do you want your future to feel like?<br><br>This isn't an interrogation.<br>It's a conversation.</div>
         </div>
 
         <!-- What happens pt 2 -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-bold">Then we look at the gaps.</div>
-          <div class="c-body" style="line-height: 1.8; margin-top: 12px;">Together. Gently.<br><br>What happens to your income if you can't work?<br><br>Are you paying more tax than you need to?<br><br>Is future-you going to thank present-you?<br><br>Everything in plain English. Always.</div>
+        <div class="ig-post c-slide cw-rose">
+          <div class="cw-pill" style="background: rgba(255,255,255,0.2); color: white;">Then the gaps</div>
+          <div style="height: 14px;"></div>
+          <div class="c-body" style="line-height: 1.8;">Together. Gently.<br><br>What happens to your income if you can't work?<br><br>Are you paying more tax than you need to?<br><br>Is future-you going to thank present-you?<br><br>Everything in plain English. Always.</div>
         </div>
 
         <!-- What I'll never do -->
-        <div class="ig-post c-slide bg-blush">
-          <div class="c-bold" style="color: var(--brand-burgundy);">What I will never do:</div>
-          <div class="c-body" style="line-height: 2.2; color: var(--brand-burgundy);">— Pressure you to sign anything<br>— Make you feel bad<br>— Use jargon to sound clever<br>— Rush you into decisions<br>— Judge your savings<br><br>This call is free. It's for you.</div>
+        <div class="ig-post c-slide">
+          <div class="c-bold">What I will never do:</div>
+          <div class="cw-check-list green">
+            <li>Pressure you to sign anything</li>
+            <li>Make you feel bad</li>
+            <li>Use jargon to sound clever</li>
+            <li>Rush you into decisions</li>
+            <li>Judge your savings</li>
+          </div>
+          <div style="height: 10px;"></div>
+          <div class="c-body" style="font-style: italic; opacity: 0.6;">This call is free. It's for you.</div>
         </div>
 
         <!-- What changes -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-bold" style="font-size: 28px;">After that first call:</div>
+        <div class="ig-post c-slide" style="background: var(--brand-blush);">
+          <div class="c-bold" style="font-size: 24px;">After that first call:</div>
           <div class="c-body" style="line-height: 1.8;">You'll know where you stand. Properly.<br><br>You'll understand what you need (and what you don't).<br><br>You'll have a sense of what's possible.<br><br>And that knot in your stomach?<br><strong>It starts to loosen.</strong></div>
         </div>
 
         <!-- CTA -->
-        <div class="ig-post c-slide c-split bg-burg" style="padding: 0;">
+        <div class="ig-post c-slide c-split" style="padding: 0; background: var(--brand-rose);">
           <div class="c-split-text">
-            <div class="c-bold" style="font-size: 20px; line-height: 1.15;">30 minutes. Free. No obligation.</div>
+            <div class="c-bold" style="font-size: 20px; line-height: 1.15; color: white;">30 minutes. Free. No obligation.</div>
             <div style="height: 8px;"></div>
-            <div class="c-serif" style="font-size: 12px; opacity: 0.55;">One conversation to start.</div>
+            <div class="c-serif" style="font-size: 12px; opacity: 0.7; color: white;">One conversation to start.</div>
             <div style="height: 12px;"></div>
-            <div class="c-swipe" style="position: static; font-size: 9px;">Link in bio</div>
+            <div class="c-swipe" style="position: static; font-size: 9px; color: white; border-color: rgba(255,255,255,0.25);">Link in bio</div>
           </div>
           <div class="c-split-photo">
             <img src="images/romany-hero.jpg" alt="Romany">
@@ -5573,76 +5812,76 @@
       </div>
     </div>
 
-    <!-- CAROUSEL 9: Decision Timeline (Two Versions of You) -->
-    <div class="carousel-group">
-      <div class="carousel-group-label">Carousel <span>8 slides</span></div>
+    <!-- CAROUSEL 9: Decision Timeline — CONTRAST THEME (dark Path A vs warm Path B) -->
+    <div class="carousel-group c-theme-contrast">
+      <div class="carousel-group-label">Carousel <span>8 slides · Two Versions of You</span></div>
       <div class="carousel-slides">
 
         <!-- Hook -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-big" style="font-size: 46px;">Two versions of you exist one year from now.</div>
+        <div class="ig-post c-slide cc-neutral">
+          <div class="c-big" style="font-size: 42px; color: white;">Two versions of you exist one year from now.</div>
           <div style="height: 12px;"></div>
-          <div class="c-body" style="opacity: 0.6;">Only one of them feels calm about money.</div>
-          <div class="c-swipe">Swipe to see the difference</div>
+          <div class="c-body" style="opacity: 0.5; color: rgba(255,255,255,0.6);">Only one of them feels calm about money.</div>
+          <div class="c-swipe" style="color: var(--brand-gold); border-color: rgba(173,155,88,0.25);">Swipe to see the difference</div>
           <img class="c-logo" src="images/tfw-leaf.svg" alt="The Finance Woman">
         </div>
 
         <!-- The fork -->
-        <div class="ig-post c-slide bg-nude">
-          <div class="c-stripe-right"></div>
-          <div class="c-bold" style="font-size: 32px;">You're standing at a fork.</div>
-          <div class="c-body" style="line-height: 1.7;"><strong>Path A:</strong> Close this app. Keep doing what you're doing. Nothing changes.<br><br><strong>Path B:</strong> Spend 30 minutes having an honest conversation. Everything shifts.<br><br>Both are easy. Only one costs you.</div>
+        <div class="ig-post c-slide" style="background: #f5f0e8; color: var(--brand-dark-olive);">
+          <div class="c-bold" style="font-size: 28px; color: var(--brand-dark-olive);">You're standing at a fork.</div>
+          <div style="height: 12px;"></div>
+          <div class="c-body" style="line-height: 1.7; color: var(--brand-dark-olive);"><span class="cc-path-badge cc-path-a-badge">A</span> Close this app. Keep doing what you're doing. Nothing changes.<br><br><span class="cc-path-badge cc-path-b-badge">B</span> Spend 30 minutes having an honest conversation. Everything shifts.<br><br>Both are easy. Only one costs you.</div>
         </div>
 
         <!-- Path A: 1 year -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-bold" style="font-size: 22px; opacity: 0.4;">Path A</div>
-          <div class="c-big" style="font-size: 40px;">One year from now.</div>
+        <div class="ig-post c-slide cc-path-a">
+          <div class="cc-path-badge cc-path-a-badge" style="margin-bottom: 10px;">Path A</div>
+          <div class="c-big" style="font-size: 36px;">One year from now.</div>
           <div style="height: 12px;"></div>
-          <div class="c-body" style="opacity: 0.7;">Still no pension. Another year of growth lost — worth £5,000-10,000 in future value.<br><br>Still no income protection.<br>Still one illness away from zero.<br><br>Nothing bad happened.<br>But nothing good happened either.</div>
+          <div class="c-body">Still no pension. Another year of growth lost — worth £5,000-10,000 in future value.<br><br>Still no income protection.<br>Still one illness away from zero.<br><br>Nothing bad happened.<br>But nothing good happened either.</div>
         </div>
 
         <!-- Path A: 5 years -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-bold" style="font-size: 22px; opacity: 0.4;">Path A</div>
-          <div class="c-big" style="font-size: 40px;">Five years from now.</div>
+        <div class="ig-post c-slide cc-path-a">
+          <div class="cc-path-badge cc-path-a-badge" style="margin-bottom: 10px;">Path A</div>
+          <div class="c-big" style="font-size: 36px;">Five years from now.</div>
           <div style="height: 12px;"></div>
-          <div class="c-body" style="opacity: 0.7;">Your pension is £30,000-60,000 lighter than it could have been.<br><br>You've paid thousands more tax than necessary.<br><br>You're still "meaning to sort it."<br><br>The gap is now much harder to close.</div>
+          <div class="c-body">Your pension is £30,000-60,000 lighter than it could have been.<br><br>You've paid thousands more tax than necessary.<br><br>You're still "meaning to sort it."<br><br>The gap is now much harder to close.</div>
         </div>
 
         <!-- Path B: 1 year -->
-        <div class="ig-post c-slide bg-blush">
-          <div class="c-bold" style="font-size: 22px; opacity: 0.4; color: var(--brand-burgundy);">Path B</div>
-          <div class="c-big" style="font-size: 40px; color: var(--brand-burgundy);">One year from now.</div>
+        <div class="ig-post c-slide cc-path-b">
+          <div class="cc-path-badge cc-path-b-badge" style="margin-bottom: 10px;">Path B</div>
+          <div class="c-big" style="font-size: 36px;">One year from now.</div>
           <div style="height: 12px;"></div>
-          <div class="c-body" style="color: var(--brand-burgundy); opacity: 0.8;">Pension running quietly in the background.<br><br>Income protected — if something happens, you're covered.<br><br>Tax structured properly.<br><br>You check in once a quarter. No stress. Just progress.</div>
+          <div class="c-body">Pension running quietly in the background.<br><br>Income protected — if something happens, you're covered.<br><br>Tax structured properly.<br><br>You check in once a quarter. No stress. Just progress.</div>
         </div>
 
         <!-- Path B: 5 years -->
-        <div class="ig-post c-slide bg-blush">
-          <div class="c-bold" style="font-size: 22px; opacity: 0.4; color: var(--brand-burgundy);">Path B</div>
-          <div class="c-big" style="font-size: 40px; color: var(--brand-burgundy);">Five years from now.</div>
+        <div class="ig-post c-slide cc-path-b">
+          <div class="cc-path-badge cc-path-b-badge" style="margin-bottom: 10px;">Path B</div>
+          <div class="c-big" style="font-size: 36px;">Five years from now.</div>
           <div style="height: 12px;"></div>
-          <div class="c-body" style="color: var(--brand-burgundy); opacity: 0.8;">Pension growing steadily — compound growth doing its thing.<br><br>Savings structured. Tax optimised. Family protected.<br><br>You feel calm. In control.<br><br>Not because everything is perfect — but because you have a plan.</div>
+          <div class="c-body">Pension growing steadily — compound growth doing its thing.<br><br>Savings structured. Tax optimised. Family protected.<br><br>You feel calm. In control.<br><br>Not because everything is perfect — but because you have a plan.</div>
         </div>
 
         <!-- The truth -->
-        <div class="ig-post c-slide bg-burg">
-          <div class="c-big" style="font-size: 36px;">The difference between these two people?</div>
-          <div class="c-line"></div>
-          <div class="c-big" style="font-size: 36px;">One 30-minute conversation.</div>
-          <div style="height: 16px;"></div>
-          <div class="c-body" style="opacity: 0.6;">That's it. That's what separates "I'll get round to it" from "I'm glad I started when I did."</div>
+        <div class="ig-post c-slide cc-neutral">
+          <div class="c-big" style="font-size: 32px; color: white;">The difference between these two people?</div>
+          <div class="c-line" style="background: var(--brand-gold);"></div>
+          <div class="c-big" style="font-size: 32px; color: var(--brand-gold);">One 30-minute conversation.</div>
+          <div style="height: 14px;"></div>
+          <div class="c-body" style="opacity: 0.5; color: rgba(255,255,255,0.6);">That's it. That's what separates "I'll get round to it" from "I'm glad I started when I did."</div>
         </div>
 
         <!-- CTA -->
-        <div class="ig-post c-slide c-split bg-burg" style="padding: 0;">
+        <div class="ig-post c-slide c-split" style="padding: 0; background: linear-gradient(135deg, var(--brand-blush) 0%, #f5e6df 100%);">
           <div class="c-split-text">
-            <div class="c-bold" style="font-size: 20px; line-height: 1.15;">Which version will you be?</div>
+            <div class="c-bold" style="font-size: 20px; line-height: 1.15; color: var(--brand-burgundy);">Which version will you be?</div>
             <div style="height: 8px;"></div>
-            <div class="c-serif" style="font-size: 12px; opacity: 0.55;">Free call. No pressure. Just clarity.</div>
+            <div class="c-serif" style="font-size: 12px; opacity: 0.55; color: var(--brand-burgundy);">Free call. No pressure. Just clarity.</div>
             <div style="height: 12px;"></div>
-            <div class="c-swipe" style="position: static; font-size: 9px;">Link in bio</div>
+            <div class="c-swipe" style="position: static; font-size: 9px; color: var(--brand-burgundy); border-color: rgba(76,19,21,0.2);">Link in bio</div>
           </div>
           <div class="c-split-photo">
             <img src="images/romany-with-dog-hero.jpg" alt="Romany">
