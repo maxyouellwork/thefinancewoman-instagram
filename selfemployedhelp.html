@@ -1,0 +1,3498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Launch Sequence — SelfEmployedHelp.co.uk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================
+       CSS VARIABLES
+       ======================================== */
+    :root {
+      --navy: #0F2340;
+      --navy-light: #1a3460;
+      --navy-dark: #0a1a30;
+      --coral: #f07a5c;
+      --coral-light: #f4957d;
+      --coral-dark: #d96647;
+      --teal: #4a9aa0;
+      --teal-light: #5fb5bb;
+      --dark-teal: #127d86;
+      --cream: #f9f4ee;
+      --cream-dark: #f0ebe3;
+      --white: #ffffff;
+      --light-gray: #e5e7eb;
+      --page-bg: #f0ede8;
+    }
+
+    /* ========================================
+       RESET & BASE
+       ======================================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--page-bg);
+      color: var(--navy);
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    /* ========================================
+       PAGE HEADER / INSTAGRAM PROFILE MOCKUP
+       ======================================== */
+    .page-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--light-gray);
+      padding: 48px 20px 40px;
+    }
+
+    .profile-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .profile-top {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 24px;
+    }
+
+    .profile-avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--coral) 0%, var(--teal) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .profile-avatar::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--coral), var(--teal), var(--coral));
+      z-index: -1;
+    }
+
+    .profile-avatar-inner {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--white);
+    }
+
+    .profile-avatar-inner span {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -1px;
+    }
+
+    .profile-stats {
+      display: flex;
+      gap: 32px;
+    }
+
+    .profile-stat {
+      text-align: center;
+    }
+
+    .profile-stat-number {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      display: block;
+    }
+
+    .profile-stat-label {
+      font-size: 12px;
+      font-weight: 400;
+      color: #8e8e8e;
+    }
+
+    .profile-info {
+      max-width: 420px;
+    }
+
+    .profile-handle {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .profile-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .profile-bio {
+      font-size: 13px;
+      font-weight: 400;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+
+    .profile-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dark-teal);
+    }
+
+    .profile-tabs {
+      display: flex;
+      border-top: 1px solid var(--light-gray);
+      max-width: 760px;
+      margin: 24px auto 0;
+    }
+
+    .profile-tab {
+      flex: 1;
+      text-align: center;
+      padding: 14px 0 12px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #8e8e8e;
+      border-top: 2px solid transparent;
+      margin-top: -1px;
+      cursor: pointer;
+    }
+
+    .profile-tab.active {
+      color: var(--navy);
+      border-top-color: var(--navy);
+    }
+
+    /* ========================================
+       PAGE META
+       ======================================== */
+    .page-meta {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 40px 8px;
+    }
+
+    .page-meta h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .page-meta p {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       WEEK DIVIDERS
+       ======================================== */
+    .week-divider {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 40px 0;
+    }
+
+    .week-divider-inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .week-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal);
+      white-space: nowrap;
+    }
+
+    .week-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(74,154,160,0.3) 0%, transparent 100%);
+    }
+
+    /* ========================================
+       POST BRIEF LAYOUT
+       ======================================== */
+    .post-brief-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .post-brief {
+      display: flex;
+      gap: 52px;
+      align-items: flex-start;
+      padding: 52px 0;
+      border-bottom: 1px solid #e0dbd4;
+    }
+
+    .post-brief:last-child {
+      border-bottom: none;
+    }
+
+    .post-brief-visual {
+      flex-shrink: 0;
+    }
+
+    .post-brief-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .post-num {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 6px;
+    }
+
+    .post-num.pin-this::after {
+      content: ' · PIN THIS';
+      color: var(--teal);
+    }
+
+    .post-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+      line-height: 1.25;
+    }
+
+    .post-timing {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 28px;
+    }
+
+    .post-caption-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 12px;
+    }
+
+    .post-caption {
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: #333;
+      white-space: pre-line;
+      background: var(--white);
+      padding: 24px 28px;
+      border-radius: 10px;
+      border: 1px solid #e5e0d8;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .post-hashtags {
+      font-size: 12px;
+      color: var(--teal);
+      margin-top: 16px;
+      line-height: 1.7;
+    }
+
+    /* ========================================
+       INSTAGRAM POST BASE
+       ======================================== */
+    .ig-post {
+      width: 380px;
+      height: 475px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+      box-shadow: 0 4px 20px rgba(15, 35, 64, 0.12);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .ig-post:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 32px rgba(15, 35, 64, 0.2);
+    }
+
+    /* Mini logo icon */
+    .mini-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mini-logo .ml-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .mini-logo .ml-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .mini-logo .ml-text {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    .mini-logo-light .ml-text { color: var(--cream); }
+    .mini-logo-dark .ml-text { color: var(--navy); }
+
+    /* Logo watermark */
+    .watermark {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      opacity: 0.35;
+      white-space: nowrap;
+    }
+
+    .watermark-light {
+      color: rgba(249, 244, 238, 0.4);
+    }
+
+    .watermark-dark {
+      color: rgba(15, 35, 64, 0.25);
+    }
+
+    /* ========================================
+       TEMPLATE 1: BRAND WELCOME
+       ======================================== */
+    .t-brand-welcome {
+      background: var(--navy);
+      background-image:
+        radial-gradient(ellipse at 20% 80%, rgba(74, 154, 160, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(240, 122, 92, 0.08) 0%, transparent 50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 36px;
+      text-align: center;
+    }
+
+    .t-brand-welcome .accent-bar {
+      width: 48px;
+      height: 4px;
+      background: var(--coral);
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+
+    .t-brand-welcome h3 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .t-brand-welcome h3 span {
+      color: var(--coral);
+    }
+
+    .t-brand-welcome .tagline {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(249, 244, 238, 0.6);
+      line-height: 1.5;
+      margin-bottom: 28px;
+      max-width: 280px;
+    }
+
+    .t-brand-welcome .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      border: 1px solid rgba(249, 244, 238, 0.15);
+      border-radius: 6px;
+    }
+
+    .t-brand-welcome .logo-block .logo-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .t-brand-welcome .logo-block .logo-text {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* ========================================
+       TEMPLATE 2: BIG STAT
+       ======================================== */
+    .t-big-stat {
+      background: var(--navy);
+      background-image:
+        radial-gradient(ellipse at 50% 40%, rgba(240, 122, 92, 0.08) 0%, transparent 50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 36px;
+      text-align: center;
+      position: relative;
+    }
+
+    .t-big-stat .kicker {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 16px;
+    }
+
+    .t-big-stat .big-number {
+      font-size: 110px;
+      font-weight: 700;
+      color: var(--coral);
+      line-height: 0.9;
+      margin-bottom: 10px;
+    }
+
+    .t-big-stat .stat-body {
+      font-size: 15px;
+      font-weight: 400;
+      color: rgba(249, 244, 238, 0.75);
+      line-height: 1.5;
+      max-width: 280px;
+      margin-bottom: 24px;
+    }
+
+    .t-big-stat .cta-pill {
+      display: inline-block;
+      padding: 10px 24px;
+      background: var(--coral);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 30px;
+    }
+
+    /* ========================================
+       TEMPLATE 3: HOW IT WORKS
+       ======================================== */
+    .t-how-it-works {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      padding: 32px 30px;
+      position: relative;
+    }
+
+    .t-how-it-works .hw-header {
+      margin-bottom: 20px;
+    }
+
+    .t-how-it-works .hw-badge {
+      display: inline-block;
+      padding: 5px 14px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .t-how-it-works h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .t-how-it-works .steps {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .t-how-it-works .step {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .t-how-it-works .step-num {
+      width: 36px;
+      height: 36px;
+      background: var(--coral);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .t-how-it-works .step-text {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.35;
+    }
+
+    .t-how-it-works .hw-footer {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 2px solid var(--coral);
+      text-align: center;
+    }
+
+    .t-how-it-works .hw-footer span {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--coral);
+      letter-spacing: 0.5px;
+    }
+
+    /* ========================================
+       TEMPLATE 4: MYTH VS REALITY
+       ======================================== */
+    .t-myth-reality {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .t-myth-reality .myth-half {
+      flex: 1;
+      padding: 28px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .t-myth-reality .myth-section {
+      background: var(--coral);
+      position: relative;
+    }
+
+    .t-myth-reality .myth-section::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: var(--coral);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 0%, 0 100%);
+    }
+
+    .t-myth-reality .reality-section {
+      background: var(--teal);
+      background-image: radial-gradient(ellipse at 80% 80%, rgba(18, 125, 134, 0.4) 0%, transparent 50%);
+    }
+
+    .t-myth-reality .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(255, 255, 255, 0.2);
+      color: var(--white);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+
+    .t-myth-reality .myth-text {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.35;
+    }
+
+    .t-myth-reality .reality-text {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.45;
+    }
+
+    /* ========================================
+       TEMPLATE 5: TIPS CAROUSEL COVER
+       ======================================== */
+    .t-tips-cover {
+      background: var(--navy);
+      background-image:
+        radial-gradient(ellipse at 0% 100%, rgba(74, 154, 160, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 100% 0%, rgba(240, 122, 92, 0.06) 0%, transparent 50%);
+      padding: 32px 30px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .t-tips-cover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--coral), var(--teal));
+    }
+
+    .t-tips-cover .tc-header {
+      margin-bottom: 20px;
+    }
+
+    .t-tips-cover h3 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .t-tips-cover .tc-sub {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(249, 244, 238, 0.5);
+    }
+
+    .t-tips-cover .tc-items {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .t-tips-cover .tc-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 14px;
+      background: rgba(249, 244, 238, 0.05);
+      border-radius: 8px;
+      border-left: 3px solid var(--coral);
+    }
+
+    .t-tips-cover .tc-num {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--coral);
+      flex-shrink: 0;
+      width: 24px;
+    }
+
+    .t-tips-cover .tc-text {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.35;
+    }
+
+    .t-tips-cover .tc-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(249, 244, 238, 0.08);
+    }
+
+    .t-tips-cover .swipe-hint {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--coral-light);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .t-tips-cover .swipe-hint .arrow {
+      font-size: 16px;
+    }
+
+    /* ========================================
+       TEMPLATE 6: QUESTION HOOK
+       ======================================== */
+    .t-question-hook {
+      background: var(--navy);
+      background-image:
+        linear-gradient(135deg, rgba(15, 35, 64, 0.85) 0%, rgba(26, 52, 96, 0.85) 50%, rgba(15, 35, 64, 0.85) 100%),
+        radial-gradient(ellipse at 30% 70%, rgba(240, 122, 92, 0.1) 0%, transparent 50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 44px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .t-question-hook::before {
+      content: '?';
+      position: absolute;
+      top: -30px;
+      right: -15px;
+      font-size: 260px;
+      font-weight: 700;
+      color: rgba(240, 122, 92, 0.04);
+      line-height: 1;
+    }
+
+    .t-question-hook h3 {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .t-question-hook .hook-underline {
+      display: inline;
+      background-image: linear-gradient(transparent 60%, rgba(240, 122, 92, 0.35) 60%);
+      padding-bottom: 2px;
+    }
+
+    .t-question-hook .hook-sub {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--coral);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ========================================
+       TEMPLATE 7: TESTIMONIAL
+       ======================================== */
+    .t-testimonial {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 36px 32px;
+      position: relative;
+    }
+
+    .t-testimonial .quote-mark {
+      font-size: 72px;
+      font-weight: 700;
+      color: var(--coral);
+      line-height: 1;
+      height: 40px;
+      overflow: hidden;
+      margin-bottom: 8px;
+      opacity: 0.6;
+    }
+
+    .t-testimonial blockquote {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.45;
+      margin-bottom: 24px;
+    }
+
+    .t-testimonial .stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .t-testimonial .star {
+      width: 18px;
+      height: 18px;
+      background: var(--coral);
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    .t-testimonial .attribution {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 2px solid var(--light-gray);
+    }
+
+    .t-testimonial .attr-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .t-testimonial .attr-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .t-testimonial .attr-role {
+      font-size: 11px;
+      font-weight: 400;
+      color: #888;
+    }
+
+    /* ========================================
+       TEMPLATE 8: CHECKLIST
+       ======================================== */
+    .t-checklist {
+      background: var(--navy);
+      background-image:
+        radial-gradient(ellipse at 70% 10%, rgba(74, 154, 160, 0.1) 0%, transparent 50%);
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .t-checklist .cl-header {
+      margin-bottom: 18px;
+    }
+
+    .t-checklist .cl-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .t-checklist h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .t-checklist .cl-items {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 7px;
+    }
+
+    .t-checklist .cl-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 12px;
+      background: rgba(249, 244, 238, 0.06);
+      border-radius: 6px;
+    }
+
+    .t-checklist .cl-check {
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      background: var(--coral);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .t-checklist .cl-check svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    .t-checklist .cl-check-empty {
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      border: 2px solid rgba(249, 244, 238, 0.2);
+      flex-shrink: 0;
+    }
+
+    .t-checklist .cl-text {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.3;
+    }
+
+    .t-checklist .cl-note {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--coral-light);
+      padding-left: 34px;
+    }
+
+    .t-checklist .cl-footer {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(249, 244, 238, 0.08);
+      text-align: center;
+    }
+
+    .t-checklist .cl-footer span {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--teal-light);
+    }
+
+    /* ========================================
+       TEMPLATE 9: BOLD STATEMENT
+       ======================================== */
+    .t-bold-statement {
+      background: linear-gradient(145deg, var(--teal) 0%, var(--dark-teal) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 44px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .t-bold-statement::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 240px;
+      height: 240px;
+      border: 2px solid rgba(255, 255, 255, 0.06);
+      border-radius: 50%;
+    }
+
+    .t-bold-statement::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 200px;
+      height: 200px;
+      border: 2px solid rgba(255, 255, 255, 0.04);
+      border-radius: 50%;
+    }
+
+    .t-bold-statement h3 {
+      font-size: 27px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .t-bold-statement .bs-sub {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ========================================
+       TEMPLATE 10: THIS OR THAT
+       ======================================== */
+    .t-this-that {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .t-this-that .tt-header {
+      background: var(--navy);
+      padding: 18px 28px;
+      text-align: center;
+    }
+
+    .t-this-that .tt-header h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.5px;
+    }
+
+    .t-this-that .tt-options {
+      flex: 1;
+      display: flex;
+    }
+
+    .t-this-that .tt-option {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    .t-this-that .tt-left {
+      background: var(--navy-dark);
+    }
+
+    .t-this-that .tt-right {
+      background: var(--coral);
+    }
+
+    .t-this-that .tt-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+
+    .t-this-that .tt-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.4;
+      max-width: 140px;
+    }
+
+    /* ========================================
+       TEMPLATE 11: CLEAN STAT
+       ======================================== */
+    .t-stat-clean {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 36px;
+      text-align: center;
+      position: relative;
+    }
+
+    .t-stat-clean .sc-kicker {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+
+    .t-stat-clean .sc-number {
+      font-size: 90px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 0.9;
+      margin-bottom: 10px;
+    }
+
+    .t-stat-clean .sc-body {
+      font-size: 15px;
+      font-weight: 400;
+      color: #555;
+      line-height: 1.5;
+      max-width: 280px;
+      margin-bottom: 20px;
+    }
+
+    .t-stat-clean .sc-line {
+      width: 60px;
+      height: 4px;
+      background: var(--teal);
+      border-radius: 2px;
+    }
+
+    /* ========================================
+       TEMPLATE 12: FINAL CTA
+       ======================================== */
+    .t-final-cta {
+      background: var(--coral);
+      background-image:
+        radial-gradient(ellipse at 30% 30%, rgba(244, 149, 125, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(217, 102, 71, 0.3) 0%, transparent 50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 44px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .t-final-cta::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: -60px;
+      width: 200px;
+      height: 200px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .t-final-cta::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      right: -40px;
+      width: 160px;
+      height: 160px;
+      border: 2px solid rgba(255, 255, 255, 0.06);
+      border-radius: 50%;
+    }
+
+    .t-final-cta h3 {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .t-final-cta .fc-features {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .t-final-cta .fc-feature {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--navy);
+      opacity: 0.8;
+    }
+
+    .t-final-cta .fc-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--navy);
+      opacity: 0.4;
+    }
+
+    .t-final-cta .fc-url {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 0.3px;
+    }
+
+    /* ========================================
+       NEW TEMPLATE: LAUNCH ANNOUNCE (Post 1)
+       ======================================== */
+    .t-launch-announce {
+      background: var(--navy);
+      background-image:
+        radial-gradient(ellipse at 15% 85%, rgba(74, 154, 160, 0.15) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 15%, rgba(240, 122, 92, 0.1) 0%, transparent 55%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 36px 36px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .t-launch-announce::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--teal), var(--coral), var(--teal));
+    }
+
+    .t-launch-announce .la-badge {
+      display: inline-block;
+      padding: 5px 14px;
+      background: var(--coral);
+      color: var(--white);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .t-launch-announce h2 {
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.0;
+      margin-bottom: 6px;
+    }
+
+    .t-launch-announce h2 span {
+      color: var(--coral);
+    }
+
+    .t-launch-announce .la-sub {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(249, 244, 238, 0.65);
+      line-height: 1.55;
+      max-width: 270px;
+      margin-bottom: 24px;
+    }
+
+    .t-launch-announce .la-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .t-launch-announce .la-pill {
+      padding: 6px 14px;
+      border: 1px solid rgba(249, 244, 238, 0.18);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(249, 244, 238, 0.7);
+    }
+
+    .t-launch-announce .la-handle {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--teal-light);
+      letter-spacing: 0.5px;
+    }
+
+    /* ========================================
+       NEW TEMPLATE: FIVE THINGS (Post 3)
+       ======================================== */
+    .t-five-things {
+      background: var(--coral);
+      background-image:
+        radial-gradient(ellipse at 80% 20%, rgba(244, 149, 125, 0.5) 0%, transparent 50%),
+        radial-gradient(ellipse at 10% 90%, rgba(217, 102, 71, 0.4) 0%, transparent 50%);
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .t-five-things .ft-header {
+      margin-bottom: 18px;
+    }
+
+    .t-five-things h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+    }
+
+    .t-five-things .ft-sub {
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.65);
+      margin-top: 4px;
+    }
+
+    .t-five-things .ft-items {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .t-five-things .ft-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 14px;
+      background: rgba(15, 35, 64, 0.18);
+      border-radius: 7px;
+    }
+
+    .t-five-things .ft-num {
+      font-size: 16px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      flex-shrink: 0;
+      width: 20px;
+    }
+
+    .t-five-things .ft-text {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.3;
+    }
+
+    .t-five-things .ft-footer {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .t-five-things .ft-footer-text {
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.6);
+      letter-spacing: 0.5px;
+    }
+
+    .t-five-things .ft-save {
+      font-size: 10px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.85);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ========================================
+       NEW TEMPLATE: FEAR STAT (Post 7)
+       ======================================== */
+    .t-fear-stat {
+      background: linear-gradient(150deg, var(--dark-teal) 0%, #0d5e65 50%, var(--navy-dark) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 44px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .t-fear-stat::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 220px;
+      height: 220px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+
+    .t-fear-stat::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 50%;
+    }
+
+    .t-fear-stat .fs-kicker {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .t-fear-stat .fs-number {
+      font-size: 100px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 0.9;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .t-fear-stat .fs-body {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.55;
+      max-width: 270px;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .t-fear-stat .fs-note {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--teal-light);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ========================================
+       NEW TEMPLATE: REASSURANCE (Post 13)
+       ======================================== */
+    .t-reassurance {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 36px 36px 36px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .t-reassurance::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+      background: linear-gradient(180deg, var(--coral) 0%, var(--teal) 100%);
+    }
+
+    .t-reassurance .rr-eyebrow {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 16px;
+    }
+
+    .t-reassurance .rr-opening {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.55;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .t-reassurance .rr-body {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 24px;
+    }
+
+    .t-reassurance .rr-body span {
+      color: var(--coral);
+    }
+
+    .t-reassurance .rr-cta {
+      display: inline-block;
+      padding: 10px 22px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 6px;
+      letter-spacing: 0.3px;
+      align-self: flex-start;
+    }
+
+    /* ========================================
+       LIGHTBOX
+       ======================================== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      backdrop-filter: blur(4px);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 28px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 36px;
+      cursor: pointer;
+      z-index: 1001;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.2s ease;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .lightbox-content {
+      max-width: 90vw;
+      max-height: 82vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-hint {
+      color: #888;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    /* ========================================
+       PAGE FOOTER
+       ======================================== */
+    .page-footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 40px 80px;
+      text-align: center;
+    }
+
+    .page-footer p {
+      font-size: 12px;
+      color: #999;
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       RESPONSIVE
+       ======================================== */
+    @media (max-width: 960px) {
+      .post-brief {
+        flex-direction: column;
+        gap: 28px;
+      }
+      .ig-post {
+        width: 340px;
+        height: 425px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .profile-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+      .profile-stats {
+        justify-content: center;
+      }
+      .profile-info {
+        text-align: center;
+      }
+      .post-brief-container {
+        padding: 0 20px;
+      }
+      .week-divider {
+        padding: 40px 20px 0;
+      }
+      .page-meta {
+        padding: 40px 20px 8px;
+      }
+      .ig-post {
+        width: 320px;
+        height: 400px;
+      }
+    }
+
+    /* ========================================
+       POST TYPE BADGES
+       ======================================== */
+    .post-type-badge {
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 4px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .badge-single { background: rgba(15,35,64,0.06); color: #666; }
+    .badge-carousel { background: rgba(240,122,92,0.12); color: var(--coral-dark); }
+    .badge-reel { background: rgba(74,154,160,0.15); color: var(--dark-teal); }
+
+    /* ========================================
+       CAROUSEL PLAYER
+       ======================================== */
+    .carousel-player { width: 380px; }
+
+    .carousel-track {
+      width: 380px;
+      height: 475px;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(15,35,64,0.12);
+    }
+
+    .carousel-slide {
+      position: absolute;
+      top: 0; left: 0;
+      width: 380px;
+      height: 475px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+      border-radius: 0;
+      box-shadow: none;
+      cursor: default;
+    }
+    .carousel-slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 1;
+    }
+
+    .carousel-ui {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+      padding: 0 2px;
+    }
+
+    .carousel-btn {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1.5px solid #d5cfc7;
+      background: white;
+      cursor: pointer;
+      font-size: 16px;
+      color: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .carousel-btn:hover:not(:disabled) {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+    }
+    .carousel-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+
+    .carousel-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .carousel-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #d5cfc7;
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+    .carousel-dot.active {
+      background: var(--coral);
+      width: 20px;
+      border-radius: 4px;
+    }
+
+    .carousel-counter {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 500;
+      color: #bbb;
+      margin-top: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ========================================
+       CAROUSEL SLIDE TYPES
+       ======================================== */
+
+    /* Body slide — navy */
+    .t-cs-body-navy {
+      background: var(--navy);
+      background-image: radial-gradient(ellipse at 85% 15%, rgba(240,122,92,0.07) 0%, transparent 55%);
+      display: flex;
+      flex-direction: column;
+      padding: 30px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-cs-body-navy .cs-bg-num {
+      position: absolute;
+      top: 8px; right: 14px;
+      font-size: 120px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.025);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .t-cs-body-navy .cs-of {
+      font-size: 9px; font-weight: 600;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 16px;
+    }
+    .t-cs-body-navy .cs-num-badge {
+      width: 38px; height: 38px;
+      background: var(--coral);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700;
+      color: white;
+      margin-bottom: 18px;
+      flex-shrink: 0;
+    }
+    .t-cs-body-navy h3 {
+      font-size: 21px; font-weight: 700;
+      color: white; line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .t-cs-body-navy p {
+      font-size: 13px; font-weight: 400;
+      color: rgba(249,244,238,0.7);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .t-cs-body-navy .cs-footer {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 8px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: rgba(255,255,255,0.18);
+    }
+
+    /* Body slide — cream */
+    .t-cs-body-cream {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      padding: 30px 28px;
+      position: relative;
+    }
+    .t-cs-body-cream .cs-of {
+      font-size: 9px; font-weight: 600;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: rgba(15,35,64,0.3);
+      margin-bottom: 16px;
+    }
+    .t-cs-body-cream .cs-num-badge {
+      width: 38px; height: 38px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700;
+      color: white;
+      margin-bottom: 18px;
+    }
+    .t-cs-body-cream h3 {
+      font-size: 21px; font-weight: 700;
+      color: var(--navy); line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .t-cs-body-cream p {
+      font-size: 13px; font-weight: 400;
+      color: #555; line-height: 1.65;
+      flex: 1;
+    }
+    .t-cs-body-cream .cs-footer {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 2px solid var(--coral);
+      font-size: 8px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: rgba(15,35,64,0.2);
+    }
+
+    /* Myth pair slide — coral top / teal bottom */
+    .t-cs-myth {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .t-cs-myth .myth-half { flex: 1; padding: 22px 28px; display: flex; flex-direction: column; justify-content: center; }
+    .t-cs-myth .myth-section { background: var(--coral); }
+    .t-cs-myth .reality-section { background: var(--teal); background-image: radial-gradient(ellipse at 80% 80%, rgba(18,125,134,0.4) 0%, transparent 50%); }
+    .t-cs-myth .badge { display: inline-block; padding: 3px 10px; background: rgba(255,255,255,0.2); color: white; font-size: 8px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; border-radius: 4px; margin-bottom: 8px; align-self: flex-start; }
+    .t-cs-myth .myth-text { font-size: 15px; font-weight: 600; color: white; line-height: 1.35; }
+    .t-cs-myth .reality-text { font-size: 12.5px; font-weight: 400; color: white; line-height: 1.5; }
+
+    /* CTA slide */
+    .t-cs-cta {
+      background: var(--coral);
+      background-image:
+        radial-gradient(ellipse at 25% 25%, rgba(244,149,125,0.45) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 85%, rgba(217,102,71,0.35) 0%, transparent 55%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .t-cs-cta::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: -60px;
+      width: 200px; height: 200px;
+      border: 2px solid rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+    .t-cs-cta .cta-eyebrow {
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: rgba(15,35,64,0.45);
+      margin-bottom: 14px;
+    }
+    .t-cs-cta h3 {
+      font-size: 24px; font-weight: 700;
+      color: var(--navy); line-height: 1.2;
+      margin-bottom: 10px;
+      position: relative; z-index: 1;
+    }
+    .t-cs-cta p {
+      font-size: 13px; color: rgba(15,35,64,0.6);
+      line-height: 1.55; margin-bottom: 24px;
+      position: relative; z-index: 1;
+    }
+    .t-cs-cta .cta-btn {
+      display: inline-block;
+      padding: 11px 26px;
+      background: var(--navy); color: white;
+      font-size: 12px; font-weight: 600;
+      border-radius: 7px;
+      position: relative; z-index: 1;
+      letter-spacing: 0.3px;
+    }
+
+    /* ========================================
+       REEL MOCKUP
+       ======================================== */
+    .reel-mockup {
+      width: 214px;
+      height: 380px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(15,35,64,0.15);
+      flex-shrink: 0;
+    }
+    .reel-bg {
+      position: absolute; inset: 0;
+    }
+    .reel-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 25%, rgba(0,0,0,0.72) 100%);
+    }
+    .reel-duration-badge {
+      position: absolute; top: 14px; right: 14px;
+      font-size: 9px; font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      background: rgba(0,0,0,0.4);
+      padding: 3px 9px; border-radius: 20px;
+      z-index: 2;
+    }
+    .reel-play {
+      position: absolute; top: 42%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; color: white;
+      z-index: 2;
+    }
+    .reel-bottom {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      z-index: 2;
+      padding: 20px 16px;
+    }
+    .reel-hook {
+      font-size: 13px; font-weight: 600;
+      color: white; line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .reel-handle {
+      font-size: 10px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ========================================
+       REEL SCRIPT
+       ======================================== */
+    .reel-script {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .script-block {
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #e5e0d8;
+      overflow: hidden;
+    }
+    .script-timing {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+    }
+    .script-timing.hook { background: var(--coral); }
+    .script-timing.body-time { background: var(--navy); }
+    .script-timing.cta-time { background: var(--dark-teal); }
+    .script-timing-label {
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: white;
+    }
+    .script-timing-note {
+      font-size: 9px; font-weight: 400;
+      color: rgba(255,255,255,0.5);
+    }
+    .script-body {
+      padding: 14px 16px;
+      font-size: 13px; line-height: 1.7;
+      color: #333;
+    }
+    .script-notes {
+      padding: 10px 16px;
+      font-size: 11px; color: #888;
+      font-style: italic;
+      border-top: 1px solid #f0ede8;
+    }
+
+    /* ========================================
+       TEMPLATE: RESULTS INSIGHT (Post 11)
+       ======================================== */
+    .t-results-insight {
+      background: var(--navy);
+      background-image:
+        radial-gradient(ellipse at 20% 80%, rgba(74, 154, 160, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(240, 122, 92, 0.08) 0%, transparent 50%);
+      padding: 28px 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .t-results-insight .ri-eyebrow {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 16px;
+    }
+
+    .t-results-insight h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+
+    .t-results-insight .ri-findings {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .t-results-insight .ri-finding {
+      padding: 10px 14px;
+      background: rgba(249, 244, 238, 0.05);
+      border-radius: 8px;
+      border-left: 3px solid var(--coral);
+    }
+
+    .t-results-insight .ri-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--coral-light);
+      margin-bottom: 3px;
+    }
+
+    .t-results-insight .ri-text {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(249, 244, 238, 0.7);
+      line-height: 1.45;
+    }
+
+    .t-results-insight .ri-callout {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      text-align: center;
+      padding: 14px 0;
+      margin-top: 12px;
+      border-top: 1px solid rgba(249, 244, 238, 0.08);
+    }
+
+    /* ========================================
+       REEL PRESENTER BADGE
+       ======================================== */
+    .reel-presenter {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-size: 9px;
+      font-weight: 600;
+      color: white;
+      background: rgba(240, 122, 92, 0.85);
+      padding: 3px 9px;
+      border-radius: 20px;
+      z-index: 2;
+    }
+
+    /* ========================================
+       STRATEGY OVERVIEW
+       ======================================== */
+    .strategy-overview {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px 8px;
+    }
+
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .strategy-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px 22px;
+      border: 1px solid #e5e0d8;
+    }
+
+    .strategy-card-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+
+    .strategy-card-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .strategy-card-detail {
+      font-size: 12px;
+      color: #888;
+      line-height: 1.5;
+    }
+
+    .strategy-note {
+      background: var(--cream);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 20px;
+      border: 1px solid #e5e0d8;
+    }
+
+    .strategy-note p {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.65;
+    }
+
+    .strategy-note strong {
+      color: var(--navy);
+    }
+
+    /* ========================================
+       POST NOTES (practical tips)
+       ======================================== */
+    .post-note {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: rgba(74, 154, 160, 0.06);
+      border-radius: 8px;
+      border-left: 3px solid var(--teal);
+      font-size: 12px;
+      color: #666;
+      line-height: 1.55;
+    }
+
+    .post-note strong {
+      color: var(--dark-teal);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================
+       PAGE HEADER: Instagram Profile Mockup
+       ====================================== -->
+  <div class="page-header">
+    <div class="profile-wrapper">
+      <div class="profile-top">
+        <div class="profile-avatar">
+          <div class="profile-avatar-inner">
+            <span>SEH</span>
+          </div>
+        </div>
+        <div class="profile-stats">
+          <div class="profile-stat">
+            <span class="profile-stat-number">14</span>
+            <span class="profile-stat-label">posts</span>
+          </div>
+          <div class="profile-stat">
+            <span class="profile-stat-number">--</span>
+            <span class="profile-stat-label">followers</span>
+          </div>
+          <div class="profile-stat">
+            <span class="profile-stat-number">--</span>
+            <span class="profile-stat-label">following</span>
+          </div>
+        </div>
+      </div>
+      <div class="profile-info">
+        <div class="profile-handle">@selfemployedhelp.co.uk</div>
+        <div class="profile-name">SelfEmployedHelp</div>
+        <div class="profile-bio">Free 5-minute financial checkup for the self-employed. No documents. No obligations. See where you stand on pensions, protection &amp; more.</div>
+        <div class="profile-link">go.selfemployedhelp.co.uk</div>
+      </div>
+      <div class="profile-tabs">
+        <div class="profile-tab active">Posts</div>
+        <div class="profile-tab">Reels</div>
+        <div class="profile-tab">Tagged</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================
+       PAGE META
+       ====================================== -->
+  <div class="page-meta">
+    <h1>Instagram Launch Sequence</h1>
+    <p>14 feed posts + 4 reel scripts. Everything is copy-ready. Screenshot graphics at 1080&times;1350 for posting. Click any graphic to preview full-size.</p>
+  </div>
+
+  <div class="strategy-overview">
+    <div class="strategy-grid">
+      <div class="strategy-card">
+        <div class="strategy-card-label">Content Mix</div>
+        <div class="strategy-card-value">10 + 4 + 4</div>
+        <div class="strategy-card-detail">10 single posts, 4 carousels (high save rate), 4 reel scripts &mdash; 3 for Romany, 1 for Matthew</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-card-label">Posting Schedule</div>
+        <div class="strategy-card-value">1 per day</div>
+        <div class="strategy-card-detail">Posts 1&ndash;7 in Week 1, Posts 8&ndash;14 in Week 2. Drop reels between posts for extra reach.</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-card-label">Best Times</div>
+        <div class="strategy-card-value">6&ndash;9pm</div>
+        <div class="strategy-card-detail">Our audience is 87% mobile, mostly checking phones after work. Sunday evenings also strong.</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-card-label">Key Metric</div>
+        <div class="strategy-card-value">Saves</div>
+        <div class="strategy-card-detail">Saves &gt; likes for reach. Carousels and checklists are designed to be saved and shared.</div>
+      </div>
+    </div>
+    <div class="strategy-note">
+      <p><strong>How to use this page:</strong> Each post has a screenshot-ready graphic on the left and a copy-paste caption on the right. For carousels, use the arrows to preview each slide &mdash; screenshot each one individually. For reels, give the script to Romany or Matthew to film. No testimonials are used &mdash; all social proof is based on real anonymised patterns from actual checkup data.</p>
+    </div>
+  </div>
+
+  <!-- ======================================
+       WEEK 1
+       ====================================== -->
+  <div class="week-divider">
+    <div class="week-divider-inner">
+      <div class="week-label">Week 1 &mdash; Posts 1&ndash;7</div>
+      <div class="week-line"></div>
+    </div>
+  </div>
+
+  <div class="post-brief-container">
+
+    <!-- POST 1 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="ig-post t-launch-announce">
+          <div class="la-badge">We&rsquo;re live</div>
+          <h2>Finally<span>.</span></h2>
+          <div class="la-sub">Free financial clarity for every self-employed person in the UK.</div>
+          <div class="la-pills">
+            <div class="la-pill">5 minutes</div>
+            <div class="la-pill">Free</div>
+            <div class="la-pill">No documents</div>
+          </div>
+          <div class="la-handle">@selfemployedhelp.co.uk</div>
+          <div class="watermark watermark-light">selfemployedhelp.co.uk</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-num pin-this">Post 1 of 14</div>
+        <div class="post-title">Launch Announcement</div>
+        <div class="post-timing">Day 1 &mdash; Pin this to your profile</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">We just launched 👋
+
+Here's who we are — and what we're here for.
+
+Running your own business is relentless. Financial planning keeps getting pushed to next month. And most self-employed people have no idea whether they're properly set up or not.
+
+So we built a free 5-minute checkup that tells you exactly where you stand:
+
+→ Pensions
+→ Income protection
+→ Life insurance
+→ Mortgage arrangements
+→ Savings
+
+No documents. No advice. No hard sell. Just your score and a clear picture of where you are.
+
+100% free. Link in bio.
+
+What's the one financial thing you keep meaning to sort? Drop it in the comments 👇
+
+#selfemployed #selfemployedlife #freelancer #ukbusiness #financialplanning #launch #newaccount</div>
+        <div class="post-note"><strong>Pin this to the profile.</strong> First thing people see when they visit. Make sure bio link is set to go.selfemployedhelp.co.uk before posting.</div>
+      </div>
+    </div>
+
+    <!-- POST 2 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="ig-post t-big-stat">
+          <div class="mini-logo mini-logo-light" style="position:absolute;top:20px;left:24px;">
+            <div class="ml-icon"><img src="../images/logo-icon.png" alt="SEH"></div>
+          </div>
+          <div class="kicker">Did you know?</div>
+          <div class="big-number">72%</div>
+          <div class="stat-body">of self-employed people have no income protection</div>
+          <div class="cta-pill">Take the free checkup &#8594;</div>
+          <div class="watermark watermark-light">selfemployedhelp.co.uk</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-num">Post 2 of 14</div>
+        <div class="post-title">The 72% Stat</div>
+        <div class="post-timing">Day 2</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">72% of self-employed people have no income protection.
+
+Nearly three quarters of people running their own businesses have nothing to fall back on if they get ill or injured.
+
+No sick pay. No employer. Just... nothing.
+
+If you couldn't work for 3 months — what would happen?
+
+That's the question income protection answers. And it's one most people never ask until it's too late.
+
+Find out where you stand with our free 5-minute checkup. Link in bio 👆
+
+Are you in the 72%? Drop it in the comments (no judgment) 👇
+
+#incomeprotection #selfemployed #selfemployedlife #freelancer #financialplanning #ukbusiness #sickpay</div>
+        <div class="post-note"><strong>Engagement driver:</strong> The question "Are you in the 72%?" is designed to prompt comments. Reply to every comment personally &mdash; even a short "it's more common than people think" builds trust.</div>
+      </div>
+    </div>
+
+    <!-- POST 3 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="carousel-player" data-id="c3">
+          <div class="carousel-track">
+            <!-- Slide 1: Cover -->
+            <div class="ig-post t-five-things carousel-slide active">
+              <div class="ft-header">
+                <h3>5 financial things most self-employed people have never checked</h3>
+                <div class="ft-sub">Swipe through all 5 &rarr;</div>
+              </div>
+              <div class="ft-items">
+                <div class="ft-item"><div class="ft-num">1</div><div class="ft-text">Whether their pension is actually active</div></div>
+                <div class="ft-item"><div class="ft-num">2</div><div class="ft-text">Whether their mortgage deal has expired</div></div>
+                <div class="ft-item"><div class="ft-num">3</div><div class="ft-text">Whether their life insurance still covers them</div></div>
+                <div class="ft-item"><div class="ft-num">4</div><div class="ft-text">Whether they'd qualify for income protection</div></div>
+                <div class="ft-item"><div class="ft-num">5</div><div class="ft-text">Whether they have any real retirement savings</div></div>
+              </div>
+              <div class="ft-footer"><div class="ft-footer-text">selfemployedhelp.co.uk</div><div class="ft-save">📌 Save this</div></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="ig-post t-cs-body-navy carousel-slide">
+              <div class="cs-bg-num">1</div>
+              <div class="cs-of">1 of 5</div>
+              <div class="cs-num-badge">1</div>
+              <h3>Whether your pension is actually active</h3>
+              <p>Most self-employed people set one up years ago, paid into it a couple of times, then life got busy. Do you actually know what yours is worth today? Is it still even open?</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="ig-post t-cs-body-cream carousel-slide">
+              <div class="cs-of">2 of 5</div>
+              <div class="cs-num-badge">2</div>
+              <h3>Whether your mortgage deal has expired</h3>
+              <p>If your fixed rate ended, you've likely moved to your lender's standard variable rate without realising. That can cost hundreds more per month — money you're just giving away.</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="ig-post t-cs-body-navy carousel-slide">
+              <div class="cs-bg-num">3</div>
+              <div class="cs-of">3 of 5</div>
+              <div class="cs-num-badge">3</div>
+              <h3>Whether your life insurance still covers you</h3>
+              <p>Life changes. Mortgage gets bigger. New partner. Business debts. Many policies become inadequate without a review. Worth a quick check to see if it still makes sense.</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="ig-post t-cs-body-cream carousel-slide">
+              <div class="cs-of">4 of 5</div>
+              <div class="cs-num-badge">4</div>
+              <h3>Whether you'd qualify for income protection</h3>
+              <p>Not everyone can get it — eligibility depends on your occupation, income history, and health. Better to know now, when you have choices, than when you actually need it.</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="ig-post t-cs-body-navy carousel-slide">
+              <div class="cs-bg-num">5</div>
+              <div class="cs-of">5 of 5</div>
+              <div class="cs-num-badge">5</div>
+              <h3>Whether you have any real retirement savings</h3>
+              <p>Not just a pension that technically exists. Something actively growing at a rate that'll actually support you when you stop working. The gap is often bigger than people expect.</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 7: CTA -->
+            <div class="ig-post t-cs-cta carousel-slide">
+              <div class="cta-eyebrow">How did you do?</div>
+              <h3>Find out where you actually stand.</h3>
+              <p>Free 5-minute checkup. No documents. No obligations. Just your score.</p>
+              <div class="cta-btn">go.selfemployedhelp.co.uk &rarr;</div>
+              <div class="watermark" style="color:rgba(15,35,64,0.15);">selfemployedhelp.co.uk</div>
+            </div>
+          </div>
+          <div class="carousel-ui">
+            <button class="carousel-btn prev-btn" disabled>&#8592;</button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span>
+            </div>
+            <button class="carousel-btn next-btn">&#8594;</button>
+          </div>
+          <div class="carousel-counter">Slide 1 of 7</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-type-badge badge-carousel">Carousel &mdash; 7 slides</div>
+        <div class="post-num">Post 3 of 14</div>
+        <div class="post-title">5 Things Nobody Checks</div>
+        <div class="post-timing">Day 3 &mdash; Great for saves &amp; shares</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">5 financial things most self-employed people have never actually checked:
+
+1️⃣ Whether their pension is doing anything
+2️⃣ Whether their mortgage deal has expired
+3️⃣ Whether their life insurance still covers what they need
+4️⃣ Whether they'd qualify for income protection
+5️⃣ Whether they have any real retirement savings building up
+
+How many can you confidently tick off?
+
+Our free checkup covers all five in under 5 minutes. No documents, no advice — just your honest answers and a clear score.
+
+Save this and come back to it 📌
+
+Link in bio 👆
+
+#selfemployed #financialplanning #pension #lifeinsurance #incomeprotection #freelancer #ukbusiness</div>
+        <div class="post-note"><strong>Carousel = saves.</strong> Each slide is a standalone tip. Screenshot all 7 slides individually at 1080&times;1350 and upload as a carousel post. The "Save this" CTA in the cover slide drives the save metric which boosts reach.</div>
+      </div>
+    </div>
+
+    <!-- POST 4 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="ig-post t-how-it-works">
+          <div class="hw-header">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <div class="hw-badge" style="margin-bottom:0;">How it works</div>
+              <div class="mini-logo mini-logo-dark"><div class="ml-icon"><img src="../images/logo-icon.png" alt="SEH"></div></div>
+            </div>
+            <h3>3 simple steps</h3>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-text">Answer honestly — no documents needed</div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-text">Get your score instantly</div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-text">See exactly where you stand</div>
+            </div>
+          </div>
+          <div class="hw-footer">
+            <span>Free &#183; 5 minutes &#183; No obligations</span>
+          </div>
+          <div class="watermark watermark-dark">selfemployedhelp.co.uk</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-num">Post 4 of 14</div>
+        <div class="post-title">How It Works</div>
+        <div class="post-timing">Day 4</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">"But how does it actually work?"
+
+Step 1 — Answer honestly.
+A few questions about your current setup: pension, protection, mortgage, savings. No trick questions. No technical jargon.
+
+Step 2 — Get your score.
+Instantly see where you land — High, Medium, or Low — across each area of your finances.
+
+Step 3 — Know what's next.
+A personalised breakdown showing where you're strong and where the gaps are. No pressure to do anything with it.
+
+5 minutes. Completely free. No login. Link in bio 👆
+
+Any questions about how it works? Ask below 👇
+
+#selfemployed #financialcheckup #selfemployedlife #pension #protection #ukbusiness #howdoesitwork</div>
+      </div>
+    </div>
+
+    <!-- POST 5 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="carousel-player" data-id="c5">
+          <div class="carousel-track">
+            <!-- Slide 1: Cover -->
+            <div class="ig-post t-tips-cover carousel-slide active">
+              <div class="tc-header">
+                <h3>3 things every self-employed person should have</h3>
+                <div class="tc-sub">Swipe to see why each one matters &rarr;</div>
+              </div>
+              <div class="tc-items">
+                <div class="tc-item"><div class="tc-num">1</div><div class="tc-text">Income protection</div></div>
+                <div class="tc-item"><div class="tc-num">2</div><div class="tc-text">A pension you actually pay into</div></div>
+                <div class="tc-item"><div class="tc-num">3</div><div class="tc-text">Life insurance (even without kids)</div></div>
+              </div>
+              <div class="tc-footer">
+                <div class="watermark watermark-light" style="position:static;transform:none;opacity:0.35;">selfemployedhelp.co.uk</div>
+                <div class="swipe-hint">Swipe <span class="arrow">&#8594;</span></div>
+              </div>
+            </div>
+            <!-- Slide 2: Income Protection -->
+            <div class="ig-post t-cs-body-navy carousel-slide">
+              <div class="cs-bg-num">1</div>
+              <div class="cs-of">1 of 3</div>
+              <div class="cs-num-badge">1</div>
+              <h3>Income protection</h3>
+              <p>If you can't work due to illness or injury, income protection pays you a monthly amount until you recover. Most self-employed people have zero cover. If you couldn't work tomorrow, what happens to your income?</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 3: Pension -->
+            <div class="ig-post t-cs-body-cream carousel-slide">
+              <div class="cs-of">2 of 3</div>
+              <div class="cs-num-badge">2</div>
+              <h3>A pension you actually pay into</h3>
+              <p>There's no employer auto-enrolment when you work for yourself. If you haven't actively set one up and contributed, nothing is building. The tax relief on personal pensions is genuinely one of the best deals available.</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 4: Life Insurance -->
+            <div class="ig-post t-cs-body-navy carousel-slide">
+              <div class="cs-bg-num">3</div>
+              <div class="cs-of">3 of 3</div>
+              <div class="cs-num-badge">3</div>
+              <h3>Life insurance (even without kids)</h3>
+              <p>It's not just about dependants. Life insurance covers mortgage debt, protects partners, and settles business liabilities. And it's usually cheaper than people think — especially when you're young and healthy.</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 5: CTA -->
+            <div class="ig-post t-cs-cta carousel-slide">
+              <div class="cta-eyebrow">How many have you got?</div>
+              <h3>Find out in 5 minutes.</h3>
+              <p>Free financial checkup. Covers all three — and more. No documents. No pressure.</p>
+              <div class="cta-btn">go.selfemployedhelp.co.uk &rarr;</div>
+              <div class="watermark" style="color:rgba(15,35,64,0.15);">selfemployedhelp.co.uk</div>
+            </div>
+          </div>
+          <div class="carousel-ui">
+            <button class="carousel-btn prev-btn" disabled>&#8592;</button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span>
+            </div>
+            <button class="carousel-btn next-btn">&#8594;</button>
+          </div>
+          <div class="carousel-counter">Slide 1 of 5</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-type-badge badge-carousel">Carousel &mdash; 5 slides</div>
+        <div class="post-num">Post 5 of 14</div>
+        <div class="post-title">3 Things You Should Have</div>
+        <div class="post-timing">Day 5</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">3 things every self-employed person should have — and most don't.
+
+1. Income protection.
+If you can't work, this pays you a monthly income until you can. Most self-employed people have zero cover.
+
+2. A pension you actually pay into.
+There's no employer auto-enrolment when you work for yourself. If you haven't actively set one up, nothing is building up.
+
+3. Life insurance.
+Even without kids. It covers debts, protects partners, provides options. And it's usually cheaper than people think.
+
+How many have you got sorted?
+
+Find out with our free 5-minute checkup — link in bio 👆
+
+#selfemployed #pension #incomeprotection #lifeinsurance #selfemployedlife #freelancer #financialplanning</div>
+      </div>
+    </div>
+
+    <!-- POST 6 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="ig-post t-question-hook">
+          <h3>Could you survive <span class="hook-underline">3 months</span> without income?</h3>
+          <div class="hook-sub">Most self-employed people can't.</div>
+          <div class="watermark watermark-light">selfemployedhelp.co.uk</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-num">Post 6 of 14</div>
+        <div class="post-title">The 3-Month Question</div>
+        <div class="post-timing">Day 6 &mdash; High engagement potential</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">Real talk — could you survive 3 months without any income?
+
+Most self-employed people can't. And that's not a dig — it's just the reality of not having sick pay, employer benefits, or anything automatically there for you.
+
+The thing is, income protection isn't just for people who think they'll get ill. It's for anyone who'd struggle if the unexpected happened.
+
+Which is most of us.
+
+What would 3 months off work look like for you? Be honest in the comments 👇
+
+And if you want to see where you actually stand — free 5-minute checkup in the bio.
+
+#selfemployed #incomeprotection #selfemployedlife #freelance #financialplanning #realtalk #ukbusiness</div>
+        <div class="post-note"><strong>Highest engagement potential.</strong> The "3 months" question is a pattern interrupt &mdash; people stop and think. Reply to every comment. This post works well paired with Reel 2 (same topic, different format).</div>
+      </div>
+    </div>
+
+    <!-- POST 7 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="ig-post t-fear-stat">
+          <div class="fs-kicker">Self-employed survey</div>
+          <div class="fs-number">22%</div>
+          <div class="fs-body">of self-employed people feel too embarrassed to ask about financial planning</div>
+          <div class="fs-note">No judgment here. Just clarity.</div>
+          <div class="watermark watermark-light">selfemployedhelp.co.uk</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-num">Post 7 of 14</div>
+        <div class="post-title">22% Feel Too Embarrassed</div>
+        <div class="post-timing">Day 7 &mdash; Empathy &amp; normalising</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">22% of self-employed people say they feel too embarrassed to ask about financial planning.
+
+And honestly? That makes complete sense.
+
+Nobody wants to admit they don't know if their pension is doing anything. Or that they're not sure what income protection even is. Or that their mortgage deal expired 18 months ago.
+
+But here's the thing — everyone starts somewhere.
+
+Our free checkup asks the questions so you don't have to. You answer honestly, and it tells you exactly where you stand.
+
+No adviser in the room. No awkward silences. Just clarity.
+
+Link in bio 👆
+
+#selfemployed #financialplanning #selfemployedlife #freelancer #ukbusiness #pension #nonembarrassment</div>
+      </div>
+    </div>
+
+  </div><!-- end post-brief-container week 1 -->
+
+  <!-- ======================================
+       WEEK 2
+       ====================================== -->
+  <div class="week-divider">
+    <div class="week-divider-inner">
+      <div class="week-label">Week 2 &mdash; Posts 8&ndash;14</div>
+      <div class="week-line"></div>
+    </div>
+  </div>
+
+  <div class="post-brief-container">
+
+    <!-- POST 8 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="carousel-player" data-id="c8">
+          <div class="carousel-track">
+            <!-- Slide 1: Cover -->
+            <div class="ig-post t-tips-cover carousel-slide active" style="background: var(--navy);">
+              <div class="tc-header">
+                <h3>4 financial myths self-employed people believe</h3>
+                <div class="tc-sub">Swipe to bust them all &rarr;</div>
+              </div>
+              <div class="tc-items">
+                <div class="tc-item"><div class="tc-num">1</div><div class="tc-text">"My accountant handles all of it"</div></div>
+                <div class="tc-item"><div class="tc-num">2</div><div class="tc-text">"I don't earn enough for a pension"</div></div>
+                <div class="tc-item"><div class="tc-num">3</div><div class="tc-text">"Life insurance is only for parents"</div></div>
+                <div class="tc-item"><div class="tc-num">4</div><div class="tc-text">"I'll sort it when things settle down"</div></div>
+              </div>
+              <div class="tc-footer"><div class="watermark watermark-light" style="position:static;transform:none;opacity:0.35;">selfemployedhelp.co.uk</div><div class="swipe-hint">Swipe <span class="arrow">&#8594;</span></div></div>
+            </div>
+            <!-- Slide 2: Myth 1 -->
+            <div class="ig-post t-cs-myth carousel-slide">
+              <div class="myth-half myth-section">
+                <div class="badge">Myth 1</div>
+                <div class="myth-text">"My accountant handles all my financial planning"</div>
+              </div>
+              <div class="myth-half reality-section">
+                <div class="badge">Reality</div>
+                <div class="reality-text">Accountants handle tax. Pensions, protection, and mortgage planning are a completely different discipline — and they often get completely missed.</div>
+              </div>
+            </div>
+            <!-- Slide 3: Myth 2 -->
+            <div class="ig-post t-cs-myth carousel-slide">
+              <div class="myth-half myth-section">
+                <div class="badge">Myth 2</div>
+                <div class="myth-text">"I don't earn enough for a pension to be worth it"</div>
+              </div>
+              <div class="myth-half reality-section">
+                <div class="badge">Reality</div>
+                <div class="reality-text">Tax relief means HMRC effectively tops up what you put in. Even £50/month now compounds significantly. The sooner you start, the less you need to contribute overall.</div>
+              </div>
+            </div>
+            <!-- Slide 4: Myth 3 -->
+            <div class="ig-post t-cs-myth carousel-slide">
+              <div class="myth-half myth-section">
+                <div class="badge">Myth 3</div>
+                <div class="myth-text">"Life insurance is only for people with children"</div>
+              </div>
+              <div class="myth-half reality-section">
+                <div class="badge">Reality</div>
+                <div class="reality-text">It covers mortgages, protects partners, and settles business debts. You don't need children for it to matter — and it's usually cheapest when you're young and healthy.</div>
+              </div>
+            </div>
+            <!-- Slide 5: Myth 4 -->
+            <div class="ig-post t-cs-myth carousel-slide">
+              <div class="myth-half myth-section">
+                <div class="badge">Myth 4</div>
+                <div class="myth-text">"I'll sort my finances out when things settle down"</div>
+              </div>
+              <div class="myth-half reality-section">
+                <div class="badge">Reality</div>
+                <div class="reality-text">Things rarely settle. And every month you wait is a month your pension isn't growing, a month you're unprotected, a month of opportunity cost. The best time to start is now.</div>
+              </div>
+            </div>
+            <!-- Slide 6: CTA -->
+            <div class="ig-post t-cs-cta carousel-slide">
+              <div class="cta-eyebrow">Which myth surprised you?</div>
+              <h3>Find out where you actually stand.</h3>
+              <p>Free 5-minute checkup. No documents. No hard sell. Just your score.</p>
+              <div class="cta-btn">go.selfemployedhelp.co.uk &rarr;</div>
+              <div class="watermark" style="color:rgba(15,35,64,0.15);">selfemployedhelp.co.uk</div>
+            </div>
+          </div>
+          <div class="carousel-ui">
+            <button class="carousel-btn prev-btn" disabled>&#8592;</button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span>
+            </div>
+            <button class="carousel-btn next-btn">&#8594;</button>
+          </div>
+          <div class="carousel-counter">Slide 1 of 6</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-type-badge badge-carousel">Carousel &mdash; 6 slides</div>
+        <div class="post-num">Post 8 of 14</div>
+        <div class="post-title">4 Financial Myths Busted</div>
+        <div class="post-timing">Day 8</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">"My accountant handles all of that."
+
+We hear this one constantly. And it makes sense — if you've got an accountant, it feels like the financial side is covered.
+
+But here's the reality:
+
+Your accountant handles your tax. They're brilliant at it.
+
+Your pension, your life insurance, your income protection, your mortgage — that's financial planning. A completely different area. One that often gets completely missed.
+
+Most self-employed people have a great accountant and zero financial protection.
+
+Don't be most people.
+
+Free 5-minute checkup, link in bio 👆
+
+#selfemployed #accountant #financialplanning #pension #lifeinsurance #incomeprotection #myth</div>
+      </div>
+    </div>
+
+    <!-- POST 9 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="ig-post t-this-that">
+          <div class="tt-header">
+            <h3>Which one are you?</h3>
+          </div>
+          <div class="tt-options">
+            <div class="tt-option tt-left">
+              <div class="tt-icon">&#10007;</div>
+              <div class="tt-label">Hoping for the best</div>
+            </div>
+            <div class="tt-option tt-right">
+              <div class="tt-icon">&#10003;</div>
+              <div class="tt-label">Knowing where you stand</div>
+            </div>
+          </div>
+          <div class="watermark watermark-light">selfemployedhelp.co.uk</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-num">Post 9 of 14</div>
+        <div class="post-title">This or That — Which Are You?</div>
+        <div class="post-timing">Day 9 &mdash; Comment bait</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">Which one are you?
+
+A) Hoping for the best and crossing fingers nothing goes wrong
+
+B) Knowing exactly where you stand and what you have in place
+
+Most people start out as A. That's completely fine.
+
+But it's worth knowing the difference between the two. And it only takes 5 minutes to get there.
+
+Our free checkup moves you from A to B — no pressure, no hard sell, no complicated paperwork.
+
+Drop an A or B in the comments 👇
+
+Link in bio.
+
+#selfemployed #financialplanning #selfemployedlife #freelance #ukbusiness #pension #incomeprotection</div>
+        <div class="post-note"><strong>Comment bait.</strong> The A/B format gives people a simple action to take. Share to Stories with a poll sticker asking the same question for extra reach.</div>
+      </div>
+    </div>
+
+    <!-- POST 10 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="ig-post t-stat-clean">
+          <div class="mini-logo mini-logo-dark" style="position:absolute;top:20px;left:24px;">
+            <div class="ml-icon"><img src="../images/logo-icon.png" alt="SEH"></div>
+          </div>
+          <div class="sc-kicker">The avoidance problem</div>
+          <div class="sc-number">55%</div>
+          <div class="sc-body">of self-employed people have never sat down to review their finances. Not once.</div>
+          <div class="sc-line"></div>
+          <div class="watermark watermark-dark">selfemployedhelp.co.uk</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-num">Post 10 of 14</div>
+        <div class="post-title">55% Have Never Reviewed</div>
+        <div class="post-timing">Day 10</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">55% of self-employed people have never sat down to properly review their finances.
+
+Not once. Ever.
+
+Not pensions. Not protection. Not savings. Not mortgage arrangements.
+
+And the scary part? Most of them assume everything's fine. Because nothing has gone wrong yet.
+
+But that's not the same as being protected.
+
+Our free checkup takes 5 minutes and shows you exactly where you stand — before anything goes wrong.
+
+No documents. Just honest answers.
+
+Find out which 45% you're in 👆 Link in bio.
+
+#selfemployed #financialplanning #pension #incomeprotection #selfemployedlife #freelancer #ukbusiness</div>
+      </div>
+    </div>
+
+    <!-- POST 11 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="ig-post t-results-insight">
+          <div class="ri-eyebrow">What people are finding</div>
+          <h3>Nobody had it all sorted.</h3>
+          <div class="ri-findings">
+            <div class="ri-finding">
+              <div class="ri-label">Biggest gap</div>
+              <div class="ri-text">Income protection &mdash; most people had zero cover in place</div>
+            </div>
+            <div class="ri-finding">
+              <div class="ri-label">Most ignored</div>
+              <div class="ri-text">Pensions &mdash; set up years ago, never checked since</div>
+            </div>
+            <div class="ri-finding">
+              <div class="ri-label">Biggest surprise</div>
+              <div class="ri-text">How many areas people didn&rsquo;t realise they were missing</div>
+            </div>
+          </div>
+          <div class="ri-callout">Most people scored Medium or Low.</div>
+          <div class="watermark watermark-light">selfemployedhelp.co.uk</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-num">Post 11 of 14</div>
+        <div class="post-title">What the Scores Are Showing</div>
+        <div class="post-timing">Day 11 &mdash; Social proof from real data</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">We've had loads of people take the free checkup now — and a clear pattern is emerging.
+
+Nobody had everything sorted.
+
+The biggest gap? Income protection. Most people had absolutely zero cover in place. If they couldn't work tomorrow, income stops on day one.
+
+The most ignored area? Pensions. Almost everyone had set one up at some point — and then never looked at it again.
+
+And the thing that surprised people most? Just how many areas they hadn't even thought about.
+
+This isn't a dig at anyone. It's the reality of being self-employed — you're so busy running your business that the financial stuff gets pushed back indefinitely.
+
+That's exactly why we built this. 5 minutes. Free. Just honest answers and your score.
+
+Link in bio 👆
+
+#selfemployed #financialcheckup #selfemployedlife #freelancer #pension #incomeprotection #ukbusiness</div>
+        <div class="post-note"><strong>Note:</strong> This is based on real anonymised patterns from checkup completions. No names, no made-up testimonials. Update the findings as more people take it.</div>
+      </div>
+    </div>
+
+    <!-- POST 12 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="carousel-player" data-id="c12">
+          <div class="carousel-track">
+            <!-- Slide 1: Cover -->
+            <div class="ig-post t-checklist carousel-slide active">
+              <div class="cl-header">
+                <div class="cl-badge">📌 Save this</div>
+                <h3>Self-Employed Financial Essentials</h3>
+              </div>
+              <div class="cl-items">
+                <div class="cl-item"><div class="cl-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="cl-text">Pension contributions</div></div>
+                <div class="cl-item"><div class="cl-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="cl-text">Income protection</div></div>
+                <div class="cl-item"><div class="cl-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="cl-text">Life insurance</div></div>
+                <div class="cl-item"><div class="cl-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="cl-text">Emergency fund (3–6 months)</div></div>
+                <div class="cl-item"><div class="cl-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="cl-text">Mortgage review</div></div>
+                <div class="cl-item"><div class="cl-check-empty"></div><div class="cl-note">Swipe to go through each one &rarr;</div></div>
+              </div>
+              <div class="watermark watermark-light">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 2: Pension -->
+            <div class="ig-post t-cs-body-navy carousel-slide">
+              <div class="cs-bg-num">1</div>
+              <div class="cs-of">1 of 5</div>
+              <div class="cs-num-badge">1</div>
+              <h3>Pension contributions</h3>
+              <p>Even £50/month now is better than £500/month in 10 years. Tax relief means HMRC tops up what you put in. If you're self-employed and not contributing, nothing is building.</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 3: Income Protection -->
+            <div class="ig-post t-cs-body-cream carousel-slide">
+              <div class="cs-of">2 of 5</div>
+              <div class="cs-num-badge">2</div>
+              <h3>Income protection</h3>
+              <p>If you can't work, this pays you a monthly income. Most self-employed people have zero cover. If you got ill or injured tomorrow — how long could you last on savings alone?</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 4: Life Insurance -->
+            <div class="ig-post t-cs-body-navy carousel-slide">
+              <div class="cs-bg-num">3</div>
+              <div class="cs-of">3 of 5</div>
+              <div class="cs-num-badge">3</div>
+              <h3>Life insurance</h3>
+              <p>Not just for parents. It covers mortgage debt, provides for partners, and settles business liabilities. Often cheaper than people assume — especially when you're young and healthy.</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 5: Emergency Fund -->
+            <div class="ig-post t-cs-body-cream carousel-slide">
+              <div class="cs-of">4 of 5</div>
+              <div class="cs-num-badge">4</div>
+              <h3>Emergency fund</h3>
+              <p>3–6 months of essential living expenses, separate from your business current account. Not an investment — just a buffer between you and a crisis. More important when you have no sick pay.</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 6: Mortgage Review -->
+            <div class="ig-post t-cs-body-navy carousel-slide">
+              <div class="cs-bg-num">5</div>
+              <div class="cs-of">5 of 5</div>
+              <div class="cs-num-badge">5</div>
+              <h3>Mortgage review</h3>
+              <p>If your fixed rate deal has ended, you may be on a standard variable rate — potentially costing hundreds more per month without realising. A quick review could save you significantly.</p>
+              <div class="cs-footer">selfemployedhelp.co.uk</div>
+            </div>
+            <!-- Slide 7: CTA -->
+            <div class="ig-post t-cs-cta carousel-slide">
+              <div class="cta-eyebrow">How many have you ticked?</div>
+              <h3>See what you're missing.</h3>
+              <p>Free 5-minute checkup covers all five areas. No documents. No pressure.</p>
+              <div class="cta-btn">go.selfemployedhelp.co.uk &rarr;</div>
+              <div class="watermark" style="color:rgba(15,35,64,0.15);">selfemployedhelp.co.uk</div>
+            </div>
+          </div>
+          <div class="carousel-ui">
+            <button class="carousel-btn prev-btn" disabled>&#8592;</button>
+            <div class="carousel-dots">
+              <span class="carousel-dot active"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span>
+            </div>
+            <button class="carousel-btn next-btn">&#8594;</button>
+          </div>
+          <div class="carousel-counter">Slide 1 of 7</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-type-badge badge-carousel">Carousel &mdash; 7 slides</div>
+        <div class="post-num">Post 12 of 14</div>
+        <div class="post-title">Save This — Full Checklist</div>
+        <div class="post-timing">Day 12 &mdash; High save rate expected</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">📌 Save this.
+
+Self-Employed Financial Essentials — the things most people forget they need:
+
+✅ Pension contributions (even small amounts regularly build up)
+✅ Income protection (if you can't work, this pays you)
+✅ Life insurance (not just for parents — it covers debts too)
+✅ Emergency fund (3-6 months of expenses, separate from business cash)
+✅ Mortgage review (your deal may have expired without you realising)
+
+Most self-employed people are missing at least 2 of these.
+
+How many have you actually sorted?
+
+Our free checkup covers all of this in 5 minutes — link in bio.
+
+#selfemployed #financialplanning #savethis #selfemployedessentials #pension #incomeprotection #freelancer</div>
+      </div>
+    </div>
+
+    <!-- POST 13 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="ig-post t-reassurance">
+          <div class="rr-eyebrow">A word, if you need it</div>
+          <div class="rr-opening">"If you're reading this thinking 'I really should have sorted this by now'..."</div>
+          <div class="rr-body">You're not behind.<br>You're not irresponsible.<br>You're just <span>busy</span>.</div>
+          <div class="rr-cta">Start when you're ready &rarr;</div>
+          <div class="watermark watermark-dark">selfemployedhelp.co.uk</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-num">Post 13 of 14</div>
+        <div class="post-title">The Reassurance Post</div>
+        <div class="post-timing">Day 13 &mdash; Warm &amp; human</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">If you're reading this thinking 'I really should have sorted this by now'...
+
+You're not behind.
+
+You're not irresponsible.
+
+You're just busy.
+
+Running your own business takes everything you've got. Financial admin gets pushed to 'next month' and then next month quietly becomes next year.
+
+We built this checkup for exactly that moment — the moment when you're finally ready to actually look.
+
+5 minutes. Free. No advice, no pressure. Just your score and a clear picture of where you stand.
+
+Start when you're ready. Link in bio.
+
+#selfemployed #nopressure #youvegotthis #selfemployedlife #freelance #financialplanning #ukbusiness</div>
+      </div>
+    </div>
+
+    <!-- POST 14 -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="ig-post t-final-cta">
+          <img src="../images/logo-horizontal.png" alt="SelfEmployedHelp.co.uk" style="position:relative;z-index:1;width:220px;margin-bottom:20px;">
+          <h3>Ready to check your score?</h3>
+          <div class="fc-features">
+            <span class="fc-feature">Free</span>
+            <span class="fc-dot"></span>
+            <span class="fc-feature">5 minutes</span>
+            <span class="fc-dot"></span>
+            <span class="fc-feature">No documents</span>
+          </div>
+          <div class="fc-url">go.selfemployedhelp.co.uk &#8594;</div>
+          <div class="watermark" style="color: rgba(15, 35, 64, 0.2);">selfemployedhelp.co.uk</div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-num">Post 14 of 14</div>
+        <div class="post-title">The Final CTA</div>
+        <div class="post-timing">Day 14 &mdash; Two-week milestone</div>
+        <div class="post-caption-label">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">Two weeks in and we want to say thank you to everyone who's already taken the checkup 🙏
+
+The most common reaction? "I had no idea I was missing so much."
+
+If you haven't done it yet:
+
+✓ Completely free
+✓ Takes 5 minutes
+✓ No documents needed
+✓ No advice or pressure
+✓ Just clarity
+
+Covers pensions, protection, savings, and mortgage.
+
+go.selfemployedhelp.co.uk (link in bio 👆)
+
+Tag a self-employed friend who needs to see this 👇
+
+#selfemployed #financialcheckup #selfemployedlife #freelancer #ukbusiness #pension #incomeprotection #lifeinsurance</div>
+        <div class="post-note"><strong>Two-week milestone.</strong> Thank people who've already taken it (social proof). The "tag a self-employed friend" CTA drives organic reach. Consider boosting this one post with a small spend (&pound;10&ndash;20) if the organic numbers look good.</div>
+      </div>
+    </div>
+
+  </div><!-- end post-brief-container week 2 -->
+
+  <!-- ======================================
+       REELS
+       ====================================== -->
+  <div class="week-divider">
+    <div class="week-divider-inner">
+      <div class="week-label">Reels &mdash; 4 Scripts</div>
+      <div class="week-line"></div>
+    </div>
+  </div>
+
+  <div class="post-brief-container">
+
+    <!-- REEL 1 — ROMANY -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="reel-mockup">
+          <div class="reel-bg" style="background: linear-gradient(160deg, var(--navy) 0%, #0a2240 60%, #0d3a2e 100%);"></div>
+          <div class="reel-overlay"></div>
+          <div class="reel-presenter">Romany</div>
+          <div class="reel-duration-badge">&#9201; 30s</div>
+          <div class="reel-play">&#9654;</div>
+          <div class="reel-bottom">
+            <div class="reel-hook">The one thing nobody told you when you went self-employed.</div>
+            <div class="reel-handle">@selfemployedhelp.co.uk</div>
+          </div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-type-badge badge-reel">Reel &mdash; 30 seconds</div>
+        <div class="post-num">Reel 1 of 4</div>
+        <div class="post-title">Nobody Told You This</div>
+        <div class="post-timing">Week 1 &mdash; Awareness &amp; hook</div>
+        <div class="post-note"><strong>Presenter: Romany.</strong> Talking head to camera. She speaks from experience as a financial adviser who works with self-employed people every day. Casual, warm, direct. Film in natural light if possible.</div>
+        <div class="reel-script">
+          <div class="script-block">
+            <div class="script-timing hook"><span class="script-timing-label">Hook</span><span class="script-timing-note">0 – 3 seconds &middot; straight to camera</span></div>
+            <div class="script-body">"The one thing nobody told you when you went self-employed — and it could cost you everything."</div>
+          </div>
+          <div class="script-block">
+            <div class="script-timing body-time"><span class="script-timing-label">Body</span><span class="script-timing-note">3 – 25 seconds</span></div>
+            <div class="script-body">"I'm a financial adviser and I speak to self-employed people every single day. And the thing that comes up again and again is this: when you work for a company, someone auto-enrolls you into a pension. Someone gives you sick pay. Someone sorts your life insurance. When you go self-employed? None of that happens. Nobody tells you. You just start working — and the gaps build up quietly for years."</div>
+          </div>
+          <div class="script-block">
+            <div class="script-timing cta-time"><span class="script-timing-label">CTA</span><span class="script-timing-note">25 – 30 seconds</span></div>
+            <div class="script-body">"We built a free 5-minute checkup to show you exactly where you stand. No documents, no hard sell. Link in bio."</div>
+            <div class="script-notes">Point upward at the end. Text overlay during CTA: "Free 5-min checkup &mdash; link in bio"</div>
+          </div>
+        </div>
+        <div class="post-caption-label" style="margin-top:20px;">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">The one thing nobody tells you when you go self-employed 👆
+
+No auto-enrolled pension. No sick pay. No employer life insurance.
+
+Just you, your business, and a growing list of financial gaps that nobody ever mentioned.
+
+I speak to self-employed people every day as a financial adviser — and this comes up in almost every conversation.
+
+We built a free 5-minute checkup to show you exactly where you stand. No documents, no pressure.
+
+Link in bio.
+
+#selfemployed #selfemployedlife #freelancer #ukbusiness #financialplanning #incomeprotection #pension</div>
+      </div>
+    </div>
+
+    <!-- REEL 2 — ROMANY -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="reel-mockup">
+          <div class="reel-bg" style="background: linear-gradient(160deg, var(--dark-teal) 0%, #0a4a50 50%, var(--navy-dark) 100%);"></div>
+          <div class="reel-overlay"></div>
+          <div class="reel-presenter">Romany</div>
+          <div class="reel-duration-badge">&#9201; 45s</div>
+          <div class="reel-play">&#9654;</div>
+          <div class="reel-bottom">
+            <div class="reel-hook">Could you survive 3 months without any income?</div>
+            <div class="reel-handle">@selfemployedhelp.co.uk</div>
+          </div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-type-badge badge-reel">Reel &mdash; 45 seconds</div>
+        <div class="post-num">Reel 2 of 4</div>
+        <div class="post-title">Could You Survive 3 Months?</div>
+        <div class="post-timing">Week 1 end / Week 2 start &mdash; high engagement hook</div>
+        <div class="post-note"><strong>Presenter: Romany.</strong> This is the highest-engagement script. The opening question is designed to stop scrolling. Romany should deliver it like she's asking a friend &mdash; direct but not judgmental. Can film at home or in the office.</div>
+        <div class="reel-script">
+          <div class="script-block">
+            <div class="script-timing hook"><span class="script-timing-label">Hook</span><span class="script-timing-note">0 – 3 seconds &middot; look straight at camera</span></div>
+            <div class="script-body">"Real question — could you survive 3 months without any income? Because most self-employed people can't."</div>
+          </div>
+          <div class="script-block">
+            <div class="script-timing body-time"><span class="script-timing-label">Body</span><span class="script-timing-note">3 – 40 seconds</span></div>
+            <div class="script-body">"And I get it — it feels like a 'that won't happen to me' situation. But illness happens. Injury happens. A family emergency. The unexpected. And when it does? There's no sick pay. No employer to cover you. Your income just stops on day one.
+
+Income protection pays you a monthly amount if you genuinely can't work. Most self-employed people have never looked into it because they assume it's expensive or it's 'not for them.' Sometimes it is more than people expect. Sometimes it's far less. Either way — you should at least know what it would cost before you decide it's not for you."</div>
+          </div>
+          <div class="script-block">
+            <div class="script-timing cta-time"><span class="script-timing-label">CTA</span><span class="script-timing-note">40 – 45 seconds</span></div>
+            <div class="script-body">"Free 5-minute checkup in the bio. It covers income protection, pensions, life insurance and more. No documents, no pressure — just clarity."</div>
+            <div class="script-notes">Text overlay during CTA: "go.selfemployedhelp.co.uk &mdash; free &amp; 5 mins". Point up at end.</div>
+          </div>
+        </div>
+        <div class="post-caption-label" style="margin-top:20px;">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">Could you survive 3 months without income? 👀
+
+Most self-employed people can't. And that's not a dig — it's just the reality of no sick pay, no employer, no safety net.
+
+Income protection pays you a monthly amount if you can't work. Most self-employed people have never even looked into it.
+
+Free checkup in the bio — takes 5 minutes and shows you exactly where you stand on this and more.
+
+Drop a ✋ in the comments if you've never looked into income protection.
+
+#selfemployed #incomeprotection #selfemployedlife #freelancer #financialplanning #ukbusiness #realtalk</div>
+      </div>
+    </div>
+
+    <!-- REEL 3 — ROMANY (Story format) -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="reel-mockup">
+          <div class="reel-bg" style="background: linear-gradient(160deg, #0a1a30 0%, var(--navy) 50%, #1a2a50 100%);"></div>
+          <div class="reel-overlay"></div>
+          <div class="reel-presenter">Romany</div>
+          <div class="reel-duration-badge">&#9201; 60s</div>
+          <div class="reel-play">&#9654;</div>
+          <div class="reel-bottom">
+            <div class="reel-hook">What I keep seeing when self-employed people actually check their finances.</div>
+            <div class="reel-handle">@selfemployedhelp.co.uk</div>
+          </div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-type-badge badge-reel">Reel &mdash; 60 seconds</div>
+        <div class="post-num">Reel 3 of 4</div>
+        <div class="post-title">What I Keep Seeing &mdash; Adviser POV</div>
+        <div class="post-timing">Week 2 &mdash; Trust-builder, drives checkup completions</div>
+        <div class="post-note"><strong>Presenter: Romany.</strong> This is a storytelling reel where Romany talks about real patterns she's seeing (anonymised). Deliver personally and warmly &mdash; talking head, one take if possible. Authenticity &gt; production quality. Don&rsquo;t name anyone &mdash; keep it about patterns.</div>
+        <div class="reel-script">
+          <div class="script-block">
+            <div class="script-timing hook"><span class="script-timing-label">Hook</span><span class="script-timing-note">0 – 3 seconds &middot; conversational tone</span></div>
+            <div class="script-body">"I'm a financial adviser and I need to tell you what I keep seeing when self-employed people actually sit down and look at their finances."</div>
+          </div>
+          <div class="script-block">
+            <div class="script-timing body-time"><span class="script-timing-label">Body</span><span class="script-timing-note">3 – 52 seconds</span></div>
+            <div class="script-body">"So we built this free financial checkup — takes about 5 minutes, no documents, just honest answers about where you stand. And loads of people have taken it now.
+
+Here's what keeps coming up. Almost nobody has income protection. If they couldn't work tomorrow — illness, injury, anything — income stops on day one. Nothing. Most people have a pension they set up years ago and haven't looked at since. A few hundred quid sitting there doing nothing. And life insurance that either doesn't exist or covers a figure that made sense five years ago.
+
+These aren't irresponsible people. They're busy. Running businesses. Looking after clients. The financial admin just keeps getting pushed to 'next month' — and next month quietly becomes next year.
+
+That's exactly why we built the checkup. It asks the questions nobody else asks."</div>
+          </div>
+          <div class="script-block">
+            <div class="script-timing cta-time"><span class="script-timing-label">CTA</span><span class="script-timing-note">52 – 60 seconds</span></div>
+            <div class="script-body">"It's completely free. No advice, no pressure. Just your score and a clear picture of where you stand. Link in bio — takes less than 5 minutes."</div>
+            <div class="script-notes">Warm close, genuine. Text overlay: "Free checkup &mdash; link in bio". Point up.</div>
+          </div>
+        </div>
+        <div class="post-caption-label" style="margin-top:20px;">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">I'm a financial adviser and here's what I keep seeing when self-employed people actually look at their finances 👇
+
+Income protection: none. Most people have zero cover.
+
+Pension: set up years ago, barely contributed to. A few hundred pounds sitting there.
+
+Life insurance: either doesn't exist or hasn't been reviewed in years.
+
+Not because anyone's being irresponsible. Because they're busy running a business and nobody ever asked them the right questions.
+
+That's why we built a free 5-minute checkup. It asks all the questions. No advice. No pressure. Just clarity.
+
+Link in bio.
+
+#selfemployed #financialadviser #selfemployedlife #freelancer #pension #incomeprotection #honesty</div>
+      </div>
+    </div>
+
+    <!-- REEL 4 — MATTHEW (Mortgage) -->
+    <div class="post-brief">
+      <div class="post-brief-visual">
+        <div class="reel-mockup">
+          <div class="reel-bg" style="background: linear-gradient(160deg, var(--coral-dark) 0%, #8b3a2a 50%, var(--navy-dark) 100%);"></div>
+          <div class="reel-overlay"></div>
+          <div class="reel-presenter">Matthew</div>
+          <div class="reel-duration-badge">&#9201; 35s</div>
+          <div class="reel-play">&#9654;</div>
+          <div class="reel-bottom">
+            <div class="reel-hook">Your mortgage deal might have expired. Here&rsquo;s why that matters.</div>
+            <div class="reel-handle">@selfemployedhelp.co.uk</div>
+          </div>
+        </div>
+      </div>
+      <div class="post-brief-info">
+        <div class="post-type-badge badge-reel">Reel &mdash; 35 seconds</div>
+        <div class="post-num">Reel 4 of 4</div>
+        <div class="post-title">Your Mortgage Deal Might Have Expired</div>
+        <div class="post-timing">Week 2 &mdash; Mortgage-focused, different voice</div>
+        <div class="post-note"><strong>Presenter: Matthew.</strong> Matthew is a mortgage broker &mdash; he brings a different voice and different expertise. This reel targets homeowners specifically. Straight to camera, keep it punchy. The &pound; figure in the body is the real hook.</div>
+        <div class="reel-script">
+          <div class="script-block">
+            <div class="script-timing hook"><span class="script-timing-label">Hook</span><span class="script-timing-note">0 – 3 seconds &middot; straight to camera</span></div>
+            <div class="script-body">"If you're self-employed and have a mortgage — when did your fixed rate deal end? Because if you don't know, you might be paying hundreds more than you need to."</div>
+          </div>
+          <div class="script-block">
+            <div class="script-timing body-time"><span class="script-timing-label">Body</span><span class="script-timing-note">3 – 28 seconds</span></div>
+            <div class="script-body">"I'm a mortgage broker and this comes up all the time. Your fixed rate ends, you get moved onto your lender's standard variable rate automatically, and most people don't even notice. The difference can be &pound;200, &pound;300, sometimes more — every single month. That's money you're just giving away because nobody reminded you to check.
+
+And if you're self-employed, remortgaging can be slightly different to when you're employed. But it's not as complicated as people think — you just need someone who knows how it works."</div>
+          </div>
+          <div class="script-block">
+            <div class="script-timing cta-time"><span class="script-timing-label">CTA</span><span class="script-timing-note">28 – 35 seconds</span></div>
+            <div class="script-body">"Our free checkup covers mortgages along with pensions, protection and savings. Takes 5 minutes and you'll see exactly where you stand. Link in bio."</div>
+            <div class="script-notes">Text overlay: "Free 5-min checkup &mdash; link in bio". Can add on-screen text showing "&pound;200-300/month" during the body section for impact.</div>
+          </div>
+        </div>
+        <div class="post-caption-label" style="margin-top:20px;">Caption &mdash; copy &amp; paste</div>
+        <div class="post-caption">When did your mortgage fixed rate end? 🏠
+
+If you don't know — you might be paying hundreds more than you need to every month.
+
+Here's what happens: your fixed deal ends, your lender quietly moves you onto their standard variable rate, and most people don't even notice. The difference can be &pound;200-300+ per month.
+
+If you're self-employed, remortgaging works slightly differently — but it's not as complicated as people think. You just need someone who knows how it works.
+
+Our free 5-minute checkup covers mortgages along with pensions, protection and savings. See exactly where you stand.
+
+Link in bio 👆
+
+#selfemployed #mortgage #remortgage #selfemployedlife #mortgagebroker #ukproperty #financialplanning</div>
+      </div>
+    </div>
+
+  </div><!-- end reels container -->
+
+  <!-- ======================================
+       PAGE FOOTER
+       ====================================== -->
+  <div class="page-footer">
+    <p>SelfEmployedHelp.co.uk &mdash; 14 Posts + 4 Reels Instagram Launch Sequence<br>
+    Click any graphic to preview full-size &middot; Screenshot at 1080&times;1350 for posting</p>
+  </div>
+
+  <!-- ======================================
+       LIGHTBOX
+       ====================================== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close preview">&times;</button>
+    <div class="lightbox-content" id="lightbox-content"></div>
+    <p class="lightbox-hint">Right-click &rarr; Save as image, or screenshot at 1080&times;1350</p>
+  </div>
+
+  <!-- ======================================
+       JAVASCRIPT
+       ====================================== -->
+  <script>
+    (function() {
+
+      /* =====================
+         CAROUSEL LOGIC
+         ===================== */
+      document.querySelectorAll('.carousel-player').forEach(function(player) {
+        var slides = player.querySelectorAll('.carousel-slide');
+        var dots = player.querySelectorAll('.carousel-dot');
+        var counter = player.querySelector('.carousel-counter');
+        var prevBtn = player.querySelector('.prev-btn');
+        var nextBtn = player.querySelector('.next-btn');
+        var total = slides.length;
+        var current = 0;
+
+        function goTo(n) {
+          slides[current].classList.remove('active');
+          dots[current].classList.remove('active');
+          current = n;
+          slides[current].classList.add('active');
+          dots[current].classList.add('active');
+          prevBtn.disabled = current === 0;
+          nextBtn.disabled = current === total - 1;
+          if (counter) counter.textContent = 'Slide ' + (current + 1) + ' of ' + total;
+        }
+
+        prevBtn.addEventListener('click', function() { if (current > 0) goTo(current - 1); });
+        nextBtn.addEventListener('click', function() { if (current < total - 1) goTo(current + 1); });
+
+        dots.forEach(function(dot, i) {
+          dot.addEventListener('click', function() { goTo(i); });
+        });
+      });
+
+      /* =====================
+         LIGHTBOX (single posts only)
+         ===================== */
+      var lightbox = document.getElementById('lightbox');
+      var lightboxContent = document.getElementById('lightbox-content');
+      var lightboxClose = document.getElementById('lightbox-close');
+
+      // Only attach lightbox to posts that are NOT carousel slides
+      document.querySelectorAll('.ig-post:not(.carousel-slide)').forEach(function(post) {
+        post.addEventListener('click', function() { openLightbox(post); });
+      });
+
+      function openLightbox(post) {
+        var clone = post.cloneNode(true);
+        var rect = post.getBoundingClientRect();
+        clone.style.width = rect.width + 'px';
+        clone.style.height = rect.height + 'px';
+        clone.style.borderRadius = '0';
+        clone.style.cursor = 'default';
+        clone.style.flexShrink = '0';
+        clone.style.boxShadow = 'none';
+        clone.style.transform = 'none';
+        var maxSize = Math.min(window.innerHeight * 0.82, window.innerWidth * 0.82);
+        clone.style.transform = 'scale(' + (maxSize / Math.max(rect.width, rect.height)) + ')';
+        clone.style.transformOrigin = 'center center';
+        clone.style.pointerEvents = 'none';
+        lightboxContent.innerHTML = '';
+        lightboxContent.appendChild(clone);
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightboxContent.innerHTML = '';
+        document.body.style.overflow = '';
+      }
+
+      lightboxClose.addEventListener('click', function(e) { e.stopPropagation(); closeLightbox(); });
+      lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+
+    })();
+  </script>
+
+</body>
+</html>
