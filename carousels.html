@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Carousels — The Finance Woman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --burgundy: #4c1315;
+      --burgundy-mid: #6B2D45;
+      --cream: #F5F0E8;
+      --blush: #faeeeb;
+      --nude: #ba9b88;
+      --rose: #c37d69;
+      --gold: #ad9b58;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lora', serif;
+      background: #ede8e0;
+      padding: 48px 20px 80px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .page-header h1 {
+      font-size: 30px;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--burgundy);
+      margin-bottom: 6px;
+    }
+
+    .page-header p {
+      font-size: 14px;
+      color: var(--nude);
+    }
+
+    /* ===========================
+       CAROUSEL CARD
+       =========================== */
+    .carousel-card {
+      max-width: 880px;
+      margin: 0 auto 64px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(76,19,21,0.07);
+    }
+
+    .card-header {
+      padding: 24px 32px 20px;
+      border-bottom: 1px solid #f0e8e0;
+    }
+
+    .card-num {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--nude);
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--burgundy);
+      margin-bottom: 2px;
+    }
+
+    .card-meta {
+      font-size: 13px;
+      font-style: italic;
+      color: #aaa;
+    }
+
+    /* ===========================
+       SLIDE VIEWER
+       =========================== */
+    .slide-viewer {
+      background: #2a2220;
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .slides-wrap {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .slides-track {
+      display: flex;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* 4:5 ratio at 300px wide = 375px tall */
+    .slide {
+      flex: 0 0 300px;
+      height: 375px;
+      position: relative;
+      overflow: hidden;
+      background: var(--cream);
+    }
+
+    /* ===========================
+       COVER SLIDE
+       =========================== */
+    .slide-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slide-cover-fallback {
+      width: 100%;
+      height: 100%;
+      background: var(--burgundy);
+      display: flex;
+      flex-direction: column;
+      padding: 24px 22px;
+      color: var(--cream);
+    }
+
+    .cf-counter {
+      font-size: 10px;
+      letter-spacing: 1px;
+      opacity: 0.4;
+      margin-bottom: auto;
+    }
+
+    .cf-title {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .cf-sub {
+      font-size: 12px;
+      font-style: italic;
+      opacity: 0.6;
+      margin-bottom: 20px;
+    }
+
+    .cf-brand {
+      font-size: 11px;
+      font-style: italic;
+      opacity: 0.3;
+    }
+
+    /* ===========================
+       SPLIT SLIDE (left burgundy + right cream)
+       =========================== */
+    .slide-split {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .split-left {
+      width: 36%;
+      background: var(--burgundy);
+      display: flex;
+      flex-direction: column;
+      padding: 18px 14px;
+      flex-shrink: 0;
+    }
+
+    .split-left.mid {
+      background: var(--burgundy-mid);
+    }
+
+    .split-right {
+      flex: 1;
+      background: var(--cream);
+      padding: 18px 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .split-right.blush {
+      background: var(--blush);
+    }
+
+    /* Left panel elements */
+    .sl-counter {
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: rgba(245,240,232,0.35);
+      margin-bottom: auto;
+    }
+
+    .sl-label {
+      font-size: 10px;
+      font-style: italic;
+      color: var(--nude);
+      margin-bottom: 5px;
+    }
+
+    .sl-number {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1;
+    }
+
+    .sl-word {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--cream);
+      line-height: 1.2;
+    }
+
+    .sl-brand {
+      font-size: 8px;
+      font-style: italic;
+      color: rgba(245,240,232,0.25);
+      margin-top: auto;
+    }
+
+    /* Right panel elements */
+    .badge {
+      display: inline-block;
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-bottom: 7px;
+      font-style: normal;
+      align-self: flex-start;
+    }
+
+    .badge-myth {
+      background: rgba(76,19,21,0.08);
+      color: var(--burgundy);
+    }
+
+    .badge-fact {
+      background: rgba(195,125,105,0.15);
+      color: var(--rose);
+    }
+
+    .sr-heading {
+      font-size: 13px;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--burgundy);
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .sr-divider {
+      height: 1px;
+      background: rgba(76,19,21,0.1);
+      margin: 8px 0;
+    }
+
+    .sr-body {
+      font-size: 11.5px;
+      color: #5a4040;
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .sr-tip {
+      font-size: 10.5px;
+      font-style: italic;
+      color: var(--nude);
+      margin-top: 6px;
+    }
+
+    .sr-arrow {
+      font-size: 13px;
+      color: var(--nude);
+      text-align: right;
+      margin-top: 8px;
+    }
+
+    .sr-q {
+      font-size: 13px;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--burgundy);
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    /* ===========================
+       CTA SLIDE
+       =========================== */
+    .slide-cta {
+      width: 100%;
+      height: 100%;
+      background: var(--burgundy);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .cta-counter {
+      position: absolute;
+      top: 16px;
+      left: 18px;
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: rgba(245,240,232,0.3);
+    }
+
+    .cta-heading {
+      font-size: 18px;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--cream);
+      line-height: 1.45;
+      margin-bottom: 22px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 9px 22px;
+      border: 1px solid rgba(245,240,232,0.35);
+      border-radius: 40px;
+      font-size: 11px;
+      color: var(--cream);
+      letter-spacing: 0.5px;
+      margin-bottom: 28px;
+    }
+
+    .cta-brand {
+      font-size: 10px;
+      font-style: italic;
+      color: rgba(245,240,232,0.25);
+    }
+
+    /* ===========================
+       THIS OR THAT SLIDES
+       =========================== */
+    .slide-tot {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .tot-half {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 22px;
+      text-align: center;
+    }
+
+    .tot-top { background: var(--cream); }
+    .tot-bottom { background: var(--burgundy); }
+
+    .tot-choice-a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--burgundy);
+      line-height: 1.35;
+    }
+
+    .tot-choice-b {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--cream);
+      line-height: 1.35;
+    }
+
+    .tot-or {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      height: 30px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-style: italic;
+      color: var(--burgundy);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      z-index: 2;
+    }
+
+    .tot-counter {
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: var(--nude);
+      z-index: 3;
+    }
+
+    .tot-arrow {
+      position: absolute;
+      bottom: 14px;
+      right: 16px;
+      font-size: 13px;
+      color: rgba(245,240,232,0.4);
+      z-index: 3;
+    }
+
+    /* ===========================
+       ANSWER SLIDE
+       =========================== */
+    .slide-answer {
+      width: 100%;
+      height: 100%;
+      background: var(--blush);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .ans-counter {
+      position: absolute;
+      top: 16px;
+      left: 18px;
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: var(--nude);
+    }
+
+    .ans-kicker {
+      font-size: 11px;
+      font-style: italic;
+      color: var(--nude);
+      margin-bottom: 10px;
+    }
+
+    .ans-heading {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--burgundy);
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    .ans-body {
+      font-size: 11.5px;
+      color: #6a4a4a;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .ans-cta {
+      display: inline-block;
+      padding: 9px 20px;
+      border: 1px solid var(--nude);
+      border-radius: 40px;
+      font-size: 11px;
+      color: var(--burgundy);
+    }
+
+    /* ===========================
+       NAV CONTROLS
+       =========================== */
+    .slide-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      background: #faf8f5;
+      border-top: 1px solid #f0e8e0;
+    }
+
+    .nav-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid #e0d5cc;
+      background: white;
+      cursor: pointer;
+      font-size: 17px;
+      color: var(--burgundy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+      line-height: 1;
+      padding-bottom: 1px;
+    }
+
+    .nav-btn:hover { background: var(--blush); }
+
+    .nav-dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .nav-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #ddd;
+      transition: background 0.2s;
+    }
+
+    .nav-dot.active { background: var(--burgundy); }
+
+    .nav-counter {
+      font-size: 11px;
+      color: #bbb;
+      min-width: 38px;
+      text-align: center;
+    }
+
+    /* ===========================
+       CAPTION SECTION
+       =========================== */
+    .card-caption {
+      padding: 22px 32px 28px;
+      border-top: 1px solid #f0e8e0;
+    }
+
+    .caption-label {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--nude);
+      margin-bottom: 10px;
+    }
+
+    .caption-body {
+      font-size: 13px;
+      line-height: 1.75;
+      color: #555;
+      white-space: pre-wrap;
+      padding: 14px 18px;
+      background: #faf7f4;
+      border-radius: 10px;
+      border: 1px solid #ece4db;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .caption-body:hover { background: #f0ebe3; }
+
+    .copy-hint {
+      font-size: 11px;
+      font-style: italic;
+      color: #ccc;
+      text-align: right;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>The Finance Woman</h1>
+    <p>5 Instagram Carousels — Final Designs with Captions</p>
+  </div>
+
+
+  <!-- ==================================================
+       CAROUSEL 1 — INVESTING MYTHS (7 slides)
+       ================================================== -->
+  <div class="carousel-card">
+    <div class="card-header">
+      <div class="card-num">Carousel 1 of 5 &middot; 7 slides</div>
+      <div class="card-title">Myths About Investing</div>
+      <div class="card-meta">Save-worthy &middot; High share potential</div>
+    </div>
+
+    <div class="slide-viewer">
+      <div class="slides-wrap">
+        <div class="slides-track" id="c1">
+
+          <!-- Cover -->
+          <div class="slide slide-cover">
+            <img src="images/cover-investing-myths.png" alt="Investing Myths cover"
+              onerror="this.style.display='none';this.parentElement.querySelector('.slide-cover-fallback').style.display='flex'">
+            <div class="slide-cover-fallback" style="display:none">
+              <span class="cf-counter">01/07</span>
+              <div class="cf-title">Myths about investing (that are keeping you stuck)</div>
+              <div class="cf-sub">Swipe to find out →</div>
+              <div class="cf-brand">The Finance Woman</div>
+            </div>
+          </div>
+
+          <!-- Myth 1 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left">
+                <span class="sl-counter">02/07</span>
+                <span class="sl-label">Myth</span>
+                <span class="sl-number">01</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right">
+                <span class="badge badge-myth">Myth</span>
+                <div class="sr-heading">"I need a lot of money to start investing"</div>
+                <div class="sr-divider"></div>
+                <span class="badge badge-fact">Fact</span>
+                <div class="sr-body">Consistency matters way more than the starting amount.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Myth 2 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left">
+                <span class="sl-counter">03/07</span>
+                <span class="sl-label">Myth</span>
+                <span class="sl-number">02</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right">
+                <span class="badge badge-myth">Myth</span>
+                <div class="sr-heading">"Investing is basically gambling"</div>
+                <div class="sr-divider"></div>
+                <span class="badge badge-fact">Fact</span>
+                <div class="sr-body">Long-term investing is about patience, not luck.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Myth 3 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left">
+                <span class="sl-counter">04/07</span>
+                <span class="sl-label">Myth</span>
+                <span class="sl-number">03</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right">
+                <span class="badge badge-myth">Myth</span>
+                <div class="sr-heading">"Cash is the safest place for my money"</div>
+                <div class="sr-divider"></div>
+                <span class="badge badge-fact">Fact</span>
+                <div class="sr-body">Inflation quietly erodes it over time.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Myth 4 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left">
+                <span class="sl-counter">05/07</span>
+                <span class="sl-label">Myth</span>
+                <span class="sl-number">04</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right">
+                <span class="badge badge-myth">Myth</span>
+                <div class="sr-heading">"I'm too late — I should have started years ago"</div>
+                <div class="sr-divider"></div>
+                <span class="badge badge-fact">Fact</span>
+                <div class="sr-body">Starting today still changes your future.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Myth 5 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left">
+                <span class="sl-counter">06/07</span>
+                <span class="sl-label">Myth</span>
+                <span class="sl-number">05</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right">
+                <span class="badge badge-myth">Myth</span>
+                <div class="sr-heading">"Pensions lock your money away forever"</div>
+                <div class="sr-divider"></div>
+                <span class="badge badge-fact">Fact</span>
+                <div class="sr-body">They're one of the most tax-efficient tools available.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Closing -->
+          <div class="slide slide-cta">
+            <span class="cta-counter">07/07</span>
+            <div class="cta-heading">The biggest risk isn't getting it wrong.<br><br>It's never starting at all.</div>
+            <div class="cta-btn">Free call — link in bio →</div>
+            <div class="cta-brand">The Finance Woman</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-nav">
+      <button class="nav-btn" onclick="nav('c1',-1)">&#8249;</button>
+      <div class="nav-dots" id="c1-dots"></div>
+      <span class="nav-counter" id="c1-count">1 / 7</span>
+      <button class="nav-btn" onclick="nav('c1',1)">&#8250;</button>
+    </div>
+
+    <div class="card-caption">
+      <div class="caption-label">Caption — click to copy</div>
+      <div class="caption-body" onclick="copy(this)">Myths about investing that are keeping people stuck.
+
+Which one have you believed? (Be honest)
+
+"I need loads of money to start" — Nope. Consistency beats size.
+"It's basically gambling" — Not even close. Patience, not luck.
+"Cash is safest" — Inflation says otherwise.
+"I'm too late" — Starting today still changes everything.
+"Pensions lock your money away" — They're actually one of the best tax tools going.
+
+The biggest risk isn't getting it wrong. It's never starting at all.
+
+If any of these myths have been holding you back — let's talk.
+
+Free call — link in bio.
+
+#investing #pensions #myths #selfemployed #financialplanning #thefinancewoman
+
+The value of pensions and investments and the income they produce can fall as well as rise. You may get back less than you invested. The benefits to the treatment of tax will depend on your individual circumstances and may be subject to change in future. Past performance is not indicative of future results.</div>
+      <div class="copy-hint">Click caption to copy</div>
+    </div>
+  </div>
+
+
+  <!-- ==================================================
+       CAROUSEL 2 — 3 THINGS BEFORE APRIL (5 slides)
+       ================================================== -->
+  <div class="carousel-card">
+    <div class="card-header">
+      <div class="card-num">Carousel 2 of 5 &middot; 5 slides</div>
+      <div class="card-title">3 Things Before April</div>
+      <div class="card-meta">Timely &middot; Post before 5th April</div>
+    </div>
+
+    <div class="slide-viewer">
+      <div class="slides-wrap">
+        <div class="slides-track" id="c2">
+
+          <!-- Cover -->
+          <div class="slide slide-cover">
+            <img src="images/cover-3-things-before-april.jpg" alt="3 Things Before April cover"
+              onerror="this.style.display='none';this.parentElement.querySelector('.slide-cover-fallback').style.display='flex'">
+            <div class="slide-cover-fallback" style="display:none">
+              <span class="cf-counter">01/05</span>
+              <div class="cf-title">3 things every self-employed person forgets to do before April</div>
+              <div class="cf-sub">Tax year ends 5th April</div>
+              <div class="cf-brand">The Finance Woman</div>
+            </div>
+          </div>
+
+          <!-- Thing 1 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left">
+                <span class="sl-counter">02/05</span>
+                <span class="sl-label">Thing</span>
+                <span class="sl-number">01</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right">
+                <div class="sr-heading">Check your pension contributions</div>
+                <div class="sr-body">You get tax relief on pension contributions up to your annual allowance. If you haven't used it — you lose it when the tax year ends.</div>
+                <div class="sr-divider"></div>
+                <div class="sr-tip">Use it or lose it.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Thing 2 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left mid">
+                <span class="sl-counter">03/05</span>
+                <span class="sl-label">Thing</span>
+                <span class="sl-number">02</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right blush">
+                <div class="sr-heading">Review your income protection</div>
+                <div class="sr-body">If your income has changed this year, your cover might not match what you actually need. A quick review takes 10 minutes.</div>
+                <div class="sr-divider"></div>
+                <div class="sr-tip">When did you last check?</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Thing 3 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left">
+                <span class="sl-counter">04/05</span>
+                <span class="sl-label">Thing</span>
+                <span class="sl-number">03</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right">
+                <div class="sr-heading">Use your ISA allowance</div>
+                <div class="sr-body">You get &pound;20,000 tax-free ISA allowance every year. It doesn't roll over. April 5th hits and it's gone.</div>
+                <div class="sr-divider"></div>
+                <div class="sr-tip">Don't leave free tax relief on the table.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="slide slide-cta">
+            <span class="cta-counter">05/05</span>
+            <div class="cta-heading">Need help getting sorted before April?</div>
+            <div class="cta-btn">Free call — link in bio →</div>
+            <div class="cta-brand">The Finance Woman</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-nav">
+      <button class="nav-btn" onclick="nav('c2',-1)">&#8249;</button>
+      <div class="nav-dots" id="c2-dots"></div>
+      <span class="nav-counter" id="c2-count">1 / 5</span>
+      <button class="nav-btn" onclick="nav('c2',1)">&#8250;</button>
+    </div>
+
+    <div class="card-caption">
+      <div class="caption-label">Caption — click to copy</div>
+      <div class="caption-body" onclick="copy(this)">Tax year ends 5th April. Here are 3 things most self-employed people forget to do before then:
+
+1. Check your pension contributions — you get tax relief, but you lose it if you don't use it before April.
+
+2. Review your income protection — if your income has changed, your cover might not match anymore. Takes 10 minutes to check.
+
+3. Use your ISA allowance — £20,000 tax-free. It doesn't roll over. Gone on 6th April.
+
+Save this post and come back to it before the deadline.
+
+Need help getting any of these sorted? Free call — link in bio.
+
+#taxseason #selfemployed #pension #ISA #financialplanning #taxplanning #thefinancewoman
+
+The value of pensions and investments and the income they produce can fall as well as rise. You may get back less than you invested. The benefits to the treatment of tax will depend on your individual circumstances and may be subject to change in future. ISA allowance correct as of 2025/26 tax year.</div>
+      <div class="copy-hint">Click caption to copy</div>
+    </div>
+  </div>
+
+
+  <!-- ==================================================
+       CAROUSEL 3 — WHAT HAPPENS IN OUR CALL (5 slides)
+       ================================================== -->
+  <div class="carousel-card">
+    <div class="card-header">
+      <div class="card-num">Carousel 3 of 5 &middot; 5 slides</div>
+      <div class="card-title">What Happens in Our Call</div>
+      <div class="card-meta">Trust-builder &middot; Overcomes objections</div>
+    </div>
+
+    <div class="slide-viewer">
+      <div class="slides-wrap">
+        <div class="slides-track" id="c3">
+
+          <!-- Cover -->
+          <div class="slide slide-cover">
+            <img src="images/cover-what-happens-in-our-call.jpg" alt="What Happens in Our Call cover"
+              onerror="this.style.display='none';this.parentElement.querySelector('.slide-cover-fallback').style.display='flex'">
+            <div class="slide-cover-fallback" style="display:none">
+              <span class="cf-counter">01/05</span>
+              <div class="cf-title">What actually happens in our Holistic Finance Call</div>
+              <div class="cf-sub">It's not what you think.</div>
+              <div class="cf-brand">The Finance Woman</div>
+            </div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left">
+                <span class="sl-counter">02/05</span>
+                <span class="sl-label">Step</span>
+                <span class="sl-word">one</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right">
+                <div class="sr-heading">We talk about you</div>
+                <div class="sr-body">Your life, your goals, what keeps you up at night. No spreadsheets. No jargon. Just a proper conversation about what matters to you.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left mid">
+                <span class="sl-counter">03/05</span>
+                <span class="sl-label">Step</span>
+                <span class="sl-word">two</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right blush">
+                <div class="sr-heading">We look at the numbers</div>
+                <div class="sr-body">What you earn, what you spend, what you've got in place. I'll help you see the full picture — clearly and without any pressure.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left">
+                <span class="sl-counter">04/05</span>
+                <span class="sl-label">Step</span>
+                <span class="sl-word">three</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right">
+                <div class="sr-heading">You leave feeling calm and in control</div>
+                <div class="sr-body">With clear next steps, a plan that makes sense, and the confidence that you're heading in the right direction.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="slide slide-cta">
+            <span class="cta-counter">05/05</span>
+            <div class="cta-heading">Ready to feel calm about your finances?</div>
+            <div class="cta-btn">Book your free call →</div>
+            <div class="cta-brand">The Finance Woman</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-nav">
+      <button class="nav-btn" onclick="nav('c3',-1)">&#8249;</button>
+      <div class="nav-dots" id="c3-dots"></div>
+      <span class="nav-counter" id="c3-count">1 / 5</span>
+      <button class="nav-btn" onclick="nav('c3',1)">&#8250;</button>
+    </div>
+
+    <div class="card-caption">
+      <div class="caption-label">Caption — click to copy</div>
+      <div class="caption-body" onclick="copy(this)">What actually happens in our Holistic Finance Call? (It's not what you think.)
+
+Step 1: We talk about you.
+Not numbers. You. Your life, your goals, what keeps you up at night.
+
+Step 2: We look at the full picture.
+Income, outgoings, what's in place, what's missing. Clearly and without pressure.
+
+Step 3: You leave feeling calm and in control.
+With clear next steps and a plan that actually makes sense for your life.
+
+No hard sell. No jargon. Just a proper conversation.
+
+Book your free call — link in bio.
+
+#financialplanning #holisticfinance #selfemployed #financialadviser #thefinancewoman</div>
+      <div class="copy-hint">Click caption to copy</div>
+    </div>
+  </div>
+
+
+  <!-- ==================================================
+       CAROUSEL 4 — THIS OR THAT (5 slides)
+       ================================================== -->
+  <div class="carousel-card">
+    <div class="card-header">
+      <div class="card-num">Carousel 4 of 5 &middot; 5 slides</div>
+      <div class="card-title">This or That — Financial Edition</div>
+      <div class="card-meta">Engagement driver &middot; Interactive</div>
+    </div>
+
+    <div class="slide-viewer">
+      <div class="slides-wrap">
+        <div class="slides-track" id="c4">
+
+          <!-- Cover -->
+          <div class="slide slide-cover">
+            <img src="images/cover-this-or-that.jpg" alt="This or That cover"
+              onerror="this.style.display='none';this.parentElement.querySelector('.slide-cover-fallback').style.display='flex'">
+            <div class="slide-cover-fallback" style="display:none">
+              <span class="cf-counter">01/05</span>
+              <div class="cf-title">This or That?</div>
+              <div class="cf-sub">Financial edition. There's a right answer — but it might surprise you.</div>
+              <div class="cf-brand">The Finance Woman</div>
+            </div>
+          </div>
+
+          <!-- Choice 1 -->
+          <div class="slide" style="position:relative;">
+            <span class="tot-counter">02/05</span>
+            <div class="slide-tot">
+              <div class="tot-half tot-top">
+                <div class="tot-choice-a">Pay off your mortgage early</div>
+              </div>
+              <div class="tot-half tot-bottom">
+                <div class="tot-choice-b">Put more into your pension</div>
+              </div>
+            </div>
+            <div class="tot-or">or</div>
+            <span class="tot-arrow">→</span>
+          </div>
+
+          <!-- Choice 2 -->
+          <div class="slide" style="position:relative;">
+            <span class="tot-counter">03/05</span>
+            <div class="slide-tot">
+              <div class="tot-half tot-top">
+                <div class="tot-choice-a">Get life insurance first</div>
+              </div>
+              <div class="tot-half tot-bottom">
+                <div class="tot-choice-b">Get income protection first</div>
+              </div>
+            </div>
+            <div class="tot-or">or</div>
+            <span class="tot-arrow">→</span>
+          </div>
+
+          <!-- Choice 3 -->
+          <div class="slide" style="position:relative;">
+            <span class="tot-counter">04/05</span>
+            <div class="slide-tot">
+              <div class="tot-half tot-top">
+                <div class="tot-choice-a">Save into an ISA</div>
+              </div>
+              <div class="tot-half tot-bottom">
+                <div class="tot-choice-b">Save into a pension</div>
+              </div>
+            </div>
+            <div class="tot-or">or</div>
+            <span class="tot-arrow">→</span>
+          </div>
+
+          <!-- Answer -->
+          <div class="slide slide-answer" style="position:relative;">
+            <span class="ans-counter">05/05</span>
+            <div class="ans-kicker">The real answer?</div>
+            <div class="ans-heading">It depends entirely on you.</div>
+            <div class="ans-body">Your age, your income, your goals, your family. There's no one-size-fits-all — and that's exactly why getting advice matters.</div>
+            <div class="ans-cta">Let's figure it out — link in bio →</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-nav">
+      <button class="nav-btn" onclick="nav('c4',-1)">&#8249;</button>
+      <div class="nav-dots" id="c4-dots"></div>
+      <span class="nav-counter" id="c4-count">1 / 5</span>
+      <button class="nav-btn" onclick="nav('c4',1)">&#8250;</button>
+    </div>
+
+    <div class="card-caption">
+      <div class="caption-label">Caption — click to copy</div>
+      <div class="caption-body" onclick="copy(this)">This or That — financial edition.
+
+Mortgage vs pension?
+Life insurance vs income protection?
+ISA vs pension?
+
+Before you answer — swipe through.
+
+The truth is, there's no one-size-fits-all answer. It depends on your age, your income, your family, and your goals.
+
+That's exactly why getting proper advice matters. Because what's right for your mate might not be right for you.
+
+Want to figure out what's right for you? Free call — link in bio.
+
+#financialplanning #thisorthat #pension #mortgage #selfemployed #thefinancewoman
+
+Your home may be repossessed if you do not keep up with repayments on your mortgage. The value of pensions and the income they produce can fall as well as rise. You may get back less than you invested.</div>
+      <div class="copy-hint">Click caption to copy</div>
+    </div>
+  </div>
+
+
+  <!-- ==================================================
+       CAROUSEL 5 — YOUR QUESTIONS ANSWERED (5 slides)
+       ================================================== -->
+  <div class="carousel-card">
+    <div class="card-header">
+      <div class="card-num">Carousel 5 of 5 &middot; 5 slides</div>
+      <div class="card-title">Your Questions, Answered</div>
+      <div class="card-meta">Authority builder &middot; FAQ format</div>
+    </div>
+
+    <div class="slide-viewer">
+      <div class="slides-wrap">
+        <div class="slides-track" id="c5">
+
+          <!-- Cover (Higgsfield image — downloaded) -->
+          <div class="slide slide-cover">
+            <img src="images/cover-05-your-questions-answered.png" alt="Your Questions Answered cover">
+          </div>
+
+          <!-- Q1 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left">
+                <span class="sl-counter">02/05</span>
+                <span class="sl-label" style="font-size:8px;">You asked...</span>
+                <span class="sl-word" style="font-size:14px;margin-top:4px;">Q1</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right">
+                <div class="sr-q">"Is it too late to start a pension at 40?"</div>
+                <div class="sr-divider"></div>
+                <div class="sr-body">Absolutely not. Starting at 40 still gives you 20+ years of growth. The best time to start was years ago — the second best time is today.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left mid">
+                <span class="sl-counter">03/05</span>
+                <span class="sl-label" style="font-size:8px;">You asked...</span>
+                <span class="sl-word" style="font-size:14px;margin-top:4px;">Q2</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right blush">
+                <div class="sr-q">"Do I really need income protection?"</div>
+                <div class="sr-divider"></div>
+                <div class="sr-body">If you're self-employed and your income depends on you being able to work — yes. It's one of the most affordable safety nets you can have.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="slide">
+            <div class="slide-split">
+              <div class="split-left">
+                <span class="sl-counter">04/05</span>
+                <span class="sl-label" style="font-size:8px;">You asked...</span>
+                <span class="sl-word" style="font-size:14px;margin-top:4px;">Q3</span>
+                <span class="sl-brand">The Finance Woman</span>
+              </div>
+              <div class="split-right">
+                <div class="sr-q" style="font-size:12px;">"What's the difference between an ISA and a pension?"</div>
+                <div class="sr-divider"></div>
+                <div class="sr-body">Both are tax-efficient. An ISA is flexible — access anytime. A pension locks in until retirement but gives you tax relief upfront. Most people benefit from both.</div>
+                <div class="sr-arrow">→</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="slide slide-cta">
+            <span class="cta-counter">05/05</span>
+            <div class="cta-heading">Got a question? I'd love to answer it.</div>
+            <div class="cta-btn">Free call — link in bio →</div>
+            <div class="cta-brand">The Finance Woman</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-nav">
+      <button class="nav-btn" onclick="nav('c5',-1)">&#8249;</button>
+      <div class="nav-dots" id="c5-dots"></div>
+      <span class="nav-counter" id="c5-count">1 / 5</span>
+      <button class="nav-btn" onclick="nav('c5',1)">&#8250;</button>
+    </div>
+
+    <div class="card-caption">
+      <div class="caption-label">Caption — click to copy</div>
+      <div class="caption-body" onclick="copy(this)">Your questions, answered.
+
+These are real questions I get asked all the time:
+
+"Is it too late to start a pension at 40?" — Absolutely not. You've still got 20+ years of growth ahead.
+
+"Do I really need income protection?" — If your income depends on you working, yes. It's one of the most affordable safety nets going.
+
+"What's the difference between an ISA and a pension?" — Both are tax-efficient, but they work differently. Most people benefit from both.
+
+Got a question you want me to answer? Drop it in the comments or send me a DM — I might feature it next time.
+
+Free call — link in bio.
+
+#financialadvice #FAQ #pension #ISA #incomeprotection #selfemployed #thefinancewoman
+
+The value of pensions and investments and the income they produce can fall as well as rise. You may get back less than you invested. The benefits to the treatment of tax will depend on your individual circumstances and may be subject to change in future.</div>
+      <div class="copy-hint">Click caption to copy</div>
+    </div>
+  </div>
+
+
+  <script>
+    // Initialise all carousels
+    ['c1','c2','c3','c4','c5'].forEach(id => {
+      const track = document.getElementById(id);
+      const slides = track.querySelectorAll(':scope > .slide');
+      const dotsEl = document.getElementById(id + '-dots');
+      track._pos = 0;
+      track._total = slides.length;
+      slides.forEach((_, i) => {
+        const d = document.createElement('div');
+        d.className = 'nav-dot' + (i === 0 ? ' active' : '');
+        dotsEl.appendChild(d);
+      });
+    });
+
+    function nav(id, dir) {
+      const track = document.getElementById(id);
+      const slides = track.querySelectorAll(':scope > .slide');
+      let pos = track._pos + dir;
+      pos = Math.max(0, Math.min(track._total - 1, pos));
+      track._pos = pos;
+
+      const w = slides[0].offsetWidth;
+      track.style.transform = `translateX(-${pos * w}px)`;
+
+      document.querySelectorAll('#' + id + '-dots .nav-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === pos);
+      });
+      document.getElementById(id + '-count').textContent = `${pos + 1} / ${track._total}`;
+    }
+
+    function copy(el) {
+      navigator.clipboard.writeText(el.innerText.trim()).then(() => {
+        const hint = el.nextElementSibling;
+        const orig = hint.textContent;
+        hint.textContent = '✓ Copied to clipboard';
+        setTimeout(() => hint.textContent = orig, 2500);
+      });
+    }
+  </script>
+
+</body>
+</html>
